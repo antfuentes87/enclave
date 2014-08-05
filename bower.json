@@ -1,0 +1,17 @@
+{
+  "name": "enclave",
+  "version": "1.0.0",
+  "homepage": "https://github.com/antfuentes87/enclave",
+  "authors": [
+    "antfuentes87 <antfuentes87@gmail.com>"
+  ],
+  "description": "Framework that does not depend on anything",
+  "main": "load.less",
+  "keywords": [
+    "less",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "license": "MIT"
+}
