@@ -1,7 +1,18 @@
-@grid-gutter-width: 0;
+.enc-container {
+  .container-fixed();
 
+  @media (min-width: @enc-media-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @enc-media-md) {
+    width: @container-md;
+  }
+  @media (min-width: @enc-media-lg) {
+    width: @container-lg;
+  }
+}
 
-.clearfix() {
+.enc-clearfix() {
   &:before,
   &:after {
     content: " "; // 1
@@ -12,20 +23,19 @@
   }
 }
 
-
 .container-fixed(@gutter: @grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
-  &:extend(.clearfix all);
+  &:extend(.enc-clearfix all);
 }
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
   margin-left:  (@gutter / -2);
   margin-right: (@gutter / -2);
-  &:extend(.clearfix all);
+  &:extend(.enc-clearfix all);
 }
 
 // Generate the extra small columns
@@ -54,23 +64,23 @@
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @enc-media-sm) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 .make-sm-column-offset(@columns) {
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @enc-media-sm) {
     margin-left: percentage((@columns / @grid-columns));
   }
 }
 .make-sm-column-push(@columns) {
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @enc-media-sm) {
     left: percentage((@columns / @grid-columns));
   }
 }
 .make-sm-column-pull(@columns) {
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @enc-media-sm) {
     right: percentage((@columns / @grid-columns));
   }
 }
@@ -82,23 +92,23 @@
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @enc-media-md) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 .make-md-column-offset(@columns) {
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @enc-media-md) {
     margin-left: percentage((@columns / @grid-columns));
   }
 }
 .make-md-column-push(@columns) {
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @enc-media-md) {
     left: percentage((@columns / @grid-columns));
   }
 }
 .make-md-column-pull(@columns) {
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @enc-media-md) {
     right: percentage((@columns / @grid-columns));
   }
 }
@@ -110,23 +120,23 @@
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @enc-media-lg) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 .make-lg-column-offset(@columns) {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @enc-media-lg) {
     margin-left: percentage((@columns / @grid-columns));
   }
 }
 .make-lg-column-push(@columns) {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @enc-media-lg) {
     left: percentage((@columns / @grid-columns));
   }
 }
 .make-lg-column-pull(@columns) {
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @enc-media-lg) {
     right: percentage((@columns / @grid-columns));
   }
 }
