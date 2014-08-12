@@ -22,11 +22,3 @@
 .enc-media-width-height(){
 	background: green;
 }
-
-// Center-align a block level element
-
-.enc-center-block() {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
