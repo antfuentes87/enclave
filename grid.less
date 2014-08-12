@@ -1,142 +1,52 @@
-.enc-container {
-  .enc-container-fixed();
-
-  @media (min-width: @enc-media-sm) {
-    width: @enc-media-sm;
-  }
-  @media (min-width: @enc-media-md) {
-    width: @enc-media-md;
-  }
-  @media (min-width: @enc-media-lg) {
-    width: @enc-media-lg;
-  }
+.enc-container{
+	margin-right: auto;
+	margin-left: auto;
+	@media (min-width: @enc-media-sm){
+		width: @enc-media-sm;
+	}
+	@media (min-width: @enc-media-md){
+		width: @enc-media-md;
+	}
+	@media (min-width: @enc-media-lg){
+		width: @enc-media-lg;
+	}
 }
 
-.enc-clearfix() {
-  &:before,
-  &:after {
-    content: " "; // 1
-    display: table; // 2
-  }
-  &:after {
-    clear: both;
-  }
+.enc-make-row(){
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.enc-container-fixed(@enc-gutter: @enc-grid-gutter-width) {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left:  (@enc-gutter / 2);
-  padding-right: (@enc-gutter / 2);
-  &:extend(.enc-clearfix all);
+.enc-make-xs-col(@columns){
+	position: relative;
+	float: left;
+	width: percentage((@columns / @enc-grid-columns));
+	min-height: 1px;
 }
 
-// Creates a wrapper for a series of columns
-.make-row(@enc-gutter: @enc-grid-gutter-width) {
-  margin-left:  (@enc-gutter / -2);
-  margin-right: (@enc-gutter / -2);
-  &:extend(.enc-clearfix all);
-}
-
-// Generate the extra small columns
-.make-xs-column(@columns; @enc-gutter: @enc-grid-gutter-width) {
-  position: relative;
-  float: left;
-  width: percentage((@columns / @enc-grid-columns));
-  min-height: 1px;
-  padding-left:  (@enc-gutter / 2);
-  padding-right: (@enc-gutter / 2);
-}
-.make-xs-column-offset(@columns) {
-  margin-left: percentage((@columns / @enc-grid-columns));
-}
-.make-xs-column-push(@columns) {
-  left: percentage((@columns / @enc-grid-columns));
-}
-.make-xs-column-pull(@columns) {
-  right: percentage((@columns / @enc-grid-columns));
-}
-
-// Generate the small columns
-.make-sm-column(@columns; @enc-gutter: @enc-grid-gutter-width) {
+.enc-make-sm-col(@columns){
   position: relative;
   min-height: 1px;
-  padding-left:  (@enc-gutter / 2);
-  padding-right: (@enc-gutter / 2);
-
-  @media (min-width: @enc-media-sm) {
+  @media (min-width: @enc-media-sm){
     float: left;
     width: percentage((@columns / @enc-grid-columns));
   }
 }
-.make-sm-column-offset(@columns) {
-  @media (min-width: @enc-media-sm) {
-    margin-left: percentage((@columns / @enc-grid-columns));
-  }
-}
-.make-sm-column-push(@columns) {
-  @media (min-width: @enc-media-sm) {
-    left: percentage((@columns / @enc-grid-columns));
-  }
-}
-.make-sm-column-pull(@columns) {
-  @media (min-width: @enc-media-sm) {
-    right: percentage((@columns / @enc-grid-columns));
-  }
-}
 
-// Generate the medium columns
-.make-md-column(@columns; @enc-gutter: @enc-grid-gutter-width) {
+.enc-make-md-col(@columns){
   position: relative;
   min-height: 1px;
-  padding-left:  (@enc-gutter / 2);
-  padding-right: (@enc-gutter / 2);
-
-  @media (min-width: @enc-media-md) {
+  @media (min-width: @enc-media-md){
     float: left;
     width: percentage((@columns / @enc-grid-columns));
   }
 }
-.make-md-column-offset(@columns) {
-  @media (min-width: @enc-media-md) {
-    margin-left: percentage((@columns / @enc-grid-columns));
-  }
-}
-.make-md-column-push(@columns) {
-  @media (min-width: @enc-media-md) {
-    left: percentage((@columns / @enc-grid-columns));
-  }
-}
-.make-md-column-pull(@columns) {
-  @media (min-width: @enc-media-md) {
-    right: percentage((@columns / @enc-grid-columns));
-  }
-}
 
-// Generate the large columns
-.make-lg-column(@columns; @enc-gutter: @enc-grid-gutter-width) {
+.enc-make-lg-col(@columns){
   position: relative;
   min-height: 1px;
-  padding-left:  (@enc-gutter / 2);
-  padding-right: (@enc-gutter / 2);
-
-  @media (min-width: @enc-media-lg) {
+  @media (min-width: @enc-media-lg){
     float: left;
     width: percentage((@columns / @enc-grid-columns));
-  }
-}
-.make-lg-column-offset(@columns) {
-  @media (min-width: @enc-media-lg) {
-    margin-left: percentage((@columns / @enc-grid-columns));
-  }
-}
-.make-lg-column-push(@columns) {
-  @media (min-width: @enc-media-lg) {
-    left: percentage((@columns / @enc-grid-columns));
-  }
-}
-.make-lg-column-pull(@columns) {
-  @media (min-width: @enc-media-lg) {
-    right: percentage((@columns / @enc-grid-columns));
   }
 }
