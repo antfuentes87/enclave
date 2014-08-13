@@ -11,15 +11,10 @@
 @enc-media-width-240: 240px;
 @enc-media-width-320: 320px;
 @enc-media-width-360: 360px;
-@enc-media-width-480: 480px;
 @enc-media-width-533: 533px;
-@enc-media-width-568: 568px;
 @enc-media-width-600: 600px;
-@enc-media-width-640: 640px;
 @enc-media-width-768: 768px;
 @enc-media-width-800: 800px;
-@enc-media-width-853: 853px;
-@enc-media-width-966: 966px;
 @enc-media-width-1024: 1024px;
 @enc-media-width-1280: 1280px;
 @enc-media-width-1366: 1366px;
