@@ -1,10 +1,54 @@
 .enc-grad-vertical(@startColor: #FFF, @endColor: #000){
-	background: @startColor; /* Old browsers */
-	background: -moz-linear-gradient(top,  @startColor 0%, @endColor 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@endColor)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  @startColor 0%,@endColor 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  @startColor 0%,@endColor 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  @startColor 0%,@endColor 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  @startColor 0%,@endColor 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{startColor}', endColorstr='@{endColor}',GradientType=0 ); /* IE6-9 */	
+	background: @startColor;
+	background: -moz-linear-gradient(top,  @startColor 0%, @endColor 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@endColor));
+	background: -webkit-linear-gradient(top,  @startColor 0%,@endColor 100%);
+	background: -o-linear-gradient(top,  @startColor 0%,@endColor 100%);
+	background: -ms-linear-gradient(top,  @startColor 0%,@endColor 100%);
+	background: linear-gradient(to bottom,  @startColor 0%,@endColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{startColor}', endColorstr='@{endColor}',GradientType=0 );
+}
+
+.enc-grad-horizontal(@startColor: #FFF, @endColor: #000){
+	background: @startColor;
+	background: -moz-linear-gradient(left,  @startColor 0%, @endColor 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%,@endColor));
+	background: -webkit-linear-gradient(left,  @startColor 0%,@endColor 100%);
+	background: -o-linear-gradient(left,  @startColor 0%,@endColor 100%);
+	background: -ms-linear-gradient(left,  @startColor 0%,@endColor 100%);
+	background: linear-gradient(to right,  @startColor 0%,@endColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{startColor}', endColorstr='@{endColor}',GradientType=1 );
+}
+
+.enc-grad-diagonal-up(@startColor: #FFF, @endColor: #000){
+	background: @startColor;
+	background: -moz-linear-gradient(45deg,  @startColor 0%, @endColor 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,@startColor), color-stop(100%,@endColor)); 
+	background: -webkit-linear-gradient(45deg,  @startColor 0%,@endColor 100%);
+	background: -o-linear-gradient(45deg,  @startColor 0%,@endColor 100%);
+	background: -ms-linear-gradient(45deg,  @startColor 0%,@endColor 100%);
+	background: linear-gradient(45deg,  @startColor 0%,@endColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{startColor}', endColorstr='@{endColor}',GradientType=1 );
+}
+
+.enc-grad-diagonal-down(@startColor: #FFF, @endColor: #000){
+	background: @startColor;
+	background: -moz-linear-gradient(-45deg,  @startColor 0%, @endColor 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,@startColor), color-stop(100%,@endColor));
+	background: -webkit-linear-gradient(-45deg,  @startColor 0%,@endColor 100%);
+	background: -o-linear-gradient(-45deg,  @startColor 0%,@endColor 100%);
+	background: -ms-linear-gradient(-45deg,  @startColor 0%,@endColor 100%);
+	background: linear-gradient(135deg,  @startColor 0%,@endColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{startColor}', endColorstr='@{endColor}',GradientType=1 );
+}
+
+.enc-grad-radial(@startColor: #FFF, @endColor: #000){
+	background: @startColor;
+	background: -moz-radial-gradient(center, ellipse cover,  @startColor 0%, @endColor 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@startColor), color-stop(100%,@endColor));
+	background: -webkit-radial-gradient(center, ellipse cover,  @startColor 0%,@endColor 100%);
+	background: -o-radial-gradient(center, ellipse cover,  @startColor 0%,@endColor 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  @startColor 0%,@endColor 100%);
+	background: radial-gradient(ellipse at center,  @startColor 0%,@endColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@startColor', endColorstr='@endColor',GradientType=1 );
 }
