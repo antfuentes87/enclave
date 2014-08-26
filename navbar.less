@@ -1,81 +1,80 @@
-//Custom Sizzler Menu
-
 .enc-navbar{
-	width: 100%;
+  width: 100%;
+  min-height: 50px;
+  &:target .enc-navbar-header .enc-navbar-button a{
+    display: none;
+  }
+  &:target .enc-navbar-header .enc-navbar-button a + a{
+    display: inline;
+  }
+ &:target .enc-navbar-collapse .enc-nav li{
+    opacity: 1;
+     font-size: 1.5rem;
+  }
+  
+}
+
+.enc-navbar-default{
+ 
 }
 
 .enc-navbar-header{
-	width: 100%;
+  .enc-navbar-brand{
+   
+  }
+  .enc-navbar-button{
+      text-align: right;
+      display: inline;
+      float: right;
+      a{
+       
+      }
+      a + a{
+        display: none;
+      }
+  }
 }
-// Sets the targets and will display or hide.  Currently set to collapse at 768px wide.
-// Use &#9776; in the <a> tags to create the "button"
 
- 
 .enc-navbar-collapse{
-	width: 100%;
-	&:target ul{
-		max-height: 1000px;
-	}
-	&:target .enc-navbar-show{
-		display: none;
-	}
-	&:target .enc-navbar-hide{
-		.enc-media-width(display,@240: block, @320: block, @360: block, @480: block, @533: block, 
-		@568: block, @600: block, @640: block, @768: none, @800: none, @853: none, @966: none, 
-		@1024: none, @1280: none, @1366: none, @1400: none, @1680: none, @1920: none);
-							
-	}
 }
 
-.enc-navbar-show{
-.enc-media-width(display,@240: block, @320: block, @360: block, @480: block, @533: block, 
-@568: block, @600: block, @640: block, @768: none, @800: none, @853: none, @966: none, 
-@1024: none, @1280: none, @1366: none, @1400: none, @1680: none, @1920: none);
-font-size: 3em;
-font-weight: bold;
-text-decoration: none;
-		display: block;
-		text-align: right;
-		padding-right: 10px;
+.enc-nav{
+  padding-top: 1rem;
+  height: 1px;
+  display: inline;
+  li{
+    opacity: 0;
+    font-size: 0rem;
+  }
 }
-	
-	.enc-navbar-hide{
-		font-size: 3em;
-		font-weight: bold;
-		text-decoration: none;
-		display: none;
-		text-align: right;
-		padding-right: 10px;
-	}
-	
-// Sets the ul to show inline at widths greater than 768px and hide at lower widths.
-// Also adds padding-top to center in .enc-header
- 
-	.enc-nav{
-		.enc-media-width(max-height,@240: 0px, @320: 0px, @360: 0px, @480: 0px, @533: 0px, 
-		@568: 0px, @600: 0px, @640: 0px, @768: 100px, @800: 100px, @853: 100px, @966: 100px, 
-		@1024: 100px, @1280: 100px, @1366: 100px, @1400: 100px, @1680: 100px, @1920: 100px);
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		overflow: hidden;
-		-webkit-transition: max-height .5s ease;
-		-moz-transition: max-height .5s ease;
-		-ms-transition: max-height .5s ease;
-		-o-transition: max-height .5s ease;
-		transition: max-height .5s ease;
-		
-		// List items stay tucked in < 768px and will  display inline at greater widths. 
-		
-		li{
-			.enc-media-width(display,@240: block, @320: block, @360: block, @480: block, @533: block, 
-			@568: block, @600: block, @640: block, @768: inline, @800: inline, @853: inline, @966: inline, 
-			@1024: inline, @1280: inline, @1366: inline, @1400: inline, @1680: inline, @1920: inline);
-			
-			
-		}
-	}
-		
- 		
-		
+
+@media(min-width: 768px){
+  .enc-navbar-header{
+    display: block;
+    float: left;
+    text-align: center;
+    width: 16.66666666666667%;
+    padding-top: 1rem;
+  }
+}
+
+@media(min-width: 768px){
+  .enc-nav{
+    display: block;
+    li{
+      display: inline;
+      width: 16.66666666666667%;
+      float: left;
+      text-align: center;
+      opacity: 1;
+      font-size: 1.25rem
+    }
+  }
+}
+
+@media(min-width: 768px){
+  .enc-navbar-button{
+    display: none;
+    font-size: 0px;
+  }
+}

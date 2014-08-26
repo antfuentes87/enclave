@@ -1,24 +1,80 @@
-.menu{
-	.enc-navbar;
-	.enc-navbar-header{
-		.enc-navbar-header;
-	}
-	.enc-navbar-collapse{
-		.enc-navbar-collapse;
-		.enc-navbar-show{
-			.enc-navbar-show;
-		}
-		.enc-navbar-hide{
-			.enc-navbar-hide;
-		}
-		.enc-nav{
-			.enc-nav;
-			li{
-				a{
-					font-size: 3rem;
-					color: red;
-				}
-			}
-		}
-	}
+.enc-navbar{
+  width: 100%;
+  min-height: 50px;
+  &:target .enc-navbar-header .enc-navbar-button a{
+    display: none;
+  }
+  &:target .enc-navbar-header .enc-navbar-button a + a{
+    display: inline;
+  }
+ &:target .enc-navbar-collapse .enc-nav li{
+    opacity: 1;
+     font-size: 1.5rem;
+  }
+  
+}
+
+.enc-navbar-default{
+ 
+}
+
+.enc-navbar-header{
+  .enc-navbar-brand{
+   
+  }
+  .enc-navbar-button{
+      text-align: right;
+      display: inline;
+      float: right;
+      a{
+       
+      }
+      a + a{
+        display: none;
+      }
+  }
+}
+
+.enc-navbar-collapse{
+}
+
+.enc-nav{
+  padding-top: 1rem;
+  height: 1px;
+  display: inline;
+  li{
+    opacity: 0;
+    font-size: 0rem;
+  }
+}
+
+@media(min-width: 768px){
+  .enc-navbar-header{
+    display: block;
+    float: left;
+    text-align: center;
+    width: 16.66666666666667%;
+    padding-top: 1rem;
+  }
+}
+
+@media(min-width: 768px){
+  .enc-nav{
+    display: block;
+    li{
+      display: inline;
+      width: 16.66666666666667%;
+      float: left;
+      text-align: center;
+      opacity: 1;
+      font-size: 1.25rem
+    }
+  }
+}
+
+@media(min-width: 768px){
+  .enc-navbar-button{
+    display: none;
+    font-size: 0px;
+  }
 }
