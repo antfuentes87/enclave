@@ -1,3 +1,4 @@
+@import '../bower_components/normalize-css/normalize.css';
 /*Gutter For Grid*/
 /*Media Widths Break Points*/
 /*Media Tool Widths*/
@@ -168,11 +169,8 @@
 }
 .example-menu .enc-navbar-collapse .enc-nav {
   display: inline;
-  width: 100%;
   margin: 0;
   padding: 0;
-  list-style: none;
-  list-style-position: outside;
 }
 .example-menu .enc-navbar-collapse .enc-nav li {
   opacity: 0;
