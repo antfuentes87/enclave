@@ -1,23 +1,51 @@
-.menu{
-  .enc-navbar{
-    .enc-navbar-default{
-        .enc-navbar-brand{
-        }
-        .enc-navbar-button{
-           a{
-            }
-            a + a{
-            }
-        }
-  }
+@import '../../enclave.less';
 
-  .enc-navbar-collapse{
-    .enc-nav{
-      li{
-      }
-    } 
+/*This is a bare bones menu, created from our building blocks in navbar.less*/
+.whatever-want-to-call-your-menu{
+	.enc-navbar;
+	.enc-navbar-header{
+		.enc-navbar-header;
+		.enc-navbar-button{
+			.enc-navbar-button;
+		}
+	}
+	.enc-navbar-collapse{
+		.enc-navbar-collapse;
+		.enc-nav{
+			.enc-nav;
+			li{
+				a{
+				}
+			}
+		}
+	}
+}
 
+/*This is a bare bones example but with styling*/
+.example-menu{
+	.enc-navbar;
+	background-color: red;
+	.enc-navbar-header{
+		.enc-navbar-header;
+		.enc-navbar-button{
+			.enc-navbar-button;
+		}
+	}
+	.enc-navbar-collapse{
+		.enc-navbar-collapse;
+		.enc-nav{
+			.enc-nav;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			list-style-position: outside;
+			li{
+				background-color: red;
+				a{
+					color: #FFF;
+				}
+			}
+		}
+	}
 }
-}
-}
-
