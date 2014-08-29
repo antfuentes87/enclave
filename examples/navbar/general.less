@@ -14,75 +14,58 @@
     opacity: 1;
      font-size: 1.5rem;
   }
-  
-}
-
-.enc-navbar-default{
+  .enc-navbar-default{
   background-color: #333;
-}
-
-.enc-navbar-header{
-  height: 50px;
-  .enc-navbar-brand{
-   color: #FFF;
-   font-size: 1.5rem;
-   display: inline;
-   padding-top: 1rem;
-  }
-  .enc-navbar-button{
-      text-align: right;
-      float: right;
-      a{
-        font-size: 3rem;
+    .enc-navbar-header{
+      .enc-media-width-768{
+        display: block;
+        float: left;
+      }
+      height: 50px;
+        .enc-navbar-brand{
         color: #FFF;
-        text-decoration: none;
+        font-size: 1.5rem;
+        display: inline;
+        padding-top: 1rem;
       }
-      a + a{
-        display: none;
+      .enc-navbar-button{
+        .enc-media-width-768{
+          font-size: 0px;
+        }
+        text-align: right;
+        float: right;
+          a{
+            font-size: 3rem;
+            color: #FFF;
+            text-decoration: none;
+          }
+          a + a{
+            display: none;
+          }
       }
   }
-}
 
-.enc-navbar-collapse{
-}
-
-.enc-nav{
-  padding-top: 1rem;
-  height: 1px;
-  display: inline;
-  li{
-    opacity: 0;
-    font-size: 0rem;
-  }
-}
-
-@media(min-width: 768px){
-  .enc-nav{
-    display: block;
-    li{
-      display: inline;
-      width: 16.66666666666667%;
-      float: left;
-      text-align: center;
-      opacity: 1;
-      font-size: 1.25rem
+  .enc-navbar-collapse{
+    .enc-nav{
+    .enc-media-width-768{
+      display: block;
     }
-  }
-}
-
-@media(min-width: 768px){
-  .enc-navbar-header{
-    display: block;
-    float: left;
-    text-align: center;
-    width: 16.66666666666667%;
     padding-top: 1rem;
-  }
+    height: 1px;
+    display: inline;
+      li{
+      .enc-media-width-768{
+        display: inline;
+        float: left;
+        text-align: center;
+        opacity: 1;
+      }
+      opacity: 0;
+      font-size: 0rem;
+      }
+    } 
+
+}
+}
 }
 
-@media(min-width: 768px){
-  .enc-navbar-button{
-    display: none;
-    font-size: 0px;
-  }
-}

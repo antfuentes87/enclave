@@ -15,7 +15,8 @@
 }
 
 .enc-navbar-default{
- 
+  margin-left: auto;
+  margin-right:auto;
 }
 
 .enc-navbar-header{
@@ -36,6 +37,8 @@
 }
 
 .enc-navbar-collapse{
+  margin-left: auto;
+  margin-right:auto;
 }
 
 .enc-nav{
@@ -47,15 +50,14 @@
   }
 }
 
-@media(min-width: 768px){
+@enc-media-width-768{
   .enc-navbar-header{
     display: block;
     float: left;
-    text-align: center;
   }
 }
 
-@media(min-width: 768px){
+@enc-media-width-768{
   .enc-nav{
     display: block;
     li{
@@ -67,9 +69,8 @@
   }
 }
 
-@media(min-width: 768px){
+@enc-media-width-768{
   .enc-navbar-button{
-    display: none;
     font-size: 0px;
   }
 }
