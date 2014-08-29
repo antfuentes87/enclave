@@ -1,48 +1,75 @@
-.menu .enc-navbar {
-  width: 100%;
-  min-height: 50px;
+/*Gutter For Grid*/
+/*Media Widths Break Points*/
+/*Media Tool Widths*/
+.enc-container {
+  margin-right: auto;
+  margin-left: auto;
 }
-.menu .enc-navbar:target .enc-navbar-header .enc-navbar-button a {
+@media (min-width: 768px) {
+  .enc-container {
+    width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .enc-container {
+    width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  .enc-container {
+    width: 1200px;
+  }
+}
+.enc-navbar:target .enc-navbar-header .enc-navbar-button a {
   display: none;
 }
-.menu .enc-navbar:target .enc-navbar-header .enc-navbar-button a + a {
-  display: inline;
+.enc-navbar:target .enc-navbar-header .enc-navbar-button a + a {
+  display: block;
 }
-.menu .enc-navbar:target .enc-navbar-collapse .enc-nav {
-  height: 200px;
-}
-.menu .enc-navbar:target .enc-navbar-collapse .enc-nav li {
+.enc-navbar:target .enc-navbar-collapse .enc-nav li {
   opacity: 1;
-  font-size: 1.5rem;
 }
-.menu .enc-navbar .enc-navbar-default {
-  background-color: #333;
-  height: 50px;
+@media (min-width: 768px) {
+  .enc-navbar-header {
+    display: inline-block;
+  }
 }
-.menu .enc-navbar .enc-navbar-default .enc-navbar-brand {
-  color: #FFF;
-  font-size: 1.5rem;
-  display: inline;
-  padding-top: 1rem;
-}
-.menu .enc-navbar .enc-navbar-default .enc-navbar-button {
-  text-align: right;
+.enc-navbar-button {
+  display: inline-block;
   float: right;
 }
-.menu .enc-navbar .enc-navbar-default .enc-navbar-button a {
-  font-size: 3rem;
-  color: #FFF;
-  text-decoration: none;
+.enc-navbar-button a {
+  display: block;
 }
-.menu .enc-navbar .enc-navbar-default .enc-navbar-button a + a {
+.enc-navbar-button a + a {
   display: none;
 }
-.menu .enc-navbar .enc-navbar-collapse .enc-nav {
-  padding-top: 1rem;
-  height: 1px;
+@media (min-width: 768px) {
+  .enc-navbar-button {
+    display: none;
+  }
+}
+.enc-navbar-brand {
+  display: inline-block;
+}
+.enc-navbar-collapse {
+  max-height: 1px;
+}
+@media (min-width: 768px) {
+  .enc-navbar-collapse {
+    display: inline-block;
+    min-height: 1px;
+  }
+}
+.enc-nav {
   display: inline;
 }
-.menu .enc-navbar .enc-navbar-collapse .enc-nav li {
+.enc-nav li {
   opacity: 0;
-  font-size: 0rem;
+}
+@media (min-width: 768px) {
+  .enc-nav li {
+    display: inline;
+    opacity: 1;
+  }
 }
