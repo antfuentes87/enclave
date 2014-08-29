@@ -1,51 +1,19 @@
 .menu{
   .enc-navbar{
-    width: 100%;
-    min-height: 50px;
-    &:target .enc-navbar-header .enc-navbar-button a{
-      display: none;
-    }
-    &:target .enc-navbar-header .enc-navbar-button a + a{
-      display: inline;
-    }
-    &:target .enc-navbar-collapse .enc-nav{
-      height: 200px;
-    }
-    &:target .enc-navbar-collapse .enc-nav li{
-      opacity: 1;
-      font-size: 1.5rem;
-    }
     .enc-navbar-default{
-      background-color: #333;
-        height: 50px;
         .enc-navbar-brand{
-          color: #FFF;
-          font-size: 1.5rem;
-          display: inline;
-          padding-top: 1rem;
         }
         .enc-navbar-button{
-          text-align: right;
-          float: right;
            a{
-            font-size: 3rem;
-            color: #FFF;
-            text-decoration: none;
             }
             a + a{
-              display: none;
             }
         }
   }
 
   .enc-navbar-collapse{
     .enc-nav{
-    padding-top: 1rem;
-    height: 1px;
-    display: inline;
       li{
-      opacity: 0;
-      font-size: 0rem;
       }
     } 
 
