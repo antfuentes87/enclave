@@ -1,0 +1,25 @@
+{
+  "name": "lesswatch",
+  "homepage": "https://github.com/antfuentes87/lesswatch",
+  "authors": [
+    "James Bouska <jbouska419@gmail.com>"
+  ],
+  "description": "a node.js script that watches directories and sub-directories and compiles into a single css file",
+  "main": "lwc.js",
+  "keywords": [
+    "node",
+    "less",
+    "css"
+  ],
+  "license": "MIT",
+  "_release": "274c77536b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "274c77536b1654ae0f49ef320df2ec0e7441c5a7"
+  },
+  "_source": "git://github.com/antfuentes87/lesswatch.git",
+  "_target": "*",
+  "_originalSource": "antfuentes87/lesswatch",
+  "_direct": true
+}

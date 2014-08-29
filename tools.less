@@ -1,3 +1,6 @@
+/*
+Adjust anything at any of the screen sizes supported by the mixin
+*/
 .enc-media-width(@property,
 @240: 0, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 @600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
@@ -26,7 +29,10 @@
 .enc-media-width-height(){
 	background: green;
 }
-// font-add
+
+/*
+Quickly add a cross browser font -- Make sure you have .EOT / .WOFF / .TTF / .SVG for the font
+*/
 .enc-font-add(@font-default-path, @font-name){
 	@font-full-path: "@{font-default-path}@{font-name}/@{font-name}";
 	@font-face{
@@ -41,24 +47,38 @@
 	}
 }
 
-// Center-align a block level element
-
+/*
+Center-align a block level element
+*/
 .enc-center-block() {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-// Keep images from scaling beyond the width of their parents.
-
+/*
+Keep images from scaling beyond the width of their parents.
+*/
 .enc-img-responsive(@display: block) {
   display: @display;
-  width: 100% \9; // Force IE10 and below to size SVG images correctly
-  max-width: 100%; // Part 1: Set a maximum relative to the parent
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
 }
 
-
+/*
+Create a background with rgb -- this will allow to set the transparency of the element
+*/
 .enc-background-rgb(@a: 1, @r: 0, @g: 0, @b: 0){
 	background-color: rgba(@r,@g,@b,@a);
+}
+
+/*
+Easily set a transistion that works for all browers
+*/
+.enc-transition(@duration:1s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
 }

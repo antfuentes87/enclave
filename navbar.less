@@ -1,11 +1,11 @@
-.enc-navbar{
+.enc-navbar(){
 	&:target .enc-navbar-header .enc-navbar-button a{
 		display: none;
 	}
 	&:target .enc-navbar-header .enc-navbar-button a + a{
 		display: block;
 	}
-	&:target .enc-navbar-collapse .enc-nav li{
+	&:target .enc-navbar-collapse .enc-nav{
 		opacity: 1;
 	}  
 }
@@ -35,18 +35,13 @@
 }
 
 .enc-navbar-collapse{
-	max-height: 1px;
 	@media (min-width: @enc-media-width-768){
     	display: inline-block;
-		min-height: 1px;
   	}
 }
 
 .enc-nav{
-	display: inline;
-	li{
-		opacity: 0;
-	}
+	opacity: 0;
 	@media (min-width: @enc-media-width-768){
 		li{
 			display: inline;
