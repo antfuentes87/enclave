@@ -1,6 +1,9 @@
 /*This is a bare bones menu, created from our building blocks in navbar.less*/
 .whatever-want-to-call-your-menu{
 	.enc-navbar;
+	&:target .enc-navbar-collapse .enc-nav{
+		/* You need to set a height here */
+	}
 	.enc-navbar-header{
 		.enc-navbar-header;
 		.enc-navbar-brand{
@@ -25,11 +28,29 @@
 /*This is a bare bones example but with styling*/
 .example-menu{
 	.enc-navbar;
+	.enc-transition;
+	&:target{
+		.enc-background-rgb(@a: 1, @r: 103, @g: 155, @b: 0);
+		-webkit-border-radius: 50px;
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-top-right-radius: 10px;
+		-moz-border-radius: 50px;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-topright: 10px;
+		border-radius: 50px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
 	&:target .enc-navbar-collapse .enc-nav{
 		.enc-media-width(height,
-		@240: 110px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+		@240: 135px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 		@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
 		@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+		width: 100%;
+		opacity: 1;
+	}
+	&:target .enc-navbar-collapse .enc-nav li a{
+		color: #000;
 	}
 	background-color: red;
 	.enc-navbar-header{
@@ -50,7 +71,7 @@
 		.enc-navbar-button{
 			.enc-navbar-button;
 			.enc-media-width(padding-top,
-			@240: 2px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+			@240: 4px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 			@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
 			@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
 			.enc-media-width(padding-right,
@@ -73,20 +94,30 @@
 	}
 	.enc-navbar-collapse{
 		.enc-navbar-collapse;
+		.enc-media-width(padding-left,
+		@240: 10px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+		@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
+		@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+		.enc-media-width(padding-right,
+		@240: 10px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+		@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
+		@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
 		.enc-nav{
 			.enc-nav;
-			.enc-transition;
+			.enc-transition(@duration:0.5s, @ease: ease-in-out);
 			.enc-media-width(padding-left,
-			@240: 15px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+			@240: 0px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 			@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
 			@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
 			margin: 0;
-			height: 1px;
+			padding: 0;
+			height: 0px;
+			width: 0px;
+			opacity: 0;
 			background-color: transparent;
-			list-style-position: inside;
+			list-style-position: outside;
 			list-style: none;
 			li{
-				.enc-transition;
 				.enc-media-width(width,
 				@240: 50%, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
@@ -95,20 +126,33 @@
 				@240: left, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
 				@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+				.enc-media-width(padding-top,
+				@240: 4px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
+				@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
 				.enc-media-width(padding-bottom,
 				@240: 4px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
 				@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+				.enc-media-width(text-align,
+				@240: center, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
+				@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+				&:hover{
+					background-color:darken(#F00, 20%);
+					border-radius: 10%;
+				}
 				a{
+					.enc-transition(@duration:0.5s, @ease: ease-in-out);
 					.enc-media-width(font-size,
-					@240: 1.75rem, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
+					@240: 1.50rem, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 					@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
 					@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-					color: #FFF;
+					text-decoration: none;
 				}
 			}
 			li + li + li + li + li{
-				.enc-transition;
+				.enc-transition(@duration:0.5s, @ease: ease-in-out);
 				.enc-media-width(width,
 				@240: 100%, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
@@ -121,15 +165,7 @@
 				@240: 4px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
 				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
 				@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-				.enc-media-width(text-align,
-				@240: center, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-				@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-				@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
 				a{
-					.enc-media-width(font-size,
-					@240: 1.75rem, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-					@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-					@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
 					color: #FFF;
 				}
 			}

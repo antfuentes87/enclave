@@ -5,7 +5,7 @@
 	&:target .enc-navbar-header .enc-navbar-button a + a{
 		display: block;
 	}
-	&:target .enc-navbar-collapse .enc-nav{
+	&:target .enc-navbar-collapse .enc-nav li a{
 		opacity: 1;
 	}  
 }
@@ -41,11 +41,17 @@
 }
 
 .enc-nav{
-	opacity: 0;
+	li{
+		a{
+			opacity: 0;
+		}
+	}
 	@media (min-width: @enc-media-width-768){
 		li{
 			display: inline;
-			opacity: 1;
+			a{
+				opacity: 1;
+			}
 		}
 	}
 }
