@@ -1,11 +1,12 @@
-.enc-navbar(){
+.enc-navbar{
 	&:target .enc-navbar-header .enc-navbar-button a{
 		display: none;
 	}
 	&:target .enc-navbar-header .enc-navbar-button a + a{
 		display: block;
 	}
-	&:target .enc-navbar-collapse .enc-nav li a{
+	&:target .enc-navbar-collapse{
+		display: block;
 		opacity: 1;
 	}  
 }
@@ -32,20 +33,21 @@
 }
 
 .enc-navbar-collapse{
-	display: inline-block;
+	opacity: 0;
+	@media (min-width: @enc-media-width-768){
+		opacity: 1;
+	}
 }
 
 .enc-nav{
 	li{
 		a{
-			opacity: 0;
 		}
 	}
 	@media (min-width: @enc-media-width-768){
 		li{
 			display: inline;
 			a{
-				opacity: 1;
 			}
 		}
 	}
