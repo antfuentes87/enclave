@@ -47,13 +47,16 @@ Easily set a transistion that works for all browers
 }
 .enc-navbar:target .enc-navbar-collapse {
   display: block;
-  opacity: 1;
 }
 .enc-navbar-header {
-  display: inline-block;
+  display: block;
+}
+@media (min-width: 768px) {
+  .enc-navbar-header {
+    display: inline-block;
+  }
 }
 .enc-navbar-button {
-  display: inline-block;
   float: right;
 }
 .enc-navbar-button a {
@@ -67,17 +70,26 @@ Easily set a transistion that works for all browers
     display: none;
   }
 }
+.enc-navbar-brand {
+  display: inline-block;
+}
 .enc-navbar-collapse {
-  opacity: 0;
+  display: none;
 }
 @media (min-width: 768px) {
   .enc-navbar-collapse {
-    opacity: 1;
+    display: inline-block;
   }
+}
+.enc-nav {
+  display: block;
+}
+.enc-nav li {
+  display: block;
 }
 @media (min-width: 768px) {
   .enc-nav li {
-    display: inline;
+    display: inline-block;
   }
 }
 /*This is a bare bones menu, created from our building blocks in navbar.less*/
@@ -89,16 +101,22 @@ Easily set a transistion that works for all browers
 }
 .whatever-want-to-call-your-menu:target .enc-navbar-collapse {
   display: block;
-  opacity: 1;
 }
 .whatever-want-to-call-your-menu:target .enc-navbar-collapse .enc-nav {
   /* You need to set a height here */
 }
 .whatever-want-to-call-your-menu .enc-navbar-header {
+  display: block;
+}
+@media (min-width: 768px) {
+  .whatever-want-to-call-your-menu .enc-navbar-header {
+    display: inline-block;
+  }
+}
+.whatever-want-to-call-your-menu .enc-navbar-header .enc-navbar-brand {
   display: inline-block;
 }
 .whatever-want-to-call-your-menu .enc-navbar-header .enc-navbar-button {
-  display: inline-block;
   float: right;
 }
 .whatever-want-to-call-your-menu .enc-navbar-header .enc-navbar-button a {
@@ -113,16 +131,22 @@ Easily set a transistion that works for all browers
   }
 }
 .whatever-want-to-call-your-menu .enc-navbar-collapse {
-  opacity: 0;
+  display: none;
 }
 @media (min-width: 768px) {
   .whatever-want-to-call-your-menu .enc-navbar-collapse {
-    opacity: 1;
+    display: inline-block;
   }
+}
+.whatever-want-to-call-your-menu .enc-navbar-collapse .enc-nav {
+  display: block;
+}
+.whatever-want-to-call-your-menu .enc-navbar-collapse .enc-nav li {
+  display: block;
 }
 @media (min-width: 768px) {
   .whatever-want-to-call-your-menu .enc-navbar-collapse .enc-nav li {
-    display: inline;
+    display: inline-block;
   }
 }
 /*This is a bare bones example but with styling*/
@@ -141,7 +165,6 @@ Easily set a transistion that works for all browers
 }
 .example-menu:target .enc-navbar-collapse {
   display: block;
-  opacity: 1;
 }
 .example-menu:target {
   background-color: #679b00;
@@ -253,9 +276,15 @@ Easily set a transistion that works for all browers
   color: #000;
 }
 .example-menu .enc-navbar-header {
-  display: inline-block;
+  display: block;
+}
+@media (min-width: 768px) {
+  .example-menu .enc-navbar-header {
+    display: inline-block;
+  }
 }
 .example-menu .enc-navbar-header .enc-navbar-brand {
+  display: inline-block;
   color: #fff;
 }
 @media (min-width: 240px) {
@@ -349,7 +378,6 @@ Easily set a transistion that works for all browers
   }
 }
 .example-menu .enc-navbar-header .enc-navbar-button {
-  display: inline-block;
   float: right;
 }
 .example-menu .enc-navbar-header .enc-navbar-button a {
@@ -642,11 +670,11 @@ Easily set a transistion that works for all browers
   text-decoration: none;
 }
 .example-menu .enc-navbar-collapse {
-  opacity: 0;
+  display: none;
 }
 @media (min-width: 768px) {
   .example-menu .enc-navbar-collapse {
-    opacity: 1;
+    display: inline-block;
   }
 }
 @media (min-width: 240px) {
@@ -830,6 +858,7 @@ Easily set a transistion that works for all browers
   }
 }
 .example-menu .enc-navbar-collapse .enc-nav {
+  display: block;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -841,9 +870,12 @@ Easily set a transistion that works for all browers
   list-style-position: outside;
   list-style: none;
 }
+.example-menu .enc-navbar-collapse .enc-nav li {
+  display: block;
+}
 @media (min-width: 768px) {
   .example-menu .enc-navbar-collapse .enc-nav li {
-    display: inline;
+    display: inline-block;
   }
 }
 @media (min-width: 240px) {

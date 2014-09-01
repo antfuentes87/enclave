@@ -6,16 +6,18 @@
 		display: block;
 	}
 	&:target .enc-navbar-collapse{
-		opacity: 1;
+		display: block;
 	}  
 }
 
 .enc-navbar-header{
-	display: inline-block;
+	display: block;
+	@media (min-width: @enc-media-width-768){
+		display: inline-block;
+	} 
 }
 
 .enc-navbar-button{
-	display: inline-block;
 	float: right;
 	a{
 		display: block;    
@@ -29,25 +31,24 @@
 }
   
 .enc-navbar-brand{
+	display: inline-block;
 }
 
 .enc-navbar-collapse{
-	opacity: 0;
+	display: none;
 	@media (min-width: @enc-media-width-768){
-		opacity: 1;
+		display: inline-block;
 	}
 }
 
 .enc-nav{
+	display: block;
 	li{
-		a{
-		}
+		display: block;
 	}
 	@media (min-width: @enc-media-width-768){
 		li{
-			display: inline;
-			a{
-			}
+			display: inline-block;
 		}
 	}
 }
