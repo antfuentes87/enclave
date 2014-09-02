@@ -1,9 +1,6 @@
 /*This is a bare bones menu, created from our building blocks in navbar.less*/
-.whatever-want-to-call-your-menu{
+.bare-bones-menu{
 	.enc-navbar;
-	&:target .enc-navbar-collapse .enc-nav{
-		/* You need to set a height here */
-	}
 	.enc-navbar-header{
 		.enc-navbar-header;
 		.enc-navbar-brand{
@@ -25,105 +22,68 @@
 	}
 }
 
-/*This is a bare bones example but with styling*/
-.example-menu{
+
+/*This is a menu that works with transition -- display does not work with transition, hence all the height / width to 0*/
+.menu-a{
 	.enc-navbar;
-	.enc-transition;
-	&:target{
-		.enc-background-rgb(@a: 1, @r: 103, @g: 155, @b: 0);
-		-webkit-border-radius: 50px;
-		-webkit-border-top-left-radius: 10px;
-		-webkit-border-top-right-radius: 10px;
-		-moz-border-radius: 50px;
-		-moz-border-radius-topleft: 10px;
-		-moz-border-radius-topright: 10px;
-		border-radius: 50px;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	&:target .enc-navbar-collapse .enc-nav{
-		.enc-media-width(height,
-		@240: 135px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-		@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-		@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-		width: 100%;
-		opacity: 1;
-	}
-	&:target .enc-navbar-collapse .enc-nav li a{
-		color: #000;
-	}
 	background-color: red;
+	&:target .enc-navbar-collapse{
+		height: 200px;
+		opacity: 1;
+		ul{
+			padding-left: 15px;
+			li{
+				a{
+					opacity: 1;
+					color: #FFF;
+					font-size: 1.7rem;
+				}
+			}
+		}
+	}
 	.enc-navbar-header{
 		.enc-navbar-header;
 		.enc-navbar-brand{
 			.enc-navbar-brand;
-			.enc-media-width(font-size,
-			@240: 1.5rem, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-			@600: 0, @640: 0, @768: 2rem, @800: 0, @853: 0, @966: 0, 
-			@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-			color: #fff;
-			
 		}
 		.enc-navbar-button{
 			.enc-navbar-button;
-			.enc-media-width(padding-top,
-			@240: 4px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-			@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-			@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-			.enc-media-width(padding-right,
-			@240: 6px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-			@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-			@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-			.enc-media-width(font-size,
-			@240: 2.25rem, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-			@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-			@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+			font-size: 2rem;
 			a{
-				color: #fff;
+				color: #FFF;
 				text-decoration: none;
 			}
 			a + a{
-				color: #fff;
+				color: #FFF;
 				text-decoration: none;
 			}
 		}
 	}
 	.enc-navbar-collapse{
 		.enc-navbar-collapse;
-		.enc-media-width(padding-left,
-		@240: 10px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-		@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-		@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-		.enc-media-width(padding-right,
-		@240: 10px, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-		@600: 0, @640: 0, @768: 0, @800: 0, @853: 0, @966: 0, 
-		@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+		.enc-transition(@duration: 0.5s, @ease: ease-out);
+		height: 0;
+		opacity: 0;
+		display: block;
+		@media (min-width: @enc-media-width-768){
+			height: auto;
+			opacity: 1;
+		}	 
 		.enc-nav{
 			.enc-nav;
-			.enc-transition(@duration:0.5s, @ease: ease-in-out);
-			.enc-media-width(opacity,
-			@240: 0, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-			@600: 0, @640: 0, @768: 1, @800: 0, @853: 0, @966: 0, 
-			@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
-			float: left;
-			margin: 0;
-			padding: 0;
-			background-color: transparent;
-			list-style-position: outside;
-			list-style: none;
+			.enc-transition(@duration: 1s, @ease: ease-in-out);
+			padding-left: 0;
 			li{
-				&:hover{
-					background-color:darken(#F00, 20%);
-					border-radius: 10%;
-				}
+				.enc-transition(@duration: 0.5s, @ease: ease-in-out);
 				a{
-					.enc-transition(@duration:0.5s, @ease: ease-in-out);
-					.enc-media-width(font-size,
-					@240: 1.50rem, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0,
-					@600: 0, @640: 0, @768: 2rem, @800: 0, @853: 0, @966: 0, 
-					@1024: 0, @1280: 0, @1366: 0, @1400: 0, @1680: 0, @1920: 0);
+					.enc-transition(@duration: 0.5s, @ease: ease-in-out);
+					opacity: 0;
 					text-decoration: none;
-					color: #FFF;
+					font-size: 0;
+					@media (min-width: @enc-media-width-768){
+						font-size: 1.7rem;
+						opacity: 1;
+					}
 				}
 			}
 		}
