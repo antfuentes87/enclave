@@ -31,6 +31,57 @@ Adjust anything at any of the screen sizes supported by the mixin
 @media (min-width:@enc-media-width-1920){@{property}: @1920;}
 }
 
+
+/*BETA -- DO NOT USE IN PRODUCTION*/
+.enc-media-auto(@property, @base: 0, @ratio: 0){
+  @base-1: @base + @ratio;
+  @base-2: @base1 + @ratio;
+  @base-3: @base2 + @ratio;
+  @base-4: @base3 + @ratio;
+  @base-5: @base4 + @ratio;
+  @base-6: @base5 + @ratio;
+  @base-7: @base6 + @ratio;
+  @base-8: @base7 + @ratio;
+  @base-9: @base8 + @ratio;
+  @base-10: @base9 + @ratio;
+  @base-11: @base10 + @ratio;
+  @base-12: @base11 + @ratio;
+  @base-13: @base12 + @ratio;
+  @base-14: @base13 + @ratio;
+  @base-15: @base14 + @ratio;
+  @base-16: @base15 + @ratio;
+  @base-17: @base16 + @ratio;
+  @base-18: @base17 + @ratio;
+  @base-19: @base18 + @ratio;
+  @base-20: @base19 + @ratio;
+  @base-21: @base20 + @ratio;
+  @base-22: @base21 + @ratio;
+  @base-23: @base22 + @ratio;
+  @media (min-width:@enc-media-width-240){@{property}: @base;}
+  @media (min-width:@enc-media-width-320){@{property}: @base1;}
+  @media (min-width:@enc-media-width-360){@{property}: @base2;}
+  @media (min-width:@enc-media-width-480){@{property}: @base3;}
+  @media (min-width:@enc-media-width-533){@{property}: @base4;}
+  @media (min-width:@enc-media-width-568){@{property}: @base5;}
+  @media (min-width:@enc-media-width-600){@{property}: @base6;}
+  @media (min-width:@enc-media-width-640){@{property}: @base7;}
+  @media (min-width:@enc-media-width-768){@{property}: @base8;}
+  @media (min-width:@enc-media-width-800){@{property}: @base9;}
+  @media (min-width:@enc-media-width-853){@{property}: @base10;}
+  @media (min-width:@enc-media-width-900){@{property}: @base11;}
+  @media (min-width:@enc-media-width-966){@{property}: @base12;}
+  @media (min-width:@enc-media-width-1024){@{property}: @base13;}
+  @media (min-width:@enc-media-width-1050){@{property}: @base14;}
+  @media (min-width:@enc-media-width-1080){@{property}: @base15;}
+  @media (min-width:@enc-media-width-1200){@{property}: @base16;}
+  @media (min-width:@enc-media-width-1280){@{property}: @base17;}
+  @media (min-width:@enc-media-width-1366){@{property}: @base18;}
+  @media (min-width:@enc-media-width-1440){@{property}: @base19;}
+  @media (min-width:@enc-media-width-1600){@{property}: @base20;}
+  @media (min-width:@enc-media-width-1680){@{property}: @base21;}
+  @media (min-width:@enc-media-width-1920){@{property}: @base22;}
+}
+
 .enc-media-width-height(){
 	background: green;
 }
