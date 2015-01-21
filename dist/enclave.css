@@ -20,14 +20,35 @@
     width: 1200px;
   }
 }
+/*
+Quickly add a cross browser font -- Make sure you have .EOT / .WOFF / .TTF / .SVG for the font
+*/
+/*
+Center-align a block level element
+*/
+/*
+Keep images from scaling beyond the width of their parents.
+*/
+/*
+Create a background with rgb -- this will allow to set the transparency of the element
+*/
+/*
+Easily set a transistion that works for all browers
+*/
+.enc-navbar {
+  display: block;
+}
 .enc-navbar:target .enc-navbar-header .enc-navbar-button a {
   display: none;
 }
 .enc-navbar:target .enc-navbar-header .enc-navbar-button a + a {
   display: block;
 }
-.enc-navbar:target .enc-navbar-collapse .enc-nav li {
-  opacity: 1;
+.enc-navbar:target .enc-navbar-collapse {
+  display: block;
+}
+.enc-navbar-header {
+  display: block;
 }
 @media (min-width: 768px) {
   .enc-navbar-header {
@@ -35,7 +56,6 @@
   }
 }
 .enc-navbar-button {
-  display: inline-block;
   float: right;
 }
 .enc-navbar-button a {
@@ -53,23 +73,31 @@
   display: inline-block;
 }
 .enc-navbar-collapse {
-  max-height: 1px;
+  display: none;
 }
 @media (min-width: 768px) {
   .enc-navbar-collapse {
     display: inline-block;
-    min-height: 1px;
   }
 }
 .enc-nav {
-  display: inline;
+  display: block;
 }
 .enc-nav li {
-  opacity: 0;
+  display: block;
 }
 @media (min-width: 768px) {
   .enc-nav li {
-    display: inline;
-    opacity: 1;
+    display: inline-block;
   }
 }
+/*BETA -- DO NOT USE IN PRODUCTION*/
+/*BETA -- DO NOT USE IN PRODUCTION*/
+/*BETA -- DO NOT USE IN PRODUCTION*/
+/*BETA -- DO NOT USE IN PRODUCTION*/
+/*
+Adjust anything at any of the screen sizes supported by the mixin
+*/
+/*SM*/
+/*MD*/
+/*LG*/
