@@ -40,3 +40,37 @@ How to install with <a href="http://bower.io/">Bower</a>
 <code>
 bower install antfuentes87/enclave
 </code>
+
+<h3>
+How to compile with LESSWatch
+</h3>
+
+<p>
+I forked <a href="https://github.com/jonycheung/Dead-Simple-LESS-Watch-Compiler">jonycheung/Dead-Simple-LESS-Watch-Compiler</a> and modified it so it could compile out to a single file.
+This way you can have one main less file that has imports of all the other less files. So when you go compile that main less file with all the imports, it creates one CSS file from all
+your LESS files. A example of this would be to import Enclave and Bootstrap into one main LESS file. Then use my modified LESS compiler to produce one compressed CSS file.
+</p>
+
+<p>
+Install <a href="https://github.com/antfuentes87/lesswatch">antfuentes87/lesswatch</a> by using bower.
+</p>
+
+<code>
+bower install antfuentes87/lesswatch
+</code>
+
+<p>
+Then run lesswatch with node to watch whatever directory you want and compile out to whatever CSS file you want.
+</p>
+
+<code>
+npm PATH_TO_LESSWATCH/lwc.js INPUT_FOLDER OUTPUT_FOLDER INPUT_FILE OUTPUT_FILE
+</code>
+
+<strong>
+Example
+</strong>
+
+<code>
+npm bower_components/lesswatch/lwc.js LESS CSS main.less main.css
+</code>
