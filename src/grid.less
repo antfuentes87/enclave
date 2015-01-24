@@ -1,3 +1,4 @@
+/*Create a container that will center in the middle*/
 .enc-container{
 	margin-right: auto;
 	margin-left: auto;
@@ -12,17 +13,20 @@
 	}
 }
 
+/*Fluid container that will center in the middle*/
 .enc-fluid-container(@width){
 	width: @width;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/*Make not be needed, but create a row*/
 .enc-make-row(){
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/*Create differnet cols based upon different break points*/
 .enc-make-xs-col(@columns){
 	position: relative;
 	float: left;
@@ -55,4 +59,10 @@
     float: left;
     width: percentage((@columns / @enc-grid-columns));
   }
+}
+
+/*Create a flow and width -- commonly used -- esp when protyping*/
+.enc-width-float(@width: 100%, @float: left){
+	width: @width;
+	float: @float;
 }
