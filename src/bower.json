@@ -5,7 +5,7 @@
   "authors": [
     "antfuentes87 <antfuentes87@gmail.com>"
   ],
-  "description": "Framework that does not depend on anything",
+  "description": "LESS Framework to help you get started.",
   "main": "load.less",
   "keywords": [
     "less",
