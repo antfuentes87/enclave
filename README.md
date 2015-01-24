@@ -32,3 +32,10 @@ You will need <a href="http://nodejs.org/">Node</a> and <a href="http://lesscss.
 <li>1680</li>
 <li>1920</li>
 </ul>
+
+<h3>
+How to install with Bower
+</h3>
+<code>
+bower install antfuentes87/enclave
+</code>
