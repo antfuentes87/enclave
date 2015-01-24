@@ -5,7 +5,7 @@ media queries. This is not a full fledge framework, but should provide most of t
 basics, plus some extras that can really help.
 </p>
 <p>
-You will need <a href="http://nodejs.org/">Node</a> and <a href="http://lesscss.org/">LESS</a> to compile this on your own or just use the already compiled version.
+You will need <a href="http://nodejs.org/">Node</a> and <a href="http://lesscss.org/">LESS</a> to compile Enclave. Enclave is composed of all mixins, so the compiled version in the dist folder is just for example purposes. You will need to import the enclave.less into your main less file that you compile for your project.
 </p>
 
 <h2>Screen Width Sizes Currently Supported</h2>
