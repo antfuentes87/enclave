@@ -1,7 +1,12 @@
 /*
 .enc-media-manual-width is used to adjust a CSS property manually at every single screen width size currently supported by enclave.
-Addition to allowing you to adjust all the screen width sizes, you can also just use the SM / MD / LG to adjust certian screen sizes.
-Breaking the screen width sizes into groups may allow for easier managment of so many screen width sizes.
+
+Addition to allowing you to adjust all the screen width sizes, you can instead use the ALL SM / ALL MD / ALL LG mixins to set a CSS property to
+all the same attribute for that group of screen width sizes. Just simplely set the CSS property and what attribute you want. The mixin
+only accpets two agruments unlike the .enc-media-manual-width, which needs each screen width size set.
+
+If you end up using the ALL SM / MD / LG mixins but notice that in one particualr screen width size group you do not want it to all be the same value. You can
+use the .enc-media-manual-width-sm, etc... to be able to take control of one screen width size group.
 */
 
 /* ALL */
@@ -35,7 +40,7 @@ Breaking the screen width sizes into groups may allow for easier managment of so
 @media (min-width:@enc-media-width-1920){@{property}: @1920;}
 }
 
-/* SM - @240 to @640 */
+/* Manual SM - @240 to @640 */
 .enc-media-manual-width-sm(@property,
 @240: 0, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0, @600: 0, @640: 0)
 {
@@ -49,7 +54,7 @@ Breaking the screen width sizes into groups may allow for easier managment of so
 @media (min-width:@enc-media-width-640){@{property}: @640;}
 }
 
-/* MD - @768 to @10801 */
+/* Manual MD - @768 to @10801 */
 .enc-media-manual-width-md(@property,
 @768: 0, @800: 0, @853: 0, @900: 0, @966: 0, @1024: 0, @1050: 0, @1080: 0)
 {
@@ -63,7 +68,7 @@ Breaking the screen width sizes into groups may allow for easier managment of so
 @media (min-width:@enc-media-width-1080){@{property}: @1080;}
 }
 
-/*LG - @1200 to @1920 */
+/* Manual LG - @1200 to @1920 */
 .enc-media-manual-width-lg(@property, 
 @1200: 0, @1280: 0, @1366: 0, @1440: 0, @1600: 0, @1680: 0, @1920: 0)
 {
@@ -74,4 +79,42 @@ Breaking the screen width sizes into groups may allow for easier managment of so
 @media (min-width:@enc-media-width-1600){@{property}: @1600;}
 @media (min-width:@enc-media-width-1680){@{property}: @1680;}
 @media (min-width:@enc-media-width-1920){@{property}: @1920;}
+}
+
+/* ALL SM - @240 to @640 */
+.enc-media-manual-width-all-sm(@property, @value)
+{
+@media (min-width:@enc-media-width-240){@{property}: @value;}
+@media (min-width:@enc-media-width-320){@{property}: @value;}
+@media (min-width:@enc-media-width-360){@{property}: @value;}
+@media (min-width:@enc-media-width-480){@{property}: @value;}
+@media (min-width:@enc-media-width-533){@{property}: @value;}
+@media (min-width:@enc-media-width-568){@{property}: @value;}
+@media (min-width:@enc-media-width-600){@{property}: @value;}
+@media (min-width:@enc-media-width-640){@{property}: @value;}
+}
+
+/* ALL MD - @768 to @10801 */
+.enc-media-manual-width-all-md(@property, @value)
+{
+@media (min-width:@enc-media-width-768){@{property}: @value;}
+@media (min-width:@enc-media-width-800){@{property}: @value;}
+@media (min-width:@enc-media-width-853){@{property}: @value;}
+@media (min-width:@enc-media-width-900){@{property}: @value;}
+@media (min-width:@enc-media-width-966){@{property}: @value;}
+@media (min-width:@enc-media-width-1024){@{property}: @value;}
+@media (min-width:@enc-media-width-1050){@{property}: @value;}
+@media (min-width:@enc-media-width-1080){@{property}: @value;}
+}
+
+/* ALL LG - @1200 to @1920 */
+.enc-media-manual-width-all-lg(@property, @value)
+{
+@media (min-width:@enc-media-width-1200){@{property}: @value;}
+@media (min-width:@enc-media-width-1280){@{property}: @value;}
+@media (min-width:@enc-media-width-1366){@{property}: @value;}
+@media (min-width:@enc-media-width-1440){@{property}: @value;}
+@media (min-width:@enc-media-width-1600){@{property}: @value;}
+@media (min-width:@enc-media-width-1680){@{property}: @value;}
+@media (min-width:@enc-media-width-1920){@{property}: @value;}
 }
