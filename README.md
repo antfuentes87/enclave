@@ -5,7 +5,7 @@ media queries. This is not a full fledge framework, but should provide most of t
 basics, plus some extras that can really help.
 </p>
 <p>
-To compile it yourself, you need to install <a href="http://nodejs.org/">Node</a> and <a href="http://lesscss.org/">LESS</a>.
+You will need <a href="http://nodejs.org/">Node</a> and <a href="http://lesscss.org/">LESS</a> to compile this on your own or just use the already compiled version.
 </p>
 
 <h2>Screen Width Sizes Currently Supported</h2>
