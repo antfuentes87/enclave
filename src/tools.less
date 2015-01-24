@@ -33,7 +33,7 @@ Keep images from scaling beyond the width of their parents.
 */
 .enc-img-responsive(@display: block) {
   display: @display;
-  width: 100% \9;
+  width: 100% \ 9;
   max-width: 100%;
   height: auto;
 }
@@ -41,8 +41,8 @@ Keep images from scaling beyond the width of their parents.
 /*
 Create a background with rgb -- this will allow to set the transparency of the element
 */
-.enc-background-rgb(@a: 1, @r: 0, @g: 0, @b: 0){
-	background-color: rgba(@r,@g,@b,@a);
+.enc-background-rgb(@opt: 1, @r: 0, @g: 0, @b: 0){
+	background-color: rgba(@r,@g,@b,@opt);
 }
 
 /*
