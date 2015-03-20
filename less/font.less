@@ -4,14 +4,14 @@ Quickly add a cross browser font -- Make sure you have .EOT / .WOFF / .WOFF2 / .
 .enc-font-add(@font-default-path, @font-name, @font-weight, @font-style){
 	@font-full-path: "@{font-default-path}@{font-name}/@{font-name}";
 	@font-face{
-    	font-family: @font-name;
-    	src: url('@{font-full-path}.eot');
-    	src: url('@{font-full-path}.eot?#iefix') format('embedded-opentype'),
-         	url('@{font-full-path}.woff') format('woff2'),
-            url('@{font-full-path}.woff2') format('woff'),
-         	url('@{font-full-path}.ttf') format('truetype'),
-         	url('@{font-full-path}.svg') format('svg');
-    	font-weight: @font-weight;
-    	font-style: @font-style;
+		font-family: @font-name;
+		src: url('@{font-full-path}.eot');
+		src: url('@{font-full-path}.eot?#iefix') format('embedded-opentype'),
+		url('@{font-full-path}.woff') format('woff2'),
+		url('@{font-full-path}.woff2') format('woff'),
+		url('@{font-full-path}.ttf') format('truetype'),
+		url('@{font-full-path}.svg') format('svg');
+		font-weight: @font-weight;
+		font-style: @font-style;
 	}
 }
