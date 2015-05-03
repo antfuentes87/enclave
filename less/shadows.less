@@ -5,7 +5,7 @@
 	box-shadow: @horizontal @vertical @blurRadius @spreadRadius @rgba-color;
 }
 
-.enc-text-shadow(@color: #000000, @opacity: 1, @angle: 2px, @distance: 2px){
+.enc-text-shadow(@color: #000000, @opacity: 1, @angle: 2px, @distance: 2px, @blur: 2px){
 	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
 	text-shadow: @angle @distance @blur @rgba-color;
 }
