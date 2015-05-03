@@ -1,0 +1,11 @@
+.enc-box-shadow(@color: #000000, @opacity: 1, @horizontal: 2px, @vertical: 2px, @blurRadius: 2px, @spreadRadius: 2px){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	-webkit-box-shadow: @horizontal @vertical @blurRadius @spreadRadius @rgba-color;
+	-moz-box-shadow: @horizontal @vertical @blurRadius @spreadRadius @rgba-color;
+	box-shadow: @horizontal @vertical @blurRadius @spreadRadius @rgba-color;
+}
+
+.enc-text-shadow(@color: #000000, @opacity: 1, @angle: 2px, @distance: 2px){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	text-shadow: @angle @distance @blur @rgba-color;
+}
