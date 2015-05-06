@@ -12,3 +12,34 @@
 	padding: @padding-vertical @padding-horizontal;
 	line-height: @line-height;
 }
+
+.enc-flex-btn(@font-size: 12px, 
+	@font-size-ratio: 1, 
+	@line-height: 12px, 
+	@line-height-ratio: 1,
+	@bg-color: #000000,
+	@bg-color-opacity: 1,
+	@color: #FFFFFF,
+	@color-opacity: 1,
+	@border-width: 1px,
+	@border-style: solid,
+	@border-color: #333333,
+	@border-radius: 1px,
+	@padding-top: 1px,
+	@padding-top-ratio: 1,
+	@padding-bottom: 1px,
+	@padding-bottom-ratio: 1,
+	@padding-left: 1px,
+	@padding-left-ratio: 1,
+	@padding-right: 1px,
+	@padding-right-ratio: 1){
+	.enc-flex-auto(font-size, @font-size, @font-sizeratio);
+	.enc-flex-auto(line-height, @line-height, @line-height-ratio);
+	.enc-background-rgb(@bg-color, @bg-color-opacity);
+	.enc-color-rgb(@color, @color-opacity);
+	.enc-create-border(@border-width, @border-style, @border-color, @border-radius);
+	.enc-flex-auto(padding-top, @padding-top, @padding-top-ratio);
+	.enc-flex-auto(padding-bottom, @padding-bottom, @padding-bottom-ratio);
+	.enc-flex-auto(padding-left, @padding-left, @padding-left-ratio);
+	.enc-flex-auto(padding-right, @padding-right, @padding-right-ratio);
+}
