@@ -33,11 +33,11 @@
 	@padding-left-ratio: 1,
 	@padding-right: 1px,
 	@padding-right-ratio: 1){
+	.enc-color-rgb(@color, @color-opacity);
+	.enc-background-rgb(@bg-color, @bg-color-opacity);
+	.enc-create-border(@border-width, @border-style, @border-color, @border-radius);
 	.enc-flex-auto(font-size, @font-size, @font-size-ratio);
 	.enc-flex-auto(line-height, @line-height, @line-height-ratio);
-	.enc-background-rgb(@bg-color, @bg-color-opacity);
-	.enc-color-rgb(@color, @color-opacity);
-	.enc-create-border(@border-width, @border-style, @border-color, @border-radius);
 	.enc-flex-auto(padding-top, @padding-top, @padding-top-ratio);
 	.enc-flex-auto(padding-bottom, @padding-bottom, @padding-bottom-ratio);
 	.enc-flex-auto(padding-left, @padding-left, @padding-left-ratio);
