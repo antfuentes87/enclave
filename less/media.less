@@ -1,14 +1,3 @@
-/*
-.enc-media-manual-width is used to adjust a CSS property manually at every single screen width size currently supported by enclave.
-
-Addition to allowing you to adjust all the screen width sizes, you can instead use the ALL SM / ALL MD / ALL LG mixins to set a CSS property to
-all the same attribute for that group of screen width sizes. Just simplely set the CSS property and what attribute you want. The mixin
-only accpets two agruments unlike the .enc-media-manual-width, which needs each screen width size set.
-
-If you end up using the ALL SM / MD / LG mixins but notice that in one particualr screen width size group you do not want it to all be the same value. You can
-use the .enc-media-manual-width-sm, etc... to be able to take control of one screen width size group.
-*/
-
 /* ALL */
 .enc-media-manual-width(@property,
 @240: 0, @320: 0, @360: 0, @480: 0, @533: 0, @568: 0, @600: 0, @640: 0, 
