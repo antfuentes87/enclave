@@ -25,6 +25,14 @@
 	@border-style: solid,
 	@border-color: #333333,
 	@border-radius: 1px,
+	@color-hover: #FFFFFF,
+	@color-opacity-hover: 1,
+	@bg-color-hover: #000000,
+	@bg-color-opacity-hover: 1,
+	@border-width-hover: 2px,
+	@border-style-hover: solid,
+	@border-color-hover: #FFFFFF,
+	@border-radius-hover: 2px,
 	@padding-top: 1px,
 	@padding-top-ratio: 1,
 	@padding-bottom: 1px,
@@ -42,4 +50,9 @@
 	.enc-flex-auto(padding-bottom, @padding-bottom, @padding-bottom-ratio);
 	.enc-flex-auto(padding-left, @padding-left, @padding-left-ratio);
 	.enc-flex-auto(padding-right, @padding-right, @padding-right-ratio);
+	&:hover{
+		.enc-color-rgb(@color-hover, @color-opacity-hover);
+		.enc-background-rgb(@bg-color-hover, @bg-color-opacity-hover);
+		.enc-create-border(@border-width-hover, @border-style-hover, @border-color-hover, @border-radius-hover);
+	}
 }
