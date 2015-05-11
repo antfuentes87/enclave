@@ -1,8 +1,6 @@
-.enc-flex-text-shadow(@counter, @color, @opacity) when (@counter > 0) {
+.enc-flex-text-shadow(@counter) when (@counter > 0) {
   .enc-flex-text-shadow((@counter - 1));    // next iteration
-  @rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
-  @blur: @blur + 1
-	text-shadow: 0px 0px @{blur} @rgba-color;
+  width: (10px * @counter); // code for each iteration
 }
 
 /*##############################################################################*/
