@@ -1,5 +1,20 @@
 /*##############################################################################*/
 /*##############################################################################*/
+/*Padding*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-padding(@padding-top, @padding-top-ratio,
+@padding-right, @padding-right-ratio,
+@padding-bottom, @padding-bottom-ratio,
+@padding-left, @padding-left-ratio){
+	.enc-flex-auto(padding-top, @padding-top, @padding-top-ratio);
+	.enc-flex-auto(padding-right, @padding-right, @padding-right-ratio);
+	.enc-flex-auto(padding-bottom, @padding-bottom, @padding-bottom-ratio);
+	.enc-flex-auto(padding-left, @padding-left, @padding-left-ratio);
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
 /*Text*/
 /*##############################################################################*/
 /*##############################################################################*/
