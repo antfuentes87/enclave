@@ -1,3 +1,16 @@
+.enc-flex-text-shadow(@color, @opacity, @size){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	@darken: 1;
+	
+  .enc-flex-text-shadow-loop(@darken, @size) when (@size < 1) {
+    text-shadow: @{angle}px @{distance}px @{blur}px darken(@rgba-color, @{darken}%);
+    @darken: @darken + 1;
+  }
+
+  .enc-flex-text-shadow-loop(@darken, @size);
+}
+
+
 /*##############################################################################*/
 /*##############################################################################*/
 /*Margin*/
