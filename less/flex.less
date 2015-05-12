@@ -1,6 +1,8 @@
 .enc-flex-text-shadow(@counter) when (@counter > 0) {
   .enc-flex-text-shadow((@counter - 1));    // next iteration
-  width: (10px * @counter); // code for each iteration
+  @string: '1px 1px 1px #FFF,';
+  text-shadow: @string; // code for each iteration
+  @string: (@string + @string);
 }
 
 /*##############################################################################*/
