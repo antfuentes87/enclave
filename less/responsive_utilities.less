@@ -1,5 +1,31 @@
 /*##############################################################################*/
 /*##############################################################################*/
+/*Height*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-vertical-center-outside(
+	@height-xs, @height-ratio-xs,
+ 	@height-sm, @height-ratio-sm,
+  	@height-md, @height-ratio-md,
+   	@height-lg, @height-ratio-lg){
+	.enc-flex-auto-xs(height, @height-xs, @height-ratio-xs);
+	.enc-flex-auto-sm(height, @height-sm, @height-ratio-sm);
+	.enc-flex-auto-md(height, @height-md, @height-ratio-md);
+	.enc-flex-auto-lg(height, @height-lg, @height-ratio-lg);
+}
+
+.enc-flex-vertical-center-inside(
+	@height-xs, @height-ratio-xs,
+ 	@height-sm, @height-ratio-sm,
+  	@height-md, @height-ratio-md,
+   	@height-lg, @height-ratio-lg){
+	.enc-flex-auto-xs(padding-top, @height-xs / 2, @height-ratio-xs / 2);
+	.enc-flex-auto-sm(padding-top, @height-sm / 2, @height-ratio-sm / 2);
+	.enc-flex-auto-md(padding-top, @height-md / 2, @height-ratio-md / 2);
+	.enc-flex-auto-lg(padding-top, @height-lg / 2, @height-ratio-lg / 2);
+}
+/*##############################################################################*/
+/*##############################################################################*/
 /*Display*/
 /*##############################################################################*/
 /*##############################################################################*/
