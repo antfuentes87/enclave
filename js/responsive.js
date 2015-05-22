@@ -14,3 +14,9 @@ function encSetSameHeight(classPathA, classPathB){
 	});
 }
 
+function encSetHalfHeight(classPathA, classPathB){
+	$(window).on("load resize scroll",function(e){
+		var classHeightB = $(classPathA).height();
+		$(classPathB).css("height", classHeightB / 2);
+	});
+}
