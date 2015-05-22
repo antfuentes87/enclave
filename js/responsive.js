@@ -6,3 +6,11 @@ function encVerticalCenter(parentClassPath, childClassPath, childContentClassPat
 		$(childContentClassPath).css("margin-top", -childContentHeight / 2);
 	});
 }
+
+function encSetSameHeight(classPathA, classPathB){
+	$(window).on("load resize scroll",function(e){
+		var classHeightB = $(classPathA).height();
+		$(classPathB).css("height", classHeightB);
+	});
+}
+
