@@ -20,3 +20,13 @@ function encSetHalfHeight(classPathA, classPathB){
 		$(classPathB).css("height", classHeightB / 2);
 	});
 }
+
+function encParallellHeight(elementA, elementB, elementRatio){
+	$(window).on("load resize scroll",function(e){
+		var elementAHeight = $(elementA).height();
+		var elementBHeight = elementAHeight / elementRatio;
+		var elementBMarginTop = elementAHeight - elementBHeight;
+		$(elementB).css("height", elementBHeight);
+		$(elementB).css("margin-top", elementBMarginTop);
+	});
+}
