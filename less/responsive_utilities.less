@@ -40,84 +40,88 @@
 	.enc-flex-auto-lg(margin-top, -@height-lg / 2, @height-ratio-lg / 2);
 }
 	
+
 /*##############################################################################*/
 /*##############################################################################*/
 /*Text Align*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-text-align(@value){
-	text-align: @value;
-}
+.enc-flex-text-align-xs(@value){.enc-flex-manual-all-xs(text-align, @value);}
+.enc-flex-text-align-sm(@value){.enc-flex-manual-all-sm(text-align, @value);}
+.enc-flex-text-align-md(@value){.enc-flex-manual-all-md(text-align, @value);}
+.enc-flex-text-align-lg(@value){.enc-flex-manual-all-lg(text-align, @value);}
 
 /*##############################################################################*/
 /*##############################################################################*/
 /*Text Align Center*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-text-align-center-xs(){.enc-text-align(center);}
-.enc-text-align-center-sm(){.enc-text-align(center);}
-.enc-text-align-center-md(){.enc-text-align(center);}
-.enc-text-align-center-lg(){.enc-text-align(center);}
-
-/*##############################################################################*/
-/*##############################################################################*/
-/*Text Align Right*/
-/*##############################################################################*/
-/*##############################################################################*/
-.enc-text-align-right-xs(){.enc-text-align(right);}
-.enc-text-align-right-sm(){.enc-text-align(right);}
-.enc-text-align-right-md(){.enc-text-align(right);}
-.enc-text-align-right-lg(){.enc-text-align(right);}
+.enc-flex-text-center-xs(){.enc-flex-text-align-xs(center);}
+.enc-flex-text-center-sm(){.enc-flex-text-align-sm(center);}
+.enc-flex-text-center-md(){.enc-flex-text-align-md(center);}
+.enc-flex-text-center-lg(){.enc-flex-text-align-lg(center);}
 
 /*##############################################################################*/
 /*##############################################################################*/
 /*Text Align Left*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-text-align-left-xs(){.enc-text-align(left);}
-.enc-text-align-left-sm(){.enc-text-align(left);}
-.enc-text-align-left-md(){.enc-text-align(left);}
-.enc-text-align-left-lg(){.enc-text-align(left);}
+.enc-flex-text-left-xs(){.enc-flex-text-align-xs(left);}
+.enc-flex-text-left-sm(){.enc-flex-text-align-sm(left);}
+.enc-flex-text-left-md(){.enc-flex-text-align-md(left);}
+.enc-flex-text-left-lg(){.enc-flex-text-align-lg(left);}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Text Align Right*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-text-right-xs(){.enc-flex-text-align-xs(right);}
+.enc-flex-text-right-sm(){.enc-flex-text-align-sm(right);}
+.enc-flex-text-right-md(){.enc-flex-text-align-md(right);}
+.enc-flex-text-right-lg(){.enc-flex-text-align-lg(right);}
+
 
 /*##############################################################################*/
 /*##############################################################################*/
 /*Display*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-display(@value){
-	display: @value;
-}
+.enc-flex-display-xs(@value){.enc-flex-manual-all-xs(display, @value);}
+.enc-flex-display-sm(@value){.enc-flex-manual-all-sm(display, @value);}
+.enc-flex-display-md(@value){.enc-flex-manual-all-md(display, @value);}
+.enc-flex-display-lg(@value){.enc-flex-manual-all-lg(display, @value);}
 
 /*##############################################################################*/
 /*##############################################################################*/
 /*Display Block*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-display-xs(){.enc-display(block);}
-.enc-display-sm(){.enc-display(block);}
-.enc-display-md(){.enc-display(block);}
-.enc-display-lg(){.enc-display(block);}
+.enc-block-xs(@value){.enc-flex-display-xs(display, @value);}
+.enc-block-sm(@value){.enc-flex-display-sm(display, @value);}
+.enc-block-md(@value){.enc-flex-display-md(display, @value);}
+.enc-block-lg(@value){.enc-flex-display-lg(display, @value);}
 
 /*##############################################################################*/
 /*##############################################################################*/
 /*Display Hidden*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-hidden-xs(){.enc-display(none);}
-.enc-hidden-sm(){.enc-display(none);}
-.enc-hidden-md(){.enc-display(none);}
-.enc-hidden-lg(){.enc-display(none);}
+.enc-hidden-xs(){.enc-flex-display-xs(none);}
+.enc-hidden-sm(){.enc-flex-display-sm(none);}
+.enc-hidden-md(){.enc-flex-display-md(none);}
+.enc-hidden-lg(){.enc-flex-display-lg(none);}
 
 /*##############################################################################*/
 /*##############################################################################*/
 /*Grouped Display, Extra Small and Small Hidden*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-display-md-lg(){
+.enc-flex-display-md-lg(){
 	.enc-hidden-xs();
 	.enc-hidden-sm();
-	.enc-display-md();
-	.enc-display-lg();
+	.enc-block-md();
+	.enc-block-lg();
 }
 
 /*##############################################################################*/
@@ -125,9 +129,9 @@
 /*Grouped Display, Medium and Large Hidden*/
 /*##############################################################################*/
 /*##############################################################################*/
-.enc-display-xs-sm(){
-	.enc-display-xs();
-	.enc-display-sm();
+.enc-flex-display-xs-sm(){
+	.enc-block-xs();
+	.enc-block-sm();
 	.enc-hidden-md();
 	.enc-hidden-lg();
 }
