@@ -17,14 +17,14 @@ function encHover($elementCSSPath, $activeClass, $nonActiveClass) {
 	});
 }
 
-function encHoverAddClass(element, class) {
+function encHoverAddClass(element, activeClass) {
 	$(window).on("load resize scroll",function(e){
 		$(element).hover(
 			function () {
-				$(this).addClass(class);
+				$(this).addClass(activeClass);
 			}, 
 			function () {
-				$(this).removeClass(class);
+				$(this).removeClass(activeClass);
 			}
 		)
 	});
