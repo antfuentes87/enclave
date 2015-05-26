@@ -26,6 +26,22 @@ function encHoverAddClass(element, activeClass) {
 			function () {
 				$(this).removeClass(activeClass);
 			}
-		)
+		);
+	});
+}
+
+function encHoverAddClassSub(elementA, elementB, activeClass, nonActiveClass) {
+	$(window).on("load resize scroll",function(e){
+		$(elementB).addClass(nonActiveClass);
+		$(elementA).hover(
+			function () {
+				$(elementB).removeClass(nonActiveClass);
+				$(elementB).addClass(activeClass);
+			}, 
+			function () {
+				$(elementB).removeClass(activeClass);
+				$(elementB).addClass(nonActiveClass);
+			}
+		);
 	});
 }
