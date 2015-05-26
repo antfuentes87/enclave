@@ -30,3 +30,12 @@ function encParallellHeight(elementA, elementB, elementRatio){
 		$(elementB).css("margin-top", elementBMarginTop);
 	});
 }
+
+function encSetHeightMinusPadding(outsideElement, paddingElement, insideElement){
+	$(window).on("load resize scroll",function(e){
+		var paddingElementValue = $(paddingElement).css("padding");
+		$(insideElement).css("height", outsideElement - paddingElementValue);
+	});
+}
+
+
