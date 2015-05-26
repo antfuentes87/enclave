@@ -16,3 +16,16 @@ function encHover($elementCSSPath, $activeClass, $nonActiveClass) {
 		});
 	});
 }
+
+function encHoverAddClass(element, class) {
+	$(window).on("load resize scroll",function(e){
+		$(element).hover(
+			function () {
+				$(this).addClass(class);
+			}, 
+			function () {
+				$(this).removeClass(class);
+			}
+		)
+	});
+}
