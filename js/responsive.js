@@ -83,7 +83,7 @@ function encSetSameHeightMinusMargin(elementA, elementB){
 	});
 }
 
-encFlexGridHeight = function(container){
+function encFlexGridHeight(container){
 	var currentTallest = 0,
 	currentRowStart = 0,
 	rowDivs = new Array(),
