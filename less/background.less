@@ -12,3 +12,12 @@ Create a background with rgb -- this will allow to set the transparency of the e
 		filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
 	}
 }
+
+.enc-img-background-color(@color, @opacity){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	box-shadow: inset 0 0 0 1000px @rgba-color;
+	-webkit-box-shadow: inset 0 0 0 1000px @rgba-color;
+	-moz-box-shadow: inset 0 0 0 1000px @rgba-color;
+	-ms-box-shadow: inset 0 0 0 1000px @rgba-color;
+	-o-box-shadow: inset 0 0 0 1000px @rgba-color;
+}
