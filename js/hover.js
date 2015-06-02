@@ -8,7 +8,7 @@ function encHoverClassActiveNotActive(element, activeClass, notActiveClass) {
 		});
 		$(element).hover(function() {
 			var elementNot = element + ':not(.' + activeClass + ')';
-			$(elementNot).addClass($notActiveClass);
+			$(elementNot).addClass(notActiveClass);
 		},
 		function(){
 			var elementNot = element + ':not(.' + activeClass + ')';
