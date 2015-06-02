@@ -1,47 +1,43 @@
-function encHover($elementCSSPath, $activeClass, $nonActiveClass) {
+function encHoverClassActiveNotActive(element, activeClass, notActiveClass) {
    $(function(){
-		$($elementCSSPath).click(function() {
-			$(this).addClass($activeClass);
+		$(element).hover(function() {
+			$(this).addClass(activeClass);
 		},
 		function(){
-			$(this).removeClass($activeClass);
+			$(this).removeClass(activeClass);
 		});
-		$($elementCSSPath).click(function() {
-			var fullPath = $elementCSSPath + ':not(.' + $activeClass + ')';
-			$(fullPath).addClass($nonActiveClass);
+		$(element).hover(function() {
+			var elementNot = element + ':not(.' + activeClass + ')';
+			$(elementNot).addClass($notActiveClass);
 		},
 		function(){
-			var fullPath = $elementCSSPath + ':not(.' + $activeClass + ')';
-			$(fullPath).removeClass($nonActiveClass);
+			var elementNot = element + ':not(.' + activeClass + ')';
+			$(elementNot).removeClass(notActiveClass);
 		});
 	});
 }
 
-function encHoverAddClass(element, activeClass) {
-	$(window).on("load resize scroll",function(e){
-		$(element).hover(
-			function () {
-				$(this).addClass(activeClass);
-			}, 
-			function () {
-				$(this).removeClass(activeClass);
-			}
-		);
-	});
+function encHoverClassActive(element, activeClass) {
+	$(element).hover(
+		function () {
+			$(this).addClass(activeClass);
+		}, 
+		function () {
+			$(this).removeClass(activeClass);
+		}
+	);
 }
 
 function encHoverAddClassSub(elementA, elementB, activeClass, nonActiveClass) {
-	$(window).on("load resize scroll",function(e){
-		$(elementB).addClass(nonActiveClass);
-		$(elementA).hover(
-			function () {
-				$(elementB).removeClass(nonActiveClass);
-				$(elementB).addClass(activeClass);
-			}, 
-			function () {
-				$(elementB).removeClass(activeClass);
-				$(elementB).addClass(nonActiveClass);
-			}
-		);
-	});
+	$(elementB).addClass(nonActiveClass);
+	$(elementA).hover(
+		function () {
+			$(elementB).removeClass(nonActiveClass);
+			$(elementB).addClass(activeClass);
+		}, 
+		function () {
+			$(elementB).removeClass(activeClass);
+			$(elementB).addClass(nonActiveClass);
+		}
+	);
 }
