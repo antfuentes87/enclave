@@ -28,7 +28,7 @@ function encHoverClassActive(element, activeClass) {
 	);
 }
 
-function encHoverAddClassSub(elementA, elementB, activeClass, nonActiveClass) {
+function encHoverAddClassRemoveClass(elementA, elementB, activeClass, nonActiveClass) {
 	$(elementB).addClass(nonActiveClass);
 	$(elementA).hover(
 		function () {
