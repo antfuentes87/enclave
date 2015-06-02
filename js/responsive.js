@@ -41,7 +41,6 @@ function  encAllHeightsEqualElementA_MinusPadding(elementA, elementB){
 		}else{
 			var elementAPadding = elementAPaddingBottom;
 		}
-	}		
 	}else if(elementAPaddingRight != ""){
 		var elementAPadding = elementAPaddingRight;
 	}else if(elementAPaddingLeft != ""){
