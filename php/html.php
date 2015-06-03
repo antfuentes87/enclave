@@ -1,17 +1,29 @@
-function enc_HTMLParagraphs($paragraphs){
-	foreach($paragraphs as $paragraphsKey => $paragraphsValue){
-		echo '<p>'.$paragraphsValue.'</p>';
+/*SECTION ARRAY EXAMPLE*/
+/*
+$whatHomeTeaser = array(
+	"id" => "what-home-teaser",
+	"title" => "The Red Carpet",
+	"subTitle" => "Experience",
+	"buttonText" => "Reading",
+	"buttonLink" => "google.com",
+	"figurePage" => "replaceHTML"
+);
+*/
+
+function enc_HTMLParagraphs($sectionArray, $array){
+	foreach($array as $arrayKey => $arrayValue){
+		echo '<p class="'.$sectionArray[id].'-p">'.$arrayValue.'</p>';
 	}
 }
 
 function enc_HTMLButton($array){
-	echo '<a href="'.$array[buttonLink].'" id="'.$array[id].'-button" class="'.$array[id].'-button uk-button uk-button-link">';
+	echo '<a href="'.$array[buttonLink].'" class="'.$array[id].'-button">';
 		echo $array[buttonText];
 	echo '</a>';
 }
 
 function encHTML_HGroup($array, $titleHeadingNumber, $subTitleHeadingNumber){
-	echo '<hgroup id="'.$array[id].'-hgroup" class="'.$array[id].'-hgroup">';
+	echo '<hgroup class="'.$array[id].'-hgroup">';
 		echo '<h'.$titleHeadingNumber.'>';
 			echo $array[title];
 		echo '</h'.$titleHeadingNumber.'>';
@@ -21,20 +33,8 @@ function encHTML_HGroup($array, $titleHeadingNumber, $subTitleHeadingNumber){
 	echo '</hgroup>';
 }
 
-function encHTML_ImageHoverOverlay($sectionArray, $array){
-	echo '<div class="uk-overlay uk-overlay-hover">';
-		echo '<img src="'.$array[image].'" id="'.$sectionArray[id].'-image" />';
-		echo '<img src="'.$array[imageHover].'" id="'.$sectionArray[id].'-imageHover" class="uk-overlay-panel uk-overlay-image uk-overlay-fade" />';
-		echo '<a class="uk-position-cover"></a>';
-	echo '</div>';
-}
-
-function encHTML_SlideShow($sectionArray, $array){
-	echo '<ul class="uk-slideshow uk-slideshow-fullscreen" data-uk-slideshow="{'.$sectionArray[slideShowSettings].'}">';
-		foreach ($array as $arrayKey => $arrayValue){
-			echo '<li>';
-				echo '<img src="'.$arrayValue.'" />';
-			echo '</li>';
-		}
-	echo '</ul>';
+function encHTML_Require($sectionArray, $arraySize, $page){
+	for ($key = 0; $key <= $arraySize; $key++) {
+    	require($sectionArray[$page].'.php');
+	}
 }
