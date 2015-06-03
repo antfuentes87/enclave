@@ -23,12 +23,17 @@ function  encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
 	$(elementB).css("margin-top", elementBMarginTop);
 }
 
-function  encAllHeightsEqualElementA_MinusPadding(elementA, elementB){
+function encAllHeightsEqualElementA_MinusPadding(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	var elementAPaddingTop = $(elementA).css("padding-top").replace("px", "");
 	var elementAPaddingRight = $(elementA).css("padding-right").replace("px", "");
 	var elementAPaddingBottom = $(elementA).css("padding-bottom").replace("px", "");
 	var elementAPaddingLeft = $(elementA).css("padding-left").replace("px", "");
+	var elementAPaddingTop = Math.floor(elementAPaddingTop);
+  	var elementAPaddingRight = Math.floor(elementAPaddingRight);
+  	var elementAPaddingBottom = Math.floor(elementAPaddingBottom);
+  	var elementAPaddingLeft = Math.floor(elementAPaddingLeft);
+  
 	if(elementAPaddingTop != ""){
 		if(elementAPaddingBottom != ""){
 			var elementAPadding = elementAPaddingTop + elementAPaddingBottom;	
@@ -46,40 +51,20 @@ function  encAllHeightsEqualElementA_MinusPadding(elementA, elementB){
 	}else if(elementAPaddingLeft != ""){
 		var elementAPadding = elementAPaddingLeft;
 	}
-	$(elementB).height(elementAHeight - elementAPadding);
+  	$(elementB).height(elementAHeight - elementAPadding);
 }
 
-function encEvenMarginFourElements(margin, elementA, elementB, elementC, elementD){
-	var marginHalfPx = margin.replace("px", '');
-	var marginHalf = Math.floor(marginHalfPx) / 2;
-
-	$(elementA).css("margin-top", margin);
-	$(elementA).css("margin-bottom", marginHalf);
-	$(elementA).css("margin-left", margin);
-	$(elementA).css("margin-right", marginHalf);
-
-	$(elementB).css("margin-top", margin);
-	$(elementB).css("margin-bottom", marginHalf);
-	$(elementB).css("margin-left", marginHalf);
-	$(elementB).css("margin-right", margin);
-
-	$(elementC).css("margin-top", marginHalf);
-	$(elementC).css("margin-bottom", margin);
-	$(elementC).css("margin-left", margin);
-	$(elementC).css("margin-right", marginHalf);
-
-	$(elementD).css("margin-top", marginHalf);
-	$(elementD).css("margin-bottom", margin);
-	$(elementD).css("margin-left", marginHalf);
-	$(elementD).css("margin-right", margin);
-}
-
-function  encAllHeightsEqualElementA_MinusMargin(elementA, elementB){
+function encAllHeightsEqualElementA_MinusMargin(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	var elementAMarginTop = $(elementA).css("margin-top").replace("px", "");
 	var elementAMarginRight = $(elementA).css("margin-right").replace("px", "");
 	var elementAMarginBottom = $(elementA).css("margin-bottom").replace("px", "");
 	var elementAMarginLeft = $(elementA).css("margin-left").replace("px", "");
+	var elementAMarginTop = Math.floor(elementAMarginTop);
+  	var elementAMarginRight = Math.floor(elementAMarginRight);
+  	var elementAMarginBottom = Math.floor(elementAMarginBottom);
+  	var elementAMarginLeft = Math.floor(elementAMarginLeft);
+  
 	if(elementAMarginTop != ""){
 		if(elementAMarginBottom != ""){
 			var elementAMargin = elementAMarginTop + elementAMarginBottom;	
@@ -92,13 +77,33 @@ function  encAllHeightsEqualElementA_MinusMargin(elementA, elementB){
 		}else{
 			var elementAMargin = elementAMarginBottom;
 		}
-	}		
 	}else if(elementAMarginRight != ""){
 		var elementAMargin = elementAMarginRight;
 	}else if(elementAMarginLeft != ""){
 		var elementAMargin = elementAMarginLeft;
 	}
-	$(elementB).height(elementAHeight - elementAMargin);
+  	$(elementB).height(elementAHeight - elementAMargin);
+}
+
+function encEvenMarginFourElements(margin, elementA, elementB, elementC, elementD){
+	var marginHalfPx = margin.replace("px", '');
+	var marginHalf = Math.floor(marginHalfPx) / 2;
+	$(elementA).css("margin-top", margin);
+	$(elementA).css("margin-bottom", marginHalf);
+	$(elementA).css("margin-left", margin);
+	$(elementA).css("margin-right", marginHalf);
+	$(elementB).css("margin-top", margin);
+	$(elementB).css("margin-bottom", marginHalf);
+	$(elementB).css("margin-left", marginHalf);
+	$(elementB).css("margin-right", margin);
+	$(elementC).css("margin-top", marginHalf);
+	$(elementC).css("margin-bottom", margin);
+	$(elementC).css("margin-left", margin);
+	$(elementC).css("margin-right", marginHalf);
+	$(elementD).css("margin-top", marginHalf);
+	$(elementD).css("margin-bottom", margin);
+	$(elementD).css("margin-left", marginHalf);
+	$(elementD).css("margin-right", margin);
 }
 
 function encAllHeightsEqualElement_Tallest(container){
