@@ -5,17 +5,17 @@ function encVerticalCenter(outerElement, innerElement, innerElementContent){
 	$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
 }
 
-function  encAllHeightsEqualElementA(elementA, elementB){
+function encAllHeightsEqualElementA(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).height(elementAHeight);
 }
 
-function  encAllHeightsEqualElementA_Half(elementA, elementB){
+function encAllHeightsEqualElementA_Half(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).height(elementAHeight / 2);
 }
 
-function  encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
+function encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
 	var elementAHeight = $(elementA).height();
 	var elementBHeight = elementAHeight / elementOffset;
 	var elementBMarginTop = elementAHeight - elementBHeight;
