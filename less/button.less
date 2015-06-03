@@ -1,46 +1,31 @@
-/*Create a btn using padding to set the width / height*/
-.enc-create-btn(@border-width, @border-style, @border-color, @border-radius,
-@background-color, @background-opacity,
-@color, @font-size, 
-@padding-vertical, @padding-horizontal,
-@line-height)
-{
-	.enc-create-border(@border-width, @border-style, @border-color, @border-radius);
-	.enc-background-rgb(@background-color, @background-opacity);
-	color: @color;
-	font-size: @font-size;
-	padding: @padding-vertical @padding-horizontal;
-	line-height: @line-height;
-}
-
-.enc-flex-btn(@font-size: 12px, 
-	@font-size-ratio: 1, 
-	@line-height: 12px, 
-	@line-height-ratio: 1,
+.enc-flex-btn(@font-size: 1rem, 
+	@font-size-ratio: 0.01, 
+	@line-height: 1.1rem, 
+	@line-height-ratio: 0.01,
 	@bg-color: #000000,
 	@bg-color-opacity: 1,
 	@color: #FFFFFF,
 	@color-opacity: 1,
-	@border-width: 1px,
+	@border-width: 0.01rem,
 	@border-style: solid,
 	@border-color: #333333,
-	@border-radius: 1px,
+	@border-radius: 0.01rem,
 	@color-hover: #FFFFFF,
 	@color-opacity-hover: 1,
 	@bg-color-hover: #000000,
 	@bg-color-opacity-hover: 1,
-	@border-width-hover: 2px,
+	@border-width-hover: 0.01rem,
 	@border-style-hover: solid,
 	@border-color-hover: #FFFFFF,
-	@border-radius-hover: 2px,
-	@padding-top: 1px,
-	@padding-top-ratio: 1,
-	@padding-bottom: 1px,
-	@padding-bottom-ratio: 1,
-	@padding-left: 1px,
-	@padding-left-ratio: 1,
-	@padding-right: 1px,
-	@padding-right-ratio: 1,
+	@border-radius-hover: 0.01rem,
+	@padding-top: 0.1rem,
+	@padding-top-ratio: 0.01,
+	@padding-bottom: 0.1rem,
+	@padding-bottom-ratio: 0.01,
+	@padding-left: 0.1rem,
+	@padding-left-ratio: 0.01,
+	@padding-right: 0.1rem,
+	@padding-right-ratio: 0.01,
 	@transition-duration: 1s,
 	@transition-ease: ease-in-out){
 	.enc-color-rgb(@color, @color-opacity);
