@@ -1,3 +1,4 @@
+<?php
 /*SECTION ARRAY EXAMPLE*/
 /*
 $whatHomeTeaser = array(
@@ -38,3 +39,4 @@ function encHTML_Require($sectionArray, $arraySize, $page){
     	require($sectionArray[$page].'.php');
 	}
 }
+?>
