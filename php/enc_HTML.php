@@ -14,6 +14,13 @@ class enc_HTML{
 	public function test(){
 		echo 'Everything is working.';
 	}
+	
+	public function paragraph($sectionArray, $paragraphName){
+		echo '<p id="'.$sectionArray['id'].'-'.$paragraphName.'" class="'.$sectionArray['id'].'-p">';
+			echo $sectionArray[$paragraphName];
+		echo '</p>';
+	}
+	
 	public function paragraphs($sectionArray, $array){
 		foreach($array as $arrayKey => $arrayValue){
 			echo '<p class="'.$sectionArray[id].'-p">'.$arrayValue.'</p>';
