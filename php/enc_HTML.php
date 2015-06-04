@@ -15,8 +15,12 @@ class enc_HTML{
 		echo 'Everything is working.';
 	}
 	
-	public function setID($sectionArray){
+	public function sectionID($sectionArray){
 		echo 'id="'.$sectionArray['id'].'"';
+	}
+	
+	public function setID($sectionArray, $id){
+		echo 'id="'.$sectionArray['id'].'-'.$id.'"';
 	}
 	
 	public function backgroundImage($sectionArray, $backgroundImage){
