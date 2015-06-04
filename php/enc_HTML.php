@@ -20,7 +20,7 @@ class enc_HTML{
 	}
 	
 	public function backgroundImage($sectionArray, $backgroundImage){
-		echo 'style="background-image(url('.$backgroundImage.'))"';
+		echo 'style="background-image(url('.$sectionArray[$backgroundImage].'))"';
 	}
 	
 	public function paragraph($sectionArray, $paragraphName){
