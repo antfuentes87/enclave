@@ -23,6 +23,12 @@ class enc_HTML{
 		echo 'id="'.$sectionArray['id'].'-'.$id.'"';
 	}
 	
+	public function span($sectionArray, $text){
+		echo '<span class="'.$sectionArray['id'].'-'.$text.'">';
+			echo $sectionArray[$text];
+		echo '</span>'
+	}
+	
 	public function backgroundImage($sectionArray, $backgroundImage){
 		echo 'style="background-image: url('.$sectionArray[$backgroundImage].')"';
 	}
