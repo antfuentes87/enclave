@@ -28,7 +28,7 @@ class enc_HTML{
 	}
 	
 	public function heading($sectionArray, $heading, $headingNumber){
-		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h" id="'.$sectionArray['id'].'-h'.$headingNumber.'">';
+		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h'.$headingNumber.'" id="'.$sectionArray['id'].'-h'.$headingNumber.'">';
 			echo $sectionArray[$heading];
 		echo '</h'.$headingNumber.'>';
 	}
