@@ -46,7 +46,7 @@ class enc_HTML{
 
 	public function repeat($sectionArray, $arraySize, $page, $pathPath){
 		for ($key = 0; $key <= $arraySize; $key++) {
-			require($pagePath.$sectionArray[$page].'.php');
+			require($sectionArray[$pagePath].$sectionArray[$page].'.php');
 		}
 	}
 }
