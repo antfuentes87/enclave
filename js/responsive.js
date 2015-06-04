@@ -1,3 +1,19 @@
+function encFlexWidthCenter(elementA, elementB, xs, sm, md, lg){
+	var elementAWidth = $(elementA).width();
+	$(elementB).css("margin", "0 auto");
+	$(elementB).css("display", "block");
+	if (window.matchMedia("(max-width: 767px)").matches){
+		$(elementB).width(elementAWidth / xs);
+		console.log(elementAWidth / xs);
+	}else if(window.matchMedia("(max-width: 1023px)").matches){
+		$(elementB).width(elementAWidth / sm);
+	}else if(window.matchMedia("(max-width: 1365px)").matches){
+		$(elementB).width(elementAWidth / md);
+	}else if(window.matchMedia("(max-width: 1920px)").matches){
+		$(elementB).width(elementAWidth / lg);
+	}
+}
+
 function encVerticalCenter(outerElement, innerElement, innerElementContent){
 	var outerElementHeight = $(outerElement).height();
 	var innerElementContentHeight = $(innerElementContent).height();
