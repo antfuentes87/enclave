@@ -26,6 +26,12 @@ class enc_HTML{
 			echo '<p class="'.$sectionArray[id].'-p">'.$arrayValue.'</p>';
 		}
 	}
+	
+	public function heading($sectionArray, $heading, $headingNumber){
+		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h" id="'.$sectionArray['id'].'-h'.$headingNumber.'">';
+			echo $sectionArray[$heading];
+		echo '</h'.$headingNumber.'>';
+	}
 
 	public function button($array){
 		echo '<a href="'.$array[buttonLink].'" class="'.$array[id].'-button">';
