@@ -11,6 +11,9 @@ $whatHomeTeaser = array(
 */
 
 class enc_HTML{
+	public function test(){
+		echo 'Everything is working.';
+	}
 	public function paragraphs($sectionArray, $array){
 		foreach($array as $arrayKey => $arrayValue){
 			echo '<p class="'.$sectionArray[id].'-p">'.$arrayValue.'</p>';
