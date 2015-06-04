@@ -15,6 +15,10 @@ class enc_HTML{
 		echo 'Everything is working.';
 	}
 	
+	public function setID($sectionArray, $id){
+		echo $sectionArray[$id];
+	}
+	
 	public function backgroundImage($sectionArray, $backgroundImage){
 		echo 'style="background-image(url('.$backgroundImage.'))"';
 	}
