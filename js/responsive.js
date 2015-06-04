@@ -1,7 +1,7 @@
-function encFlexFont(elementA, elementB, ratio){
+function encFlexFont(elementA, elementB, fontRatio, lineheightRatio){
 	var elementAHeight = $(elementA).height();
-	$(elementB).css("font-size", elementAHeight / ratio);
-	$(elementB).css("line-height", ratio * 8 + 'px');
+	$(elementB).css("font-size", elementAHeight / fontRatio);
+	$(elementB).css("line-height", elementAHeight / lineheightRatio);
 }
 
 function encFlexPaddingTopBottom(elementA, elementB){
