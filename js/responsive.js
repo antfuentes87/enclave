@@ -2,7 +2,7 @@ function encMarginNegativeVerticalCenter(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	var elementBHeight = $(elementB).height();
 	var elementBMargin = elementAHeight - elementBHeight;
-	$(elementBMargin).css("margin-top", -elementBMargin);
+	$(elementB).css("vertical-align", elementBMargin / 4);
 }
 
 function encFlexWidthCenter(elementA, elementB, xs, sm, md, lg){
