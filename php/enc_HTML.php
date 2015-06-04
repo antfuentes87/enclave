@@ -16,7 +16,7 @@ class enc_HTML{
 	}
 	
 	public function setID($sectionArray){
-		echo $sectionArray['id'];
+		echo 'id="'.$sectionArray['id'].'"';
 	}
 	
 	public function backgroundImage($sectionArray, $backgroundImage){
