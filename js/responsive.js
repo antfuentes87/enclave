@@ -1,3 +1,9 @@
+function encFlexPaddingTopBottom(elementA, elementB){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("padding-top", elementAHeight / 4);
+	$(elementB).css("padding-bottom", elementAHeight / 8);	
+}
+
 function encMarginNegativeVerticalCenter(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	var elementBHeight = $(elementB).height();
