@@ -26,7 +26,7 @@ class enc_HTML{
 	public function span($sectionArray, $text){
 		echo '<span class="'.$sectionArray['id'].'-'.$text.'">';
 			echo $sectionArray[$text];
-		echo '</span>'
+		echo '</span>';
 	}
 	
 	public function backgroundImage($sectionArray, $backgroundImage){
