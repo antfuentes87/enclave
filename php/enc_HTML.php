@@ -1,5 +1,4 @@
 <?php
-/*SECTION ARRAY EXAMPLE*/
 /*
 $whatHomeTeaser = array(
 	"id" => "what-home-teaser",
