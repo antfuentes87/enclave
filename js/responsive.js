@@ -52,12 +52,12 @@ function encAllWidthsEqualElementA_Half(elementA, elementB){
 
 function encAllHeightsEqualElementA(elementA, elementB){
 	var elementAHeight = $(elementA).height();
-	$(elementB).height(elementAHeight);
+	$(elementB).css("min-height", elementAHeight);
 }
 
 function encAllHeightsEqualElementA_Half(elementA, elementB){
 	var elementAHeight = $(elementA).height();
-	$(elementB).height(elementAHeight / 2);
+	$(elementB).css("min-height", elementAHeight / 2);
 }
 
 function encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
