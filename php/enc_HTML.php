@@ -44,9 +44,9 @@ class enc_HTML{
 		echo '</hgroup>';
 	}
 
-	public function repeat($sectionArray, $arraySize, $page){
+	public function repeat($sectionArray, $arraySize, $page, $pathPath){
 		for ($key = 0; $key <= $arraySize; $key++) {
-			require($sectionArray[$page].'.php');
+			require($pagePath.$sectionArray[$page].'.php');
 		}
 	}
 }
