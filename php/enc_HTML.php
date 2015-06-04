@@ -15,6 +15,10 @@ class enc_HTML{
 		echo 'Everything is working.';
 	}
 	
+	public function backgroundImage($sectionArray, $backgroundImage){
+		echo 'style="background-image(url('.$backgroundImage.'))"';
+	}
+	
 	public function paragraph($sectionArray, $paragraphName){
 		echo '<p id="'.$sectionArray['id'].'-'.$paragraphName.'" class="'.$sectionArray['id'].'-p">';
 			echo $sectionArray[$paragraphName];
