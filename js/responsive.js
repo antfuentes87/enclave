@@ -28,6 +28,16 @@ function encVerticalCenter(outerElement, innerElement, innerElementContent){
 	$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
 }
 
+function encAllWidthsEqualElementA(elementA, elementB){
+	var elementAHeight = $(elementA).width();
+	$(elementB).width(elementAHeight);
+}
+
+function encAllWidthsEqualElementA_Half(elementA, elementB){
+	var elementAHeight = $(elementA).width();
+	$(elementB).width(elementAHeight / 2);
+}
+
 function encAllHeightsEqualElementA(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).height(elementAHeight);
