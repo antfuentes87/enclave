@@ -50,7 +50,7 @@ class enc_HTML{
 		echo '</hgroup>';
 	}
 
-	public function repeat($sectionArray, $arraySize, $page, $pathPath){
+	public function repeat($sectionArray, $arraySize, $page, $pagePath){
 		for ($key = 0; $key <= $arraySize; $key++) {
 			require($sectionArray[$pagePath].$sectionArray[$page].'.php');
 		}
