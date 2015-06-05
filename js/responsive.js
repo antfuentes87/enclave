@@ -50,14 +50,24 @@ function encAllWidthsEqualElementA_Half(elementA, elementB){
 	$(elementB).width(elementAHeight / 2);
 }
 
-function encAllHeightsEqualElementA(elementA, elementB){
+function encAllMinHeightsEqualElementA(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).css("min-height", elementAHeight);
 }
 
-function encAllHeightsEqualElementA_Half(elementA, elementB){
+function encAllMinHeightsEqualElementA_Half(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).css("min-height", elementAHeight / 2);
+}
+
+function encAllHeightsEqualElementA(elementA, elementB){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("height", elementAHeight);
+}
+
+function encAllHeightsEqualElementA_Half(elementA, elementB){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("height", elementAHeight / 2);
 }
 
 function encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
