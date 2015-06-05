@@ -1,13 +1,12 @@
-function encAddClassWindowHeight_Half($startClass, $endClass){
-	var header = $($startClass);
+function encAddClassWindowHeight_Half(startClass, endClass){
+	var header = $(startClass);
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-				var windowHeight = $(window).height();
+	var windowHeight = $(window).height();
         if (scroll >= windowHeight) {
-            header.addClass($endClass);
-					console.log(scroll);
+            header.addClass(endClass);
         } else {
-            header.removeClass($endClass);
+            header.removeClass(endClass);
         }
     });
 }
