@@ -15,6 +15,14 @@ class enc_HTML{
 		echo 'Everything is working.';
 	}
 	
+	public function link($sectionArray, $linkText, $linkURL, $before, $after){
+		echo $before;
+		echo '<a href="'.$sectionArray[$linkURL].'" class="'.$sectionArray['id'].'">';
+			echo $sectionArray[$linkText];
+		echo '</a>';
+		echo $after;
+	}
+	
 	public function sectionID($sectionArray){
 		echo 'id="'.$sectionArray['id'].'"';
 	}
