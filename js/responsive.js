@@ -1,3 +1,17 @@
+function encAddClassWindowHeight_Half($startClass, $endClass){
+	var header = $($startClass);
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+				var windowHeight = $(window).height();
+        if (scroll >= windowHeight) {
+            header.addClass($endClass);
+					console.log(scroll);
+        } else {
+            header.removeClass($endClass);
+        }
+    });
+}
+
 function encFlexFont(elementA, elementB, fontRatio, lineheightRatio){
 	var elementAWidth = $(elementA).width();
 	$(elementB).css("font-size", elementAWidth / fontRatio);
