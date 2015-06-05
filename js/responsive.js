@@ -3,7 +3,7 @@ function encAddClassWindowHeight_Half(startClass, endClass){
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 	var windowHeight = $(window).height();
-        if (scroll >= windowHeight) {
+        if (scroll >= windowHeight / 2) {
             header.addClass(endClass);
         } else {
             header.removeClass(endClass);
