@@ -1,9 +1,12 @@
-function encAddClassWindowHeight_Half(startClass, endClass){
+function encAddClassScrollWindowHeight_Half(startClass, endClass, minusClass){
 	var header = $(startClass);
+	var minusClassHeight = $(minusClass).height();
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 	var windowHeight = $(window).height();
-        if (scroll >= windowHeight / 2) {
+	var windowHeightDivide = windowHeight / 2;
+	var windowHeightMinus = windowHeightDivide - minusClassHeight;
+        if (scroll >= windowHeightMinus) {
             header.addClass(endClass);
         } else {
             header.removeClass(endClass);
