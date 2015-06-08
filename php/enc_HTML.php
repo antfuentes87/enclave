@@ -9,7 +9,6 @@ $whatHomeTeaser = array(
 	"figurePage" => "replaceHTML"
 );
 */
-
 class enc_HTML{
 	public function test(){
 		echo 'Everything is working.';
@@ -58,13 +57,11 @@ class enc_HTML{
 			echo $sectionArray[$heading];
 		echo '</h'.$headingNumber.'>';
 	}
-
 	public function button($array){
 		echo '<a href="'.$array[buttonLink].'" class="'.$array[id].'-button">';
 			echo $array[buttonText];
 		echo '</a>';
 	}
-
 	public function hGroup($array, $titleHeadingNumber, $subTitleHeadingNumber){
 		echo '<hgroup class="'.$array[id].'-hgroup">';
 			echo '<h'.$titleHeadingNumber.'>';
@@ -75,7 +72,6 @@ class enc_HTML{
 			echo '</h'.$subTitleHeadingNumber.'>';
 		echo '</hgroup>';
 	}
-
 	public function repeat($sectionArray, $arraySize, $page, $pagePath){
 		for ($key = 0; $key <= $arraySize; $key++) {
 			require($sectionArray[$pagePath].$sectionArray[$page].'.php');
@@ -102,12 +98,11 @@ class enc_HTML{
 	public function image($sectionArray, $src, $alt){
 		echo '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
 	}
-	public function joomlaQueryArray($table, $order, $limit){
+	public function joomlaQueryArray($table, $col, $order, $limit){
 		$db = JFactory::getDbo();
-
 		$query = $db->getQuery(true);
 	
-		$query->select($db->quoteName(array('id', 'asset_id', 'title', 'alias', 'introtext', 'fulltext', 'state', 'catid', 'created', 'created_by', 'created_by_alias', 'modified', 'modified_by', 'checked_out', 'checked_out_time', 'publish_up', 'publish_down', 'images', 'urls', 'attribs', 'version', 'ordering', 'metakey', 'metadesc', 'access', 'hits', 'metadata', 'featured', 'language', 'xreference')));
+		$query->select($db->quoteName($col));
 		$query->from($db->quoteName('#__'.$table));
 		$query->order('ordering '.$order);
 		$query->setLimit($limit);
