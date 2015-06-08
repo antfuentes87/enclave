@@ -97,9 +97,10 @@ class enc_HTML{
 			$required = "";
 		}
 		echo '<textarea id="'.$id.'" class="'.$sectionArray["id"].'-input" name="'.$name.'" cols="'.$colums.'" rows="'.$rows.'" '.$required.'>';
+		echo '</textarea>';
 	}
 	public function image($sectionArray, $src, $alt){
-		echo '<img class="'.$sectionArray[id].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
+		echo '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
 	}
 }
 ?>
