@@ -87,7 +87,7 @@ class enc_HTML{
 		}else{
 			$required = "";
 		}
-		echo '<input id="'.$id.'" class="'.$sectionArray["id"]'-input" type ="'.$type.'" name="'.$name.'" '.$required.'>';
+		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" name="'.$name.'" '.$required.'>';
 		
 	}
 }
