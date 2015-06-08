@@ -81,5 +81,14 @@ class enc_HTML{
 			require($sectionArray[$pagePath].$sectionArray[$page].'.php');
 		}
 	}
+	public function input($sectionArray, $type, $id, $name, $required){
+		if($required == true){
+			$required = "required";
+		}else{
+			$required = "";
+		}
+		echo '<input id="'.$id.'" class="'.$sectionArray["id"]'-input" type ="'.$type.'" name="'.$name.'" '.$required.'>';
+		
+	}
 }
 ?>
