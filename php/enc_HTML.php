@@ -92,7 +92,7 @@ class enc_HTML{
 		}else{
 			$required = "";
 		}
-		echo '<textarea id="'.$id.'" class="'.$sectionArray["id"].'-input" name="'.$name.'" cols="'.$colums.'" rows="'.$rows.'" '.$required.'>';
+		echo '<textarea id="'.$id.'" class="'.$sectionArray["id"].'-text-area" name="'.$name.'" cols="'.$colums.'" rows="'.$rows.'" '.$required.'>';
 		echo '</textarea>';
 	}
 	public function submit($sectionArray, $type, $id, $value){		
