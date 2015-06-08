@@ -90,6 +90,14 @@ class enc_HTML{
 		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" name="'.$name.'" '.$required.'>';
 		
 	}
+	public function textArea($sectionArray, $id, $name, $colums, $rows, $required){
+		if($required == true){
+			$required = "required";
+		}else{
+			$required = "";
+		}
+		echo '<textarea id="'.$id.'" class="'.$sectionArray["id"].'-input" name="'.$name.'" cols="'.$colums.'" rows="'.$rows.'" '.$required.'>';
+	}
 	public function image($sectionArray, $src, $alt){
 		echo '<img class="'.$sectionArray[id].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
 	}
