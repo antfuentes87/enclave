@@ -102,5 +102,26 @@ class enc_HTML{
 	public function image($sectionArray, $src, $alt){
 		echo '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
 	}
+	public function joomlaQueryArray($table, $order, $limit){
+		$db = JFactory::getDbo();
+
+		$query = $db->getQuery(true);
+	
+		$query->select($db->quoteName(array('id', 'asset_id', 'title', 'alias', 'introtext', 'fulltext', 'state', 'catid', 'created', 'created_by', 'created_by_alias', 'modified', 'modified_by', 'checked_out', 'checked_out_time', 'publish_up', 'publish_down', 'images', 'urls', 'attribs', 'version', 'ordering', 'metakey', 'metadesc', 'access', 'hits', 'metadata', 'featured', 'language', 'xreference')));
+		$query->from($db->quoteName('#__'.$table));
+		$query->order('ordering '.$order);
+		$query->setLimit($limit);
+		
+		$db->setQuery($query);
+	
+		$results = $db->loadObjectList();
+		return $results;
+	}
+	
+	public function repeatArray($sectionArray, $array, $page, $pagePath){
+		foreach ($array as $key => $value) {
+			require($sectionArray[$pagePath].$sectionArray[$page].'.php');
+		}
+	}
 }
 ?>
