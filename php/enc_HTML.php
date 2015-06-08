@@ -90,5 +90,8 @@ class enc_HTML{
 		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" name="'.$name.'" '.$required.'>';
 		
 	}
+	public function image($sectionArray, $src, $alt){
+		echo '<img class="'.$sectionArray[id].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
+	}
 }
 ?>
