@@ -159,22 +159,22 @@ function encAllHeightsEqualElementA_MinusMargin(elementA, elementB){
 function encEvenPaddingFourElements(padding, elementA, elementB, elementC, elementD){
 	var paddingHalfPx = padding.replace("px", '');
 	var paddingHalf = Math.floor(paddingHalfPx) / 2;
-	$(elementA).css("margin-top", padding);
-	$(elementA).css("margin-bottom", paddingHalf);
-	$(elementA).css("margin-left", padding);
-	$(elementA).css("margin-right", paddingHalf);
-	$(elementB).css("margin-top", padding);
-	$(elementB).css("margin-bottom", paddingHalf);
-	$(elementB).css("margin-left", paddingHalf);
-	$(elementB).css("margin-right", padding);
-	$(elementC).css("margin-top", paddingHalf);
-	$(elementC).css("margin-bottom", padding);
-	$(elementC).css("margin-left", padding);
-	$(elementC).css("margin-right", paddingHalf);
-	$(elementD).css("margin-top", paddingHalf);
-	$(elementD).css("margin-bottom", padding);
-	$(elementD).css("margin-left", paddingHalf);
-	$(elementD).css("margin-right", padding);
+	$(elementA).css("padding-top", padding);
+	$(elementA).css("padding-bottom", paddingHalf);
+	$(elementA).css("padding-left", padding);
+	$(elementA).css("padding-right", paddingHalf);
+	$(elementB).css("padding-top", padding);
+	$(elementB).css("padding-bottom", paddingHalf);
+	$(elementB).css("padding-left", paddingHalf);
+	$(elementB).css("padding-right", padding);
+	$(elementC).css("padding-top", paddingHalf);
+	$(elementC).css("padding-bottom", padding);
+	$(elementC).css("padding-left", padding);
+	$(elementC).css("padding-right", paddingHalf);
+	$(elementD).css("padding-top", paddingHalf);
+	$(elementD).css("padding-bottom", padding);
+	$(elementD).css("padding-left", paddingHalf);
+	$(elementD).css("padding-right", padding);
 }
 
 function encEvenMarginFourElements(margin, elementA, elementB, elementC, elementD){
