@@ -62,7 +62,12 @@ class enc_HTML{
 	
 	public function heading($sectionArray, $heading, $headingNumber){
 		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h'.$headingNumber.'" id="'.$sectionArray['id'].'-h'.$headingNumber.'">';
-			echo $sectionArray[$heading];
+			if (array_key_exists($heading, $sectionArray)){
+				echo $sectionArray[$heading];
+			}else{
+				echo $heading;
+			}
+			
 		echo '</h'.$headingNumber.'>';
 	}
 	public function button($array){
