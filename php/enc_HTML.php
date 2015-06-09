@@ -64,12 +64,18 @@ class enc_HTML{
 		}
 	}
 	
-	public function heading($sectionArray, $heading, $headingNumber){
-		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h'.$headingNumber.'" id="'.$sectionArray['id'].'-h'.$headingNumber.'">';
-			if (array_key_exists($heading, $sectionArray)){
+	public function heading($sectionArray, $heading, $headingNumber, $link){
+		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h'.$headingNumber.'">';
+			if($link <> ''){
+				echo '<a href="'.$link.'" class="'.$sectionArray['id'].'-link">';
+			}
+			if(array_key_exists($heading, $sectionArray)){
 				echo $sectionArray[$heading];
 			}else{
 				echo $heading;
+			}
+			if($link <> ''){
+				echo '</a>';
 			}
 			
 		echo '</h'.$headingNumber.'>';
