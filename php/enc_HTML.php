@@ -129,5 +129,9 @@ class enc_HTML{
 			require($sectionArray[$pagePath].$sectionArray[$page].'.php');
 		}
 	}
+	
+	public function string_formatDate($dateFormat, $dateKey){
+		return date($dateFormat, strtotime($dateKey));
+	}	
 }
 ?>
