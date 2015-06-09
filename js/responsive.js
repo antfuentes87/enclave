@@ -1,3 +1,45 @@
+function encPadding_EvenInner(margin, elementA, elementB, elementC, elementD){
+	var marginHalfPx = margin.replace("px", '');
+	var marginHalf = Math.floor(marginHalfPx) / 2;
+	$(elementA).css("padding-top", 0);
+	$(elementA).css("padding-bottom", marginHalf);
+	$(elementA).css("padding-left", 0);
+	$(elementA).css("padding-right", marginHalf);
+	$(elementB).css("padding-top", 0);
+	$(elementB).css("padding-bottom", marginHalf);
+	$(elementB).css("padding-left", marginHalf);
+	$(elementB).css("padding-right", 0);
+	$(elementC).css("padding-top", marginHalf);
+	$(elementC).css("padding-bottom", 0);
+	$(elementC).css("padding-left", 0);
+	$(elementC).css("padding-right", marginHalf);
+	$(elementD).css("padding-top", marginHalf);
+	$(elementD).css("padding-bottom", 0);
+	$(elementD).css("padding-left", marginHalf);
+	$(elementD).css("padding-right", 0);
+}
+
+function encMargin_EvenInner(margin, elementA, elementB, elementC, elementD){
+	var marginHalfPx = margin.replace("px", '');
+	var marginHalf = Math.floor(marginHalfPx) / 2;
+	$(elementA).css("margin-top", 0);
+	$(elementA).css("margin-bottom", marginHalf);
+	$(elementA).css("margin-left", 0);
+	$(elementA).css("margin-right", marginHalf);
+	$(elementB).css("margin-top", 0);
+	$(elementB).css("margin-bottom", marginHalf);
+	$(elementB).css("margin-left", marginHalf);
+	$(elementB).css("margin-right", 0);
+	$(elementC).css("margin-top", marginHalf);
+	$(elementC).css("margin-bottom", 0);
+	$(elementC).css("margin-left", 0);
+	$(elementC).css("margin-right", marginHalf);
+	$(elementD).css("margin-top", marginHalf);
+	$(elementD).css("margin-bottom", 0);
+	$(elementD).css("margin-left", marginHalf);
+	$(elementD).css("margin-right", 0);
+}
+
 function encAddClassScrollWindowHeight_Half(startClass, endClass, minusClass){
 	var header = $(startClass);
 	var minusClassHeight = $(minusClass).height();
