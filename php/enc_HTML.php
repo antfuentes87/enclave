@@ -77,26 +77,26 @@ class enc_HTML{
 			require($sectionArray[$pagePath].$sectionArray[$page].'.php');
 		}
 	}
-	public function input($sectionArray, $type, $id, $name, $required){
+	public function input($sectionArray, $type, $id, $placeHolder, $name, $required){
 		if($required == true){
 			$required = "required";
 		}else{
 			$required = "";
 		}
-		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" name="'.$name.'" '.$required.'>';
+		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" placeholder="'.$placeHolder.'" name="'.$name.'" '.$required.'>';
 		
 	}
-	public function textArea($sectionArray, $id, $name, $colums, $rows, $required){
+	public function textArea($sectionArray, $id, $name, $colums, $rows, $placeHolder, $required){
 		if($required == true){
 			$required = "required";
 		}else{
 			$required = "";
 		}
-		echo '<textarea id="'.$id.'" class="'.$sectionArray["id"].'-text-area" name="'.$name.'" cols="'.$colums.'" rows="'.$rows.'" '.$required.'>';
+		echo '<textarea id="'.$id.'" class="'.$sectionArray["id"].'-text-area" name="'.$name.'" cols="'.$colums.'" rows="'.$rows.'" placeholder="'.$placeHolder.'" '.$required.'>';
 		echo '</textarea>';
 	}
 	public function submit($sectionArray, $type, $id, $value){		
-		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" value="'.$value.'" '.$required.'>';		
+		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" value="'.$value.'">';		
 	}
 	public function image($sectionArray, $src, $alt){
 		echo '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
