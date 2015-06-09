@@ -107,7 +107,14 @@ class enc_HTML{
 		echo '<input id="'.$id.'" class="'.$sectionArray["id"].'-input" type ="'.$type.'" value="'.$value.'">';		
 	}
 	public function image($sectionArray, $src, $alt){
-		echo '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
+		if (array_key_exists($src, $sectionArray)){
+			if(array_key_exists($alt, $sectionArray)){
+				echo '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
+			}
+		}else{
+			echo '<img class="'.$sectionArray['id'].'-image" src="'.$src.'" alt="'.$alt.'"/>';
+		}
+		
 	}
 	public function joomlaQueryArray($table, $col, $where, $whereValue, $orderBy, $order, $limit){
 		$db = JFactory::getDbo();
