@@ -28,9 +28,9 @@
 	@padding-right-ratio: 0.01,
 	@transition-duration: 1s,
 	@transition-ease: ease-in-out){
-	.enc-color(@color, @color-opacity);
-	.enc-background(@bg-color, @bg-color-opacity);
-	.enc-create-border(@border-width, @border-style, @border-color, @border-radius);
+	.enc-font-color(@color, @color-opacity);
+	.enc-background-color(@bg-color, @bg-color-opacity);
+	.enc-border(@border-width, @border-style, @border-color, @border-radius);
 	.enc-flex-auto(font-size, @font-size, @font-size-ratio);
 	.enc-flex-auto(line-height, @line-height, @line-height-ratio);
 	.enc-flex-auto(padding-top, @padding-top, @padding-top-ratio);
@@ -39,8 +39,8 @@
 	.enc-flex-auto(padding-right, @padding-right, @padding-right-ratio);
 	.enc-transition(@transition-duration, @transition-ease);
 	&:hover{
-		.enc-color(@color-hover, @color-opacity-hover);
-		.enc-background(@bg-color-hover, @bg-color-opacity-hover);
-		.enc-create-border(@border-width-hover, @border-style-hover, @border-color-hover, @border-radius-hover);
+		.enc-font-color(@color-hover, @color-opacity-hover);
+		.enc-background-color(@bg-color-hover, @bg-color-opacity-hover);
+		.enc-border(@border-width-hover, @border-style-hover, @border-color-hover, @border-radius-hover);
 	}
 }
