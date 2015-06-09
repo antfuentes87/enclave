@@ -26,6 +26,10 @@ class enc_HTML{
 		echo 'id="'.$sectionArray['id'].'"';
 	}
 	
+	public function sectionClass($sectionArray){
+		echo 'class="'.$sectionArray['id'].'"';
+	}
+	
 	public function setID($sectionArray, $idExt){
 		echo 'id="'.$sectionArray['id'].'-'.$idExt.'"';
 	}
