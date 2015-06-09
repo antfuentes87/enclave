@@ -27,11 +27,11 @@ class enc_HTML{
 	}
 	
 	public function setID($sectionArray, $idExt){
-		echo 'id="'.$sectionArray['id'].'-'.$id.'"';
+		echo 'id="'.$sectionArray['id'].'-'.$idExt.'"';
 	}
 	
 	public function setClass($sectionArray, $classExt){
-		echo 'class="'.$sectionArray['id'].'-'.$id.'"';
+		echo 'class="'.$sectionArray['id'].'-'.$classExt.'"';
 	}
 	
 	public function span($sectionArray, $text){
