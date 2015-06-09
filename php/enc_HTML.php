@@ -143,7 +143,7 @@ class enc_HTML{
 	}
 	
 	public function string_formatDate($dateFormat, $dateKey){
-		return date($dateFormat, strtotime($dateKey));
+		echo date($dateFormat, strtotime($dateKey));
 	}	
 }
 ?>
