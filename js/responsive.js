@@ -156,6 +156,27 @@ function encAllHeightsEqualElementA_MinusMargin(elementA, elementB){
   	$(elementB).height(elementAHeight - elementAMargin);
 }
 
+function encEvenPaddingFourElements(padding, elementA, elementB, elementC, elementD){
+	var paddingHalfPx = padding.replace("px", '');
+	var paddingHalf = Math.floor(paddingHalfPx) / 2;
+	$(elementA).css("margin-top", padding);
+	$(elementA).css("margin-bottom", paddingHalf);
+	$(elementA).css("margin-left", padding);
+	$(elementA).css("margin-right", paddingHalf);
+	$(elementB).css("margin-top", padding);
+	$(elementB).css("margin-bottom", paddingHalf);
+	$(elementB).css("margin-left", paddingHalf);
+	$(elementB).css("margin-right", padding);
+	$(elementC).css("margin-top", paddingHalf);
+	$(elementC).css("margin-bottom", padding);
+	$(elementC).css("margin-left", padding);
+	$(elementC).css("margin-right", paddingHalf);
+	$(elementD).css("margin-top", paddingHalf);
+	$(elementD).css("margin-bottom", padding);
+	$(elementD).css("margin-left", paddingHalf);
+	$(elementD).css("margin-right", padding);
+}
+
 function encEvenMarginFourElements(margin, elementA, elementB, elementC, elementD){
 	var marginHalfPx = margin.replace("px", '');
 	var marginHalf = Math.floor(marginHalfPx) / 2;
