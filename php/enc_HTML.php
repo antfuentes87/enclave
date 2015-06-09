@@ -152,6 +152,16 @@ class enc_HTML{
 		}
 	}
 	
+	public function span($sectionArray, $content){
+		echo '<span class="'.$sectionArray['id'].'-p">';
+			if (array_key_exists($content, $sectionArray)){
+				echo $sectionArray[$content];
+			}else{
+				echo $content;
+			}
+		echo '</span>';
+	}
+	
 	public function string_formatDate($dateFormat, $dateKey){
 		echo date($dateFormat, strtotime($dateKey));
 	}	
