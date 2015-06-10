@@ -13,15 +13,7 @@ class enc_HTML{
 	public function test(){
 		echo 'Everything is working.';
 	}
-	
-	public function link($sectionArray, $linkText, $linkURL, $before, $after){
-		echo $before;
-		echo '<a href="'.$sectionArray[$linkURL].'" class="'.$sectionArray['id'].'">';
-			echo $sectionArray[$linkText];
-		echo '</a>';
-		echo $after;
-	}
-	
+
 	public function sectionID($sectionArray){
 		echo 'id="'.$sectionArray['id'].'"';
 	}
@@ -155,6 +147,21 @@ class enc_HTML{
 			}
 		echo '</span>';
 	}
+	
+		
+	public function link($sectionArray, $linkText, $linkURL, $before, $after){
+		echo $before;
+			if (array_key_exists($linkURL, $sectionArray)){
+				echo '<a href="'.$sectionArray[$linkURL].'" class="'.$sectionArray['id'].'-link">';
+					echo $sectionArray[$linkText];
+				}else{
+				echo '<a href="'.$linkURL.'" class="'.$sectionArray['id'].'-link">';
+					echo $linkText;
+			}
+			echo '</a>';
+		echo $after;
+	}
+	
 	
 	public function string_formatDate($dateFormat, $dateKey){
 		return date($dateFormat, strtotime($dateKey));
