@@ -147,7 +147,7 @@ class enc_HTML{
 	}
 	
 	public function span($sectionArray, $content){
-		echo '<span class="'.$sectionArray['id'].'-p">';
+		echo '<span class="'.$sectionArray['id'].'-span">';
 			if (array_key_exists($content, $sectionArray)){
 				echo $sectionArray[$content];
 			}else{
