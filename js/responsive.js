@@ -99,13 +99,13 @@ function encVerticalCenter(outerElement, innerElement, innerElementContent){
 }
 
 function encAllWidthsEqualElementA(elementA, elementB){
-	var elementAHeight = $(elementA).width();
-	$(elementB).width(elementAHeight);
+	var elementAWidth = $(elementA).width();
+	$(elementB).width(elementAWidth);
 }
 
 function encAllWidthsEqualElementA_Half(elementA, elementB){
-	var elementAHeight = $(elementA).width();
-	$(elementB).width(elementAHeight / 2);
+	var elementAWidth = $(elementA).width();
+	$(elementB).width(elementAWidth / 2);
 }
 
 function encAllMinHeightsEqualElementA(elementA, elementB){
