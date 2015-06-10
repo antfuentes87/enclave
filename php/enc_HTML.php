@@ -150,16 +150,22 @@ class enc_HTML{
 	
 		
 	public function link($sectionArray, $linkText, $linkURL, $before, $after){
-		echo $before;
-			if (array_key_exists($linkURL, $sectionArray)){
-				echo '<a href="'.$sectionArray[$linkURL].'" class="'.$sectionArray['id'].'-link">';
-					echo $sectionArray[$linkText];
-				}else{
+		if($before <> ''){
+			echo $before;	
+		}
+			if (array_key_exists($linkText, $sectionArray)){
+				if(array_key_exists($linkURL, $sectionArray)){
+					echo '<a href="'.$sectionArray[$linkURL].'" class="'.$sectionArray['id'].'-link">';
+						echo $sectionArray[$linkText];
+				}
+			}else{
 				echo '<a href="'.$linkURL.'" class="'.$sectionArray['id'].'-link">';
 					echo $linkText;
 			}
 			echo '</a>';
-		echo $after;
+		if($after <> ''){
+			echo $after;	
+		}
 	}
 	
 	
