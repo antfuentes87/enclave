@@ -110,10 +110,10 @@ class enc_HTML{
 	public function image($sectionArray, $src, $alt){
 		if (array_key_exists($src, $sectionArray)){
 			if(array_key_exists($alt, $sectionArray)){
-				echo '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
+				return '<img class="'.$sectionArray['id'].'-image" src="'.$sectionArray[$src].'" alt="'.$sectionArray[$alt].'"/>';
 			}
 		}else{
-			echo '<img class="'.$sectionArray['id'].'-image" src="'.$src.'" alt="'.$alt.'"/>';
+			return '<img class="'.$sectionArray['id'].'-image" src="'.$src.'" alt="'.$alt.'"/>';
 		}
 		
 	}
