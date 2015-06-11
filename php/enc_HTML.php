@@ -44,6 +44,16 @@ class enc_HTML{
 		echo '</p>';
 	}
 	
+	public function li($sectionArray, $liName){
+		echo '<li class="'.$sectionArray['id'].'-li">';
+			if (array_key_exists($liName, $sectionArray)){
+				return $sectionArray[$liName];
+			}else{
+				return $liName;
+			}
+		echo '</li>'
+	}
+	
 	public function heading($sectionArray, $heading, $headingNumber, $link){
 		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h'.$headingNumber.'">';
 			if($link <> ''){
