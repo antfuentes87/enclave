@@ -44,12 +44,6 @@ class enc_HTML{
 		echo '</p>';
 	}
 	
-	public function paragraphs($sectionArray, $array){
-		foreach($array as $arrayKey => $arrayValue){
-			echo '<p class="'.$sectionArray[id].'-p">'.$arrayValue.'</p>';
-		}
-	}
-	
 	public function heading($sectionArray, $heading, $headingNumber, $link){
 		echo '<h'.$headingNumber.' class="'.$sectionArray['id'].'-h'.$headingNumber.'">';
 			if($link <> ''){
