@@ -1,23 +1,25 @@
-.enc-placeholder-color{
-
-
-*::-webkit-input-placeholder {
-				color: @white;
-				opacity: 1;
-			}
-			*:-moz-placeholder {
-				/* FF 4-18 */
-				color: @white;
-				opacity: 1;
-			}
-			*::-moz-placeholder {
-				/* FF 19+ */
-				color: @white;
-				opacity: 1;
-			}
-			*:-ms-input-placeholder {
-				/* IE 10+ */
-				color: @white;
-				opacity: 1;
-			}
+.enc-placeholder-color(@color, @opacity){
+	*::-webkit-input-placeholder {
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
+	*:-moz-placeholder {
+		/* FF 4-18 */
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
+	*::-moz-placeholder {
+		/* FF 19+ */
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
+	*:-ms-input-placeholder {
+		/* IE 10+ */
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
 }
