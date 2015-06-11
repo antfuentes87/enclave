@@ -37,9 +37,9 @@ class enc_HTML{
 	public function paragraph($sectionArray, $paragraphName){
 		echo '<p class="'.$sectionArray['id'].'-p">';
 			if (array_key_exists($paragraphName, $sectionArray)){
-				echo $sectionArray[$paragraphName];
+				return $sectionArray[$paragraphName];
 			}else{
-				echo $paragraphName;
+				return $paragraphName;
 			}
 		echo '</p>';
 	}
