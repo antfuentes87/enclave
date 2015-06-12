@@ -51,7 +51,7 @@ class enc_HTML{
 			}else{
 				return $liName;
 			}
-		echo '</li>'
+		echo '</li>';
 	}
 	
 	public function heading($sectionArray, $heading, $headingNumber, $link){
