@@ -1,3 +1,9 @@
+/*Takes care of font size / font line height in one mixin*/
+.enc-flex-auto-fontsize-lineheight(@size, @sizeRatio, @line, @lineRatio){
+	.enc-flex-auto(font-size, @size, @sizeRatio);
+	.enc-flex-auto(line-height, @line, @lineRatio);
+}
+
 /*
 Quickly add a cross browser font -- Make sure you have .EOT / .WOFF / .WOFF2 / .TTF / .SVG for the font
 */
