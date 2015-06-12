@@ -97,7 +97,7 @@ function encVerticalCenter(outerElement, innerElement, innerElementContent){
 	$(innerElement).css("padding-top", outerElementHeight / 2);
 	$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
 }
-
+/*Widths*/
 function encAllWidthsEqualElementA(elementA, elementB){
 	var elementAWidth = $(elementA).width();
 	$(elementB).width(elementAWidth);
@@ -108,6 +108,11 @@ function encAllWidthsEqualElementA_Half(elementA, elementB){
 	$(elementB).width(elementAWidth / 2);
 }
 
+function encAllWidthsEqualElementA_Divided(elementA, elementB, divisionNumber){
+	var elementAWidth = $(elementA).width();
+	$(elementB).width(elementAWidth / divisionNumber;
+}
+/*Min Heights*/
 function encAllMinHeightsEqualElementA(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).css("min-height", elementAHeight);
@@ -118,6 +123,11 @@ function encAllMinHeightsEqualElementA_Half(elementA, elementB){
 	$(elementB).css("min-height", elementAHeight / 2);
 }
 
+function encAllMinHeightsEqualElementA_Divided(elementA, elementB, divisionNumber){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("min-height", elementAHeight / divisionNumber);
+}
+/*Heights*/
 function encAllHeightsEqualElementA(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).css("height", elementAHeight);
@@ -126,6 +136,11 @@ function encAllHeightsEqualElementA(elementA, elementB){
 function encAllHeightsEqualElementA_Half(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	$(elementB).css("height", elementAHeight / 2);
+}
+
+function encAllHeightsEqualElementA_Divided(elementA, elementB, divisionNumber){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("height", elementAHeight / divisionNumber);
 }
 
 function encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
