@@ -1,4 +1,12 @@
 /*Flex auto for margin top / margin bottom in one mixin*/
+.enc-flex-auto-margin-top(@top, @topRatio){
+	.enc-flex-auto(margin-top, @top, @topRatio);
+}
+
+.enc-flex-auto-margin-bottom(@bottom, @bottomRatio){
+	.enc-flex-auto(margin-bottom, @bottom, @bottomRatio);
+}
+
 .enc-flex-auto-margin-topbottom(@top, @topRatio, @bottom, @bottomRatio){
 	.enc-flex-auto(margin-top, @top, @topRatio);
 	.enc-flex-auto(margin-bottom, @bottom, @bottomRatio);
