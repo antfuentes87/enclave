@@ -110,7 +110,7 @@ function encAllWidthsEqualElementA_Half(elementA, elementB){
 
 function encAllWidthsEqualElementA_Divided(elementA, elementB, divisionNumber){
 	var elementAWidth = $(elementA).width();
-	$(elementB).width(elementAWidth / divisionNumber;
+	$(elementB).width(elementAWidth / divisionNumber);
 }
 /*Min Heights*/
 function encAllMinHeightsEqualElementA(elementA, elementB){
