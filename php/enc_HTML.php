@@ -10,10 +10,6 @@ $whatHomeTeaser = array(
 );
 */
 class enc_HTML{
-	public function test(){
-		echo 'Everything is working.';
-	}
-
 	public function sectionID($sectionArray){
 		echo 'id="'.$sectionArray['id'].'"';
 	}
@@ -21,13 +17,21 @@ class enc_HTML{
 	public function sectionClass($sectionArray){
 		echo 'class="'.$sectionArray['id'].'"';
 	}
-	
+
 	public function setID($sectionArray, $idExt){
 		echo 'id="'.$sectionArray['id'].'-'.$idExt.'"';
 	}
 	
 	public function setClass($sectionArray, $classExt){
 		echo 'class="'.$sectionArray['id'].'-'.$classExt.'"';
+	}
+
+	public function setRepeatID($sectionArray, $pageExt, $idExt){
+		echo 'id="'.$sectionArray['id'].'-'.$sectionArray[$pageExt].'-'.$idExt.'"';
+	}
+
+	public function setRepeatClass($sectionArray, $pageExt, $idExt){
+		echo 'class="'.$sectionArray['id'].'-'.$sectionArray[$pageExt].'-'.$idExt.'"';
 	}
 	
 	public function backgroundImage($sectionArray, $backgroundImage){
@@ -176,5 +180,9 @@ class enc_HTML{
 	public function string_formatDate($dateFormat, $dateKey){
 		return date($dateFormat, strtotime($dateKey));
 	}	
+
+	public function test(){
+		echo 'Everything is working.';
+	}
 }
 ?>
