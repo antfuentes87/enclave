@@ -282,3 +282,14 @@ function encAllHeightsEqualElement_Tallest(container){
 		}
 	});
 }
+
+function encScrollTopAddClass(element, elementAddClass, scrollAddClassValue){
+	$(window).scroll(function() {    
+    var scrollTopValue = $(window).scrollTop();
+    if (scrollTopValue >= scrollAddClassValue) {
+        $(element).addClass(elementAddClass);
+    } else {
+        $(element).removeClass(elementAddClass);
+    }
+	});
+}
