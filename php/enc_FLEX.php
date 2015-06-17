@@ -2,7 +2,7 @@
 class enc_FLEX{
 	public function buildLayout($section){
 		$sectionArray = array();
-		if ($handle = opendir('html/com_content/article/'.$section)) {
+		if ($handle = opendir('templates/what/html/com_content/article/'.$section)) {
     		while (false !== ($entry = readdir($handle))) {
        		 if ($entry != "." && $entry != "..") {
             	$sectionArray[] = $entry;
@@ -23,14 +23,14 @@ class enc_FLEX{
 						echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-inner">';
 							echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-content">';
 								echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-center">';
-									require('html/com_content/article/'.$sectionName.'/'.$sectionValue.'/section.php');
+									require('templates/what/html/com_content/article/'.$sectionName.'/'.$sectionValue.'/section.php');
 								echo '</div>';
 							echo '</div>';
 						echo '</div>';
 					echo '</section>';
 				}
 				if($sectionType == 'parallax'){
-					require_once('html/com_content/article/'.$sectionName.'/'.$sectionValue.'/parallax.php');
+					require_once('templates/what/html/com_content/article/'.$sectionName.'/'.$sectionValue.'/parallax.php');
 					$paralaxArray = $this->buildLayout($sectionName.'/'.$sectionValue);
 						echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax" style="background-image: url('.$paralaxBackground.');">';
 							foreach ($paralaxArray as &$paralaxValue){
@@ -40,7 +40,7 @@ class enc_FLEX{
 										echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-inner">';
 											echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-content">';
 												echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-center">';
-													require('html/com_content/article/'.$sectionName.'/'.$sectionValue.'/'.$paralaxValue.'/section.php');
+													require('templates/what/html/com_content/article/'.$sectionName.'/'.$sectionValue.'/'.$paralaxValue.'/section.php');
 												echo '</div>';
 											echo '</div>';
 										echo '</div>';
@@ -56,7 +56,7 @@ class enc_FLEX{
 	public function layoutJS($sectionArray, $sectionName){
 		$var = 0;
 		foreach ($sectionArray as $sectionKey => $sectionValue){
-		require_once('html/com_content/article/'.$sectionName.'/config.php');
+		require_once('templates/what/html/com_content/article/'.$sectionName.'/config.php');
 			if($sectionValue <> 'config.php'){
 				list($sectionId, $sectionType) = explode('_', $sectionValue);
 				if($sectionType == 'section'){
