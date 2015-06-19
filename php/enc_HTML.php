@@ -79,13 +79,13 @@ class enc_HTML{
 			echo $array[buttonText];
 		echo '</a>';
 	}
-	public function hGroup($array, $titleHeadingNumber, $subTitleHeadingNumber){
-		echo '<hgroup class="'.$array[id].'-hgroup">';
+	public function hGroup($sectionArray, $titleHeadingNumber, $subTitleHeadingNumber){
+		echo '<hgroup class="'.$sectionArray["id"].'-hgroup">';
 			echo '<h'.$titleHeadingNumber.'>';
-				echo $array[title];
+				echo $sectionArray["title"];
 			echo '</h'.$titleHeadingNumber.'>';
 			echo '<h'.$subTitleHeadingNumber.'>';		
-				echo $array[subTitle];
+				echo $sectionArray["subTitle"];
 			echo '</h'.$subTitleHeadingNumber.'>';
 		echo '</hgroup>';
 	}
