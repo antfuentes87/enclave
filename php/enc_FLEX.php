@@ -31,16 +31,16 @@ class enc_FLEX{
 				}
 				if($sectionType == 'parallax'){
 					require_once('templates/what/html/com_content/article/'.$sectionName.'/'.$sectionValue.'/parallax.php');
-					$paralaxArray = $this->buildLayout($sectionName.'/'.$sectionValue);
-						echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax" style="background-image: url('.$paralaxBackground.');">';
-							foreach ($paralaxArray as &$paralaxValue){
-								if($paralaxValue <> 'parallax.php'){
-									list($parallaxId, $parallaxType) = explode('_', $paralaxValue);
+					$parallaxArray = $this->buildLayout($sectionName.'/'.$sectionValue);
+						echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax" style="background-image: url('.$parallaxBackground.');">';
+							foreach ($parallaxArray as &$parallaxValue){
+								if($parallaxValue <> 'parallax.php'){
+									list($parallaxId, $parallaxType) = explode('_', $parallaxValue);
 									echo '<section id="what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer">';
 										echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-inner">';
 											echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-content">';
 												echo '<div id="what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-center">';
-													require('templates/what/html/com_content/article/'.$sectionName.'/'.$sectionValue.'/'.$paralaxValue.'/section.php');
+													require('templates/what/html/com_content/article/'.$sectionName.'/'.$sectionValue.'/'.$parallaxValue.'/section.php');
 												echo '</div>';
 											echo '</div>';
 										echo '</div>';
@@ -69,10 +69,10 @@ class enc_FLEX{
 					$var = $var + 1;
 				}
 				if($sectionType == 'parallax'){
-					$paralaxArray = $this->buildLayout($sectionName.'/'.$sectionValue);
-					foreach ($paralaxArray as &$paralaxValue){
-						if($paralaxValue <> 'parallax.php'){
-							list($parallaxId, $parallaxType) = explode('_', $paralaxValue);
+					$parallaxArray = $this->buildLayout($sectionName.'/'.$sectionValue);
+					foreach ($parallaxArray as &$parallaxValue){
+						if($parallaxValue <> 'parallax.php'){
+							list($parallaxId, $parallaxType) = explode('_', $parallaxValue);
 							echo '<script>';
 								echo '$(window).on("load resize scroll",function(e){';
 								echo 'encAllMinHeightsEqualElementA_Divided(window, "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", '.$sectionWindowDivide[$var].');';
