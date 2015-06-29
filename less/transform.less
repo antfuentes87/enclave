@@ -1,3 +1,10 @@
+.enc-transform(@transform:rotate, @deg:45deg) {
+ 	-webkit-transition: @transform(@deg);
+  	-moz-transition: @transform(@deg);
+  	-o-transition: @transform(@deg);
+ 	 transition: @transform(@deg);
+}
+
 .enc-rotate(@deg){
 	@msDeg: (@deg / 100); 
 	-webkit-transform: rotate(@deg);
