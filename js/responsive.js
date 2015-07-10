@@ -81,7 +81,6 @@ function encFlexWidthCenter(elementA, elementB, xs, sm, md, lg){
 	$(elementB).css("display", "block");
 	if (window.matchMedia("(max-width: 767px)").matches){
 		$(elementB).width(elementAWidth / xs);
-		console.log(elementAWidth / xs);
 	}else if(window.matchMedia("(max-width: 1023px)").matches){
 		$(elementB).width(elementAWidth / sm);
 	}else if(window.matchMedia("(max-width: 1365px)").matches){
