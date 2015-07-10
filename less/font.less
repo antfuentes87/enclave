@@ -1,12 +1,21 @@
-/*Takes care of font size / font line height in one mixin*/
-.enc-flex-auto-fontsize-lineheight(@size, @sizeRatio, @line, @lineRatio){
-	.enc-flex-auto(font-size, @size, @sizeRatio);
-	.enc-flex-auto(line-height, @line, @lineRatio);
+/* ALIGN TEXT VERTICALLY */
+.enc-font-vertical-align(@position: middle){
+	vertical-align: @position;
+	display: table-cell;
 }
 
-/*
-Quickly add a cross browser font -- Make sure you have .EOT / .WOFF / .WOFF2 / .TTF / .SVG for the font
-*/
+/* ALIGN TEXT HORIZONTALLY */
+.enc-font-align(@align){
+	text-align: @align;
+}
+
+/* Auto Flex for Font Size and Line Height */
+.enc-font-auto-fontsize-lineheight(@fontSize, @fontSizeRatio, @lineHeight, @lineHeightRatio){
+	.enc-flex-auto(font-size, @fontSize, @fontSizeRatio);
+	.enc-flex-auto(line-height, @lineHeight, @lineHeightRatio);
+}
+
+/* Add a cross browser font -- Make sure you have .EOT / .WOFF / .WOFF2 / .TTF / .SVG */
 .enc-font-add(@font-default-path, @font-name, @font-weight, @font-style){
 	@font-full-path: "@{font-default-path}@{font-name}/@{font-name}";
 	@font-face{
@@ -20,4 +29,12 @@ Quickly add a cross browser font -- Make sure you have .EOT / .WOFF / .WOFF2 / .
 		font-weight: @font-weight;
 		font-style: @font-style;
 	}
+}
+
+
+
+/*DECRYPTED*/
+.enc-flex-auto-fontsize-lineheight(@size, @sizeRatio, @line, @lineRatio){
+	.enc-flex-auto(font-size, @size, @sizeRatio);
+	.enc-flex-auto(line-height, @line, @lineRatio);
 }
