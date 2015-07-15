@@ -1,11 +1,52 @@
+/*AUTO*/
 .enc-padding-auto-top(@paddingTop, @paddingTopRatio){.enc-flex-auto(padding-top, @paddingTop, @paddingTopRatio);}
 .enc-padding-auto-bottom(@paddingBottom, @paddingBottomRatio){.enc-flex-auto(padding-bottom, @paddingBottom, @paddingBottomRatio);}
 .enc-padding-auto-left(@paddingLeft, @paddingLeftRatio){.enc-flex-auto(padding-left, @paddingLeft, @paddingLeftRatio);}
 .enc-padding-auto-right(@paddingRight, @paddingRightRatio){.enc-flex-auto(padding-right, @paddingRight, @paddingRightRatio);}
 
+.enc-padding-auto-top-xs(@paddingTop, @paddingTopRatio){.enc-flex-auto-xs(padding-top, @paddingTop, @paddingTopRatio);}
+.enc-padding-auto-top-sm(@paddingTop, @paddingTopRatio){.enc-flex-auto-sm(padding-top, @paddingTop, @paddingTopRatio);}
+.enc-padding-auto-top-md(@paddingTop, @paddingTopRatio){.enc-flex-auto-md(padding-top, @paddingTop, @paddingTopRatio);}
+.enc-padding-auto-top-lg(@paddingTop, @paddingTopRatio){.enc-flex-auto-lg(padding-top, @paddingTop, @paddingTopRatio);}
+
+.enc-padding-auto-bottom-xs(@paddingBottom, @paddingBottomRatio){.enc-flex-auto-xs(padding-bottom, @paddingBottom, @paddingBottomRatio);}
+.enc-padding-auto-bottom-sm(@paddingBottom, @paddingBottomRatio){.enc-flex-auto-sm(padding-bottom, @paddingBottom, @paddingBottomRatio);}
+.enc-padding-auto-bottom-md(@paddingBottom, @paddingBottomRatio){.enc-flex-auto-md(padding-bottom, @paddingBottom, @paddingBottomRatio);}
+.enc-padding-auto-bottom-lg(@paddingBottom, @paddingBottomRatio){.enc-flex-auto-lg(padding-bottom, @paddingBottom, @paddingBottomRatio);}
+
+.enc-padding-auto-left-xs(@paddingLeft, @paddingLeftRatio){.enc-flex-auto-xs(padding-left, @paddingLeft, @paddingLeftRatio);}
+.enc-padding-auto-left-sm(@paddingLeft, @paddingLeftRatio){.enc-flex-auto-sm(padding-left, @paddingLeft, @paddingLeftRatio);}
+.enc-padding-auto-left-md(@paddingLeft, @paddingLeftRatio){.enc-flex-auto-md(padding-left, @paddingLeft, @paddingLeftRatio);}
+.enc-padding-auto-left-lg(@paddingLeft, @paddingLeftRatio){.enc-flex-auto-lg(padding-left, @paddingLeft, @paddingLeftRatio);}
+
+.enc-padding-auto-right-xs(@paddingRight, @paddingRightRatio){.enc-flex-auto-xs(padding-right, @paddingRight, @paddingRightRatio);}
+.enc-padding-auto-right-sm(@paddingRight, @paddingRightRatio){.enc-flex-auto-sm(padding-right, @paddingRight, @paddingRightRatio);}
+.enc-padding-auto-right-md(@paddingRight, @paddingRightRatio){.enc-flex-auto-md(padding-right, @paddingRight, @paddingRightRatio);}
+.enc-padding-auto-right-lg(@paddingRight, @paddingRightRatio){.enc-flex-auto-lg(padding-right, @paddingRight, @paddingRightRatio);}
+
 .enc-padding-auto-topbottom(@paddingTop, @paddingTopRatio, @paddingBottom, @paddingBottomRatio){
 	.enc-padding-auto-top(@paddingTop, @paddingTopRatio);
 	.enc-padding-auto-bottom(@paddingBottom, @paddingBottomRatio);
+}
+
+.enc-padding-auto-topbottom-xs(@paddingTop, @paddingTopRatio, @paddingBottom, @paddingBottomRatio){
+	.enc-padding-auto-top-xs(@paddingTop, @paddingTopRatio);
+	.enc-padding-auto-bottom-xs(@paddingBottom, @paddingBottomRatio);
+}
+
+.enc-padding-auto-topbottom-sm(@paddingTop, @paddingTopRatio, @paddingBottom, @paddingBottomRatio){
+	.enc-padding-auto-top-sm(@paddingTop, @paddingTopRatio);
+	.enc-padding-auto-bottom-sm(@paddingBottom, @paddingBottomRatio);
+}
+
+.enc-padding-auto-topbottom-md(@paddingTop, @paddingTopRatio, @paddingBottom, @paddingBottomRatio){
+	.enc-padding-auto-top-md(@paddingTop, @paddingTopRatio);
+	.enc-padding-auto-bottom-md(@paddingBottom, @paddingBottomRatio);
+}
+
+.enc-padding-auto-topbottom-lg(@paddingTop, @paddingTopRatio, @paddingBottom, @paddingBottomRatio){
+	.enc-padding-auto-top-lg(@paddingTop, @paddingTopRatio);
+	.enc-padding-auto-bottom-lg(@paddingBottom, @paddingBottomRatio);
 }
 
 .enc-padding-auto-leftright(@paddingLeft, @paddingLeftRatio, @paddingRight, @paddingRightRatio){
@@ -13,12 +54,194 @@
 	.enc-padding-auto-right(@paddingRight, @paddingRightRatio);
 }
 
+.enc-padding-auto-leftright-xs(@paddingLeft, @paddingLeftRatio, @paddingRight, @paddingRightRatio){
+	.enc-padding-auto-left-xs(@paddingLeft, @paddingLeftRatio);
+	.enc-padding-auto-right-xs(@paddingRight, @paddingRightRatio);
+}
+
+.enc-padding-auto-leftright-sm(@paddingLeft, @paddingLeftRatio, @paddingRight, @paddingRightRatio){
+	.enc-padding-auto-left-sm(@paddingLeft, @paddingLeftRatio);
+	.enc-padding-auto-right-sm(@paddingRight, @paddingRightRatio);
+}
+
+.enc-padding-auto-leftright-md(@paddingLeft, @paddingLeftRatio, @paddingRight, @paddingRightRatio){
+	.enc-padding-auto-left-md(@paddingLeft, @paddingLeftRatio);
+	.enc-padding-auto-right-md(@paddingRight, @paddingRightRatio);
+}
+
+.enc-padding-auto-leftright-lg(@paddingLeft, @paddingLeftRatio, @paddingRight, @paddingRightRatio){
+	.enc-padding-auto-left-lg(@paddingLeft, @paddingLeftRatio);
+	.enc-padding-auto-right-lg(@paddingRight, @paddingRightRatio);
+}
+
 .enc-padding-auto-equal-topbottom(@padding, @paddingRatio){
 	.enc-padding-auto-top(@padding, @paddingRatio);
 	.enc-padding-auto-bottom(@padding, @paddingRatio);
 }
 
+.enc-padding-auto-equal-topbottom-xs(@padding, @paddingRatio){
+	.enc-padding-auto-top-xs(@padding, @paddingRatio);
+	.enc-padding-auto-bottom-xs(@padding, @paddingRatio);
+}
+
+.enc-padding-auto-equal-topbottom-sm(@padding, @paddingRatio){
+	.enc-padding-auto-top-sm(@padding, @paddingRatio);
+	.enc-padding-auto-bottom-sm(@padding, @paddingRatio);
+}
+
+.enc-padding-auto-equal-topbottom-md(@padding, @paddingRatio){
+	.enc-padding-auto-top-md(@padding, @paddingRatio);
+	.enc-padding-auto-bottom-md(@padding, @paddingRatio);
+}
+.enc-padding-auto-equal-topbottom-lg(@padding, @paddingRatio){
+	.enc-padding-auto-top-lg(@padding, @paddingRatio);
+	.enc-padding-auto-bottom-lg(@padding, @paddingRatio);
+}
+
 .enc-padding-auto-equal-leftright(@padding, @paddingRatio){
 	.enc-padding-auto-left(@padding, @paddingRatio);
 	.enc-padding-auto-right(@padding, @paddingRatio);
+}
+
+.enc-padding-auto-equal-leftright-xs(@padding, @paddingRatio){
+	.enc-padding-auto-left-xs(@padding, @paddingRatio);
+	.enc-padding-auto-right-xs(@padding, @paddingRatio);
+}
+
+.enc-padding-auto-equal-leftright-sm(@padding, @paddingRatio){
+	.enc-padding-auto-left-sm(@padding, @paddingRatio);
+	.enc-padding-auto-right-sm(@padding, @paddingRatio);
+}
+
+.enc-padding-auto-equal-leftright-md(@padding, @paddingRatio){
+	.enc-padding-auto-left-md(@padding, @paddingRatio);
+	.enc-padding-auto-right-md(@padding, @paddingRatio);
+}
+.enc-padding-auto-equal-leftright-lg(@padding, @paddingRatio){
+	.enc-padding-auto-left-lg(@padding, @paddingRatio);
+	.enc-padding-auto-right-lg(@padding, @paddingRatio);
+}
+
+/*MANUAL*/
+.enc-padding-manual-all-top(@paddingTop){.enc-flex-manual-all(padding-top, @paddingTop);}
+.enc-padding-manual-all-bottom(@paddingBottom){.enc-flex-manual-all(padding-bottom, @paddingBottom);}
+.enc-padding-manual-all-left(@paddingLeft){.enc-flex-manual-all(padding-left, @paddingLeft);}
+.enc-padding-manual-all-right(@paddingRight){.enc-flex-manual-all(padding-right, @paddingRight);}
+
+.enc-padding-manual-all-top-xs(@paddingTop){.enc-flex-manual-all-xs(padding-top, @paddingTop);}
+.enc-padding-manual-all-top-sm(@paddingTop){.enc-flex-manual-all-sm(padding-top, @paddingTop);}
+.enc-padding-manual-all-top-md(@paddingTop){.enc-flex-manual-all-md(padding-top, @paddingTop);}
+.enc-padding-manual-all-top-lg(@paddingTop){.enc-flex-manual-all-lg(padding-top, @paddingTop);}
+
+.enc-padding-manual-all-bottom-xs(@paddingBottom){.enc-flex-manual-all-xs(padding-bottom, @paddingBottom);}
+.enc-padding-manual-all-bottom-sm(@paddingBottom){.enc-flex-manual-all-sm(padding-bottom, @paddingBottom);}
+.enc-padding-manual-all-bottom-md(@paddingBottom){.enc-flex-manual-all-md(padding-bottom, @paddingBottom);}
+.enc-padding-manual-all-bottom-lg(@paddingBottom){.enc-flex-manual-all-lg(padding-bottom, @paddingBottom);}
+
+.enc-padding-manual-all-left-xs(@paddingLeft){.enc-flex-manual-all-xs(padding-left, @paddingLeft);}
+.enc-padding-manual-all-left-sm(@paddingLeft){.enc-flex-manual-all-sm(padding-left, @paddingLeft);}
+.enc-padding-manual-all-left-md(@paddingLeft){.enc-flex-manual-all-md(padding-left, @paddingLeft);}
+.enc-padding-manual-all-left-lg(@paddingLeft){.enc-flex-manual-all-lg(padding-left, @paddingLeft);}
+
+.enc-padding-manual-all-right-xs(@paddingRight){.enc-flex-manual-all-xs(padding-right, @paddingRight);}
+.enc-padding-manual-all-right-sm(@paddingRight){.enc-flex-manual-all-sm(padding-right, @paddingRight);}
+.enc-padding-manual-all-right-md(@paddingRight){.enc-flex-manual-all-md(padding-right, @paddingRight);}
+.enc-padding-manual-all-right-lg(@paddingRight){.enc-flex-manual-all-lg(padding-right, @paddingRight);}
+
+.enc-padding-manual-all-topbottom(@paddingTop, @paddingBottom){
+	.enc-padding-manual-all-top(@paddingTop);
+	.enc-padding-manual-all-bottom(@paddingBottom);
+}
+
+.enc-padding-manual-all-topbottom-xs(@paddingTop, @paddingBottom){
+	.enc-padding-manual-all-top-xs(@paddingTop);
+	.enc-padding-manual-all-bottom-xs(@paddingBottom);
+}
+
+.enc-padding-manual-all-topbottom-sm(@paddingTop, @paddingBottom){
+	.enc-padding-manual-all-top-sm(@paddingTop);
+	.enc-padding-manual-all-bottom-sm(@paddingBottom);
+}
+
+.enc-padding-manual-all-topbottom-md(@paddingTop, @paddingBottom){
+	.enc-padding-manual-all-top-md(@paddingTop);
+	.enc-padding-manual-all-bottom-md(@paddingBottom);
+}
+
+.enc-padding-manual-all-topbottom-lg(@paddingTop, @paddingBottom){
+	.enc-padding-manual-all-top-lg(@paddingTop);
+	.enc-padding-manual-all-bottom-lg(@paddingBottom);
+}
+
+.enc-padding-manual-all-leftright(@paddingLeft, @paddingRight){
+	.enc-padding-manual-all-left(@paddingLeft);
+	.enc-padding-manual-all-right(@paddingRight);
+}
+
+.enc-padding-manual-all-leftright-xs(@paddingLeft, @paddingRight){
+	.enc-padding-manual-all-left-xs(@paddingLeft);
+	.enc-padding-manual-all-right-xs(@paddingRight);
+}
+
+.enc-padding-manual-all-leftright-sm(@paddingLeft, @paddingRight){
+	.enc-padding-manual-all-left-sm(@paddingLeft);
+	.enc-padding-manual-all-right-sm(@paddingRight);
+}
+
+.enc-padding-manual-all-leftright-md(@paddingLeft, @paddingRight){
+	.enc-padding-manual-all-left-md(@paddingLeft);
+	.enc-padding-manual-all-right-md(@paddingRight);
+}
+
+.enc-padding-manual-all-leftright-lg(@paddingLeft, @paddingRight){
+	.enc-padding-manual-all-left-lg(@paddingLeft);
+	.enc-padding-manual-all-right-lg(@paddingRight);
+}
+
+.enc-padding-manual-all-equal-topbottom(@padding){
+	.enc-padding-manual-all-top(@padding);
+	.enc-padding-manual-all-bottom(@padding);
+}
+
+.enc-padding-manual-all-equal-topbottom-xs(@padding){
+	.enc-padding-manual-all-top-xs(@padding);
+	.enc-padding-manual-all-bottom-xs(@padding);
+}
+
+.enc-padding-manual-all-equal-topbottom-sm(@padding){
+	.enc-padding-manual-all-top-sm(@padding);
+	.enc-padding-manual-all-bottom-sm(@padding);
+}
+
+.enc-padding-manual-all-equal-topbottom-md(@padding){
+	.enc-padding-manual-all-top-md(@padding);
+	.enc-padding-manual-all-bottom-md(@padding);
+}
+.enc-padding-manual-all-equal-topbottom-lg(@padding){
+	.enc-padding-manual-all-top-lg(@padding);
+	.enc-padding-manual-all-bottom-lg(@padding);
+}
+
+.enc-padding-manual-all-equal-leftright(@padding){
+	.enc-padding-manual-all-left(@padding);
+	.enc-padding-manual-all-right(@padding);
+}
+
+.enc-padding-manual-all-equal-leftright-xs(@padding){
+	.enc-padding-manual-all-left-xs(@padding);
+	.enc-padding-manual-all-right-xs(@padding);
+}
+
+.enc-padding-manual-all-equal-leftright-sm(@padding){
+	.enc-padding-manual-all-left-sm(@padding);
+	.enc-padding-manual-all-right-sm(@padding);
+}
+
+.enc-padding-manual-all-equal-leftright-md(@padding){
+	.enc-padding-manual-all-left-md(@padding);
+	.enc-padding-manual-all-right-md(@padding);
+}
+.enc-padding-manual-all-equal-leftright-lg(@padding){
+	.enc-padding-manual-all-left-lg(@padding);
+	.enc-padding-manual-all-right-lg(@padding);
 }
