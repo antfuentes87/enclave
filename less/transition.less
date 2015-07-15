@@ -1,9 +1,10 @@
-/*
-Easily set a transistion that works for all browers
-*/
-.enc-transition(@duration:1s, @ease:ease-out) {
-  -webkit-transition: all @duration @ease;
-  -moz-transition: all @duration @ease;
-  -o-transition: all @duration @ease;
-  transition: all @duration @ease;
+.enc-transition-all(@delay: 0s, @duration: 0s, @timing: ease-in-out) {
+	-webkit-transition-delay: @delay;
+	-webkit-transition-duration: @duration;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: @timing;
+	transition-delay: @delay;
+	transition-duration: @duration;
+	transition-property: all;
+	transition-timing-function: @timing;
 }

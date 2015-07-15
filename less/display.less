@@ -1,0 +1,33 @@
+.enc-display(@display: block){
+	display: @display;
+}
+
+.enc-display-xs(@display: block){
+	.enc-flex-manual-all-xs(display, @display);
+}
+
+.enc-display-sm(@display: block){
+	.enc-flex-manual-all-sm(display, @display);
+}
+
+.enc-display-md(@display: block){
+	.enc-flex-manual-all-md(display, @display);
+}
+
+.enc-display-lg(@display: block){
+	.enc-flex-manual-all-lg(display, @display);
+}
+
+.enc-display-xs-sm{
+	.enc-display-xs;
+	.enc-display-sm;
+	.enc-display-md(none);
+	.enc-display-lg(none);
+}
+
+.enc-display-md-lg{
+	.enc-display-xs(none);
+	.enc-display-sm(none);
+	.enc-display-md;
+	.enc-display-lg;
+}

@@ -1,28 +1,23 @@
-/*BASE FLEX AUTO MARGIN MIXINS*/
 .enc-margin-auto-top(@marginTop, @marginTopRatio){.enc-flex-auto(margin-top, @marginTop, @marginTopRatio);}
 .enc-margin-auto-bottom(@marginBottom, @marginBottomRatio){.enc-flex-auto(margin-bottom, @marginBottom, @marginBottomRatio);}
 .enc-margin-auto-left(@marginLeft, @marginLeftRatio){.enc-flex-auto(margin-left, @marginLeft, @marginLeftRatio);}
 .enc-margin-auto-right(@marginRight, @marginRightRatio){.enc-flex-auto(margin-right, @marginRight, @marginRightRatio);}
 
-/*FLEX AUTO TOP BOTTOM MARGIN MIXIN*/
 .enc-margin-auto-topbottom(@marginTop, @marginTopRatio, @marginBottom, @marginBottomRatio){
 	.enc-margin-auto-top(@marginTop, @marginTopRatio);
 	.enc-margin-auto-bottom(@marginBottom, @marginBottomRatio);
 }
 
-/*FLEX AUTO LEFT RIGHT MARGIN MIXIN*/
 .enc-margin-auto-leftright(@marginLeft, @marginLeftRatio, @marginRight, @marginRightRatio){
 	.enc-margin-auto-left(@marginLeft, @marginLeftRatio);
 	.enc-margin-auto-right(@marginRight, @marginRightRatio);
 }
 
-/*FLEX AUTO TOP BOTTOM EQUAL MARGIN MIXIN*/
 .enc-margin-auto-equal-topbottom(@margin, @marginRatio){
 	.enc-margin-auto-top(@margin, @marginRatio);
 	.enc-margin-auto-bottom(@margin, @marginRatio);
 }
 
-/*FLEX AUTO LEFT RIGHT EQUAL MARGIN MIXIN*/
 .enc-margin-auto-equal-leftright(@margin, @marginRatio){
 	.enc-margin-auto-left(@margin, @marginRatio);
 	.enc-margin-auto-right(@margin, @marginRatio);

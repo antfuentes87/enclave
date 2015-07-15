@@ -1,14 +1,40 @@
-/* MIXINS TO HELP WITH ALIGNMENT OF HTML ELEMENTS */
-
-
-/*VERTICAL ALIGN ELEMENT WITH PERCENT*/
-.enc-align-vertical(@percent){
+.enc-align-vertical(@percent: 50%){
 	top: @percent;
 	position: relative;
 	transform: translateY(-@percent);
 }
 
-/*CONTROL BOX SIZING*/
 .enc-align-boxsizing(@type: border-box){
 	box-sizing: @type;
+}
+
+.enc-align-vertical-font(@position: middle){
+	vertical-align: @position;
+	display: table-cell;
+}
+
+.enc-align-font(@align){
+	text-align: @align;
+}
+
+.enc-align-font-xs(@align){
+	.enc-flex-manual-all-xs(text-align, @align);
+}
+
+.enc-align-font-sm(@align){
+	.enc-flex-manual-all-sm(text-align, @align);
+}
+
+.enc-align-font-md(@align){
+	.enc-flex-manual-all-md(text-align, @align);
+}
+
+.enc-align-font-lg(@align){
+	.enc-flex-manual-all-lg(text-align, @align);
+}
+
+.enc-align-horizontal{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }

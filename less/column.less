@@ -1,0 +1,26 @@
+.enc-column(@xs: 100%, @sm: 100%, @md: 100%, @lg: 100%){
+	.enc-column-xs(@xs);
+	.enc-column-sm(@sm);
+	.enc-column-md(@md);
+	.enc-column-lg(@lg);
+}
+
+.enc-column-xs(@percent: 100%, @float: left){
+	.enc-flex-manual-all-xs(width, @percent);
+	float: @float;
+}
+
+.enc-column-sm(@percent: 100%, @float: left){
+	.enc-flex-manual-all-sm(width, @percent);
+	float: @float;
+}
+
+.enc-column-md(@percent: 100%, @float: left){
+	.enc-flex-manual-all-md(width, @percent);
+	float: @float;
+}
+
+.enc-column-lg(@percent: 100%, @float: left){
+	.enc-flex-manual-all-lg(width, @percent);
+	float: @float;
+}

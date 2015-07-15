@@ -1,25 +1,24 @@
-.enc-flex-auto-padding-top(@top, @topRatio){
-	.enc-flex-auto(padding-top, @top, @topRatio);
+.enc-padding-auto-top(@paddingTop, @paddingTopRatio){.enc-flex-auto(padding-top, @paddingTop, @paddingTopRatio);}
+.enc-padding-auto-bottom(@paddingBottom, @paddingBottomRatio){.enc-flex-auto(padding-bottom, @paddingBottom, @paddingBottomRatio);}
+.enc-padding-auto-left(@paddingLeft, @paddingLeftRatio){.enc-flex-auto(padding-left, @paddingLeft, @paddingLeftRatio);}
+.enc-padding-auto-right(@paddingRight, @paddingRightRatio){.enc-flex-auto(padding-right, @paddingRight, @paddingRightRatio);}
+
+.enc-padding-auto-topbottom(@paddingTop, @paddingTopRatio, @paddingBottom, @paddingBottomRatio){
+	.enc-padding-auto-top(@paddingTop, @paddingTopRatio);
+	.enc-padding-auto-bottom(@paddingBottom, @paddingBottomRatio);
 }
 
-.enc-flex-auto-padding-bottom(@bottom, @bottomRatio){
-	.enc-flex-auto(padding-bottom, @bottom, @bottomRatio);
+.enc-padding-auto-leftright(@paddingLeft, @paddingLeftRatio, @paddingRight, @paddingRightRatio){
+	.enc-padding-auto-left(@paddingLeft, @paddingLeftRatio);
+	.enc-padding-auto-right(@paddingRight, @paddingRightRatio);
 }
 
-.enc-flex-auto-padding-left(@left, @leftRatio){
-	.enc-flex-auto(padding-left, @left, @leftRatio);
+.enc-padding-auto-equal-topbottom(@padding, @paddingRatio){
+	.enc-padding-auto-top(@padding, @paddingRatio);
+	.enc-padding-auto-bottom(@padding, @paddingRatio);
 }
 
-.enc-flex-auto-padding-right(@right, @rightRatio){
-	.enc-flex-auto(padding-right, @right, @rightRatio);
-}
-
-.enc-flex-auto-padding-topbottom(@top, @topRatio, @bottom, @bottomRatio){
-	.enc-flex-auto(padding-top, @top, @topRatio);
-	.enc-flex-auto(padding-bottom, @bottom, @bottomRatio);
-}
-
-.enc-flex-auto-padding-leftright(@left, @leftRatio, @right, @rightRatio){
-	.enc-flex-auto(padding-left, @left, @leftRatio);
-	.enc-flex-auto(padding-right, @right, @rightRatio);
+.enc-padding-auto-equal-leftright(@padding, @paddingRatio){
+	.enc-padding-auto-left(@padding, @paddingRatio);
+	.enc-padding-auto-right(@padding, @paddingRatio);
 }

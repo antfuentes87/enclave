@@ -30,3 +30,408 @@
 	.enc-flex-auto(font-size, @size, @sizeRatio);
 	.enc-flex-auto(line-height, @line, @lineRatio);
 }
+
+.enc-flex-btn(@font-size: 1rem, 
+	@font-size-ratio: 0.01, 
+	@line-height: 1.1rem, 
+	@line-height-ratio: 0.01,
+	@bg-color: #000000,
+	@bg-color-opacity: 1,
+	@color: #FFFFFF,
+	@color-opacity: 1,
+	@border-width: 0.01rem,
+	@border-style: solid,
+	@border-color: #333333,
+	@border-radius: 0.01rem,
+	@color-hover: #FFFFFF,
+	@color-opacity-hover: 1,
+	@bg-color-hover: #000000,
+	@bg-color-opacity-hover: 1,
+	@border-width-hover: 0.01rem,
+	@border-style-hover: solid,
+	@border-color-hover: #FFFFFF,
+	@border-radius-hover: 0.01rem,
+	@padding-top: 0.1rem,
+	@padding-top-ratio: 0.01,
+	@padding-bottom: 0.1rem,
+	@padding-bottom-ratio: 0.01,
+	@padding-left: 0.1rem,
+	@padding-left-ratio: 0.01,
+	@padding-right: 0.1rem,
+	@padding-right-ratio: 0.01,
+	@transition-duration: 1s,
+	@transition-ease: ease-in-out){
+	.enc-font-color(@color, @color-opacity);
+	.enc-background-color(@bg-color, @bg-color-opacity);
+	.enc-border(@border-width, @border-style, @border-color, @border-radius);
+	.enc-flex-auto(font-size, @font-size, @font-size-ratio);
+	.enc-flex-auto(line-height, @line-height, @line-height-ratio);
+	.enc-flex-auto(padding-top, @padding-top, @padding-top-ratio);
+	.enc-flex-auto(padding-bottom, @padding-bottom, @padding-bottom-ratio);
+	.enc-flex-auto(padding-left, @padding-left, @padding-left-ratio);
+	.enc-flex-auto(padding-right, @padding-right, @padding-right-ratio);
+	.enc-transition(@transition-duration, @transition-ease);
+	&:hover{
+		.enc-font-color(@color-hover, @color-opacity-hover);
+		.enc-background-color(@bg-color-hover, @bg-color-opacity-hover);
+		.enc-border(@border-width-hover, @border-style-hover, @border-color-hover, @border-radius-hover);
+	}
+}
+
+/*
+Set a color with rgb -- this will allow to set the transparency of the font color
+*/
+.enc-font-color(@color, @opacity){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	color: @rgba-color;
+}
+
+.enc-cursor(){
+        cursor: pointer;
+        cursor: hand;
+}
+
+.enc-cursor-select-none(){
+        cursor: pointer;
+        cursor: hand;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;	
+}
+
+.enc-cursor-default-select-none(){
+        cursor: default;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;	
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Margin*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-margin(@margin-top: 0, @margin-top-ratio: 0,
+@margin-right: 0, @margin-right-ratio: 0,
+@margin-bottom: 0, @margin-bottom-ratio: 0,
+@margin-left: 0, @margin-left-ratio: 0){
+	.enc-flex-auto(margin-top, @margin-top, @margin-top-ratio);
+	.enc-flex-auto(margin-right, @margin-right, @margin-right-ratio);
+	.enc-flex-auto(margin-bottom, @margin-bottom, @margin-bottom-ratio);
+	.enc-flex-auto(margin-left, @margin-left, @margin-left-ratio);
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Padding*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-padding(@padding-top: 0, @padding-top-ratio: 0,
+@padding-right: 0, @padding-right-ratio: 0,
+@padding-bottom: 0, @padding-bottom-ratio: 0,
+@padding-left: 0, @padding-left-ratio: 0){
+	.enc-flex-auto(padding-top, @padding-top, @padding-top-ratio);
+	.enc-flex-auto(padding-right, @padding-right, @padding-right-ratio);
+	.enc-flex-auto(padding-bottom, @padding-bottom, @padding-bottom-ratio);
+	.enc-flex-auto(padding-left, @padding-left, @padding-left-ratio);
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Text*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-text(@font-size, @font-size-ratio, @line-height, @line-height-ratio, @text-align){
+	.enc-flex-auto(font-size, @font-size, @font-size-ratio);
+	.enc-flex-auto(line-height, @line-height, @line-height-ratio);
+	text-align: @text-align;
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Columns*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-col(@xs, @sm, @md, @lg){
+  .enc-flex-col-xs(@xs);
+  .enc-flex-col-sm(@sm);
+  .enc-flex-col-md(@md);
+  .enc-flex-col-lg(@lg);
+}
+
+.enc-flex-col-xs(@percent){.enc-flex-manual-all-xs(width, @percent);float: left;}
+.enc-flex-col-sm(@percent){.enc-flex-manual-all-sm(width, @percent);float: left;}
+.enc-flex-col-md(@percent){.enc-flex-manual-all-md(width, @percent);float: left;}
+.enc-flex-col-lg(@percent){.enc-flex-manual-all-lg(width, @percent);float: left;}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Width 100% Float left*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-width-float(){
+	width:100%;
+	float: left;
+}
+
+/* ALIGN TEXT VERTICALLY */
+.enc-font-vertical-align(@position: middle){
+	vertical-align: @position;
+	display: table-cell;
+}
+
+/* ALIGN TEXT HORIZONTALLY */
+.enc-font-align(@align){
+	text-align: @align;
+}
+
+/* Auto Flex for Font Size and Line Height */
+.enc-font-auto-fontsize-lineheight(@fontSize, @fontSizeRatio, @lineHeight, @lineHeightRatio){
+	.enc-flex-auto(font-size, @fontSize, @fontSizeRatio);
+	.enc-flex-auto(line-height, @lineHeight, @lineHeightRatio);
+}
+
+.enc-placeholder-color(@color, @opacity){
+	*::-webkit-input-placeholder {
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
+	*:-moz-placeholder {
+		/* FF 4-18 */
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
+	*::-moz-placeholder {
+		/* FF 19+ */
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
+	*:-ms-input-placeholder {
+		/* IE 10+ */
+		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+		color: @rgba-color;
+		opacity: @opacity;
+	}
+}
+
+.enc-flex-auto-padding-top(@top, @topRatio){
+	.enc-flex-auto(padding-top, @top, @topRatio);
+}
+
+.enc-flex-auto-padding-bottom(@bottom, @bottomRatio){
+	.enc-flex-auto(padding-bottom, @bottom, @bottomRatio);
+}
+
+.enc-flex-auto-padding-left(@left, @leftRatio){
+	.enc-flex-auto(padding-left, @left, @leftRatio);
+}
+
+.enc-flex-auto-padding-right(@right, @rightRatio){
+	.enc-flex-auto(padding-right, @right, @rightRatio);
+}
+
+.enc-flex-auto-padding-topbottom(@top, @topRatio, @bottom, @bottomRatio){
+	.enc-flex-auto(padding-top, @top, @topRatio);
+	.enc-flex-auto(padding-bottom, @bottom, @bottomRatio);
+}
+
+.enc-flex-auto-padding-leftright(@left, @leftRatio, @right, @rightRatio){
+	.enc-flex-auto(padding-left, @left, @leftRatio);
+	.enc-flex-auto(padding-right, @right, @rightRatio);
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Horizontal Center*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-horizontal-center(){
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Vertical-Center-works-with-heights*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-vertical-center-outside(
+	@height-xs, @height-ratio-xs,
+ 	@height-sm, @height-ratio-sm,
+  	@height-md, @height-ratio-md,
+   	@height-lg, @height-ratio-lg){
+	.enc-flex-auto-xs(height, @height-xs, @height-ratio-xs);
+	.enc-flex-auto-sm(height, @height-sm, @height-ratio-sm);
+	.enc-flex-auto-md(height, @height-md, @height-ratio-md);
+	.enc-flex-auto-lg(height, @height-lg, @height-ratio-lg);
+}
+
+.enc-flex-vertical-center-inside(
+	@height-xs, @height-ratio-xs,
+ 	@height-sm, @height-ratio-sm,
+  	@height-md, @height-ratio-md,
+   	@height-lg, @height-ratio-lg){
+	.enc-flex-auto-xs(padding-top, @height-xs / 2, @height-ratio-xs / 2);
+	.enc-flex-auto-sm(padding-top, @height-sm / 2, @height-ratio-sm / 2);
+	.enc-flex-auto-md(padding-top, @height-md / 2, @height-ratio-md / 2);
+	.enc-flex-auto-lg(padding-top, @height-lg / 2, @height-ratio-lg / 2);
+}
+
+.enc-flex-vertical-center-content(
+	@height-xs, @height-ratio-xs,
+ 	@height-sm, @height-ratio-sm,
+  	@height-md, @height-ratio-md,
+   	@height-lg, @height-ratio-lg){
+	.enc-flex-auto-xs(height, @height-xs, @height-ratio-xs);
+	.enc-flex-auto-sm(height, @height-sm, @height-ratio-sm);
+	.enc-flex-auto-md(height, @height-md, @height-ratio-md);
+	.enc-flex-auto-lg(height, @height-lg, @height-ratio-lg);
+	.enc-flex-auto-xs(margin-top, -@height-xs / 2, @height-ratio-xs / 2);
+	.enc-flex-auto-sm(margin-top, -@height-sm / 2, @height-ratio-sm / 2);
+	.enc-flex-auto-md(margin-top, -@height-md / 2, @height-ratio-md / 2);
+	.enc-flex-auto-lg(margin-top, -@height-lg / 2, @height-ratio-lg / 2);
+}
+	
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Text Align*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-text-align-xs(@value){.enc-flex-manual-all-xs(text-align, @value);}
+.enc-flex-text-align-sm(@value){.enc-flex-manual-all-sm(text-align, @value);}
+.enc-flex-text-align-md(@value){.enc-flex-manual-all-md(text-align, @value);}
+.enc-flex-text-align-lg(@value){.enc-flex-manual-all-lg(text-align, @value);}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Text Align Center*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-text-center-xs(){.enc-flex-text-align-xs(center);}
+.enc-flex-text-center-sm(){.enc-flex-text-align-sm(center);}
+.enc-flex-text-center-md(){.enc-flex-text-align-md(center);}
+.enc-flex-text-center-lg(){.enc-flex-text-align-lg(center);}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Text Align Left*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-text-left-xs(){.enc-flex-text-align-xs(left);}
+.enc-flex-text-left-sm(){.enc-flex-text-align-sm(left);}
+.enc-flex-text-left-md(){.enc-flex-text-align-md(left);}
+.enc-flex-text-left-lg(){.enc-flex-text-align-lg(left);}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Text Align Right*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-text-right-xs(){.enc-flex-text-align-xs(right);}
+.enc-flex-text-right-sm(){.enc-flex-text-align-sm(right);}
+.enc-flex-text-right-md(){.enc-flex-text-align-md(right);}
+.enc-flex-text-right-lg(){.enc-flex-text-align-lg(right);}
+
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Display*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-display-xs(@value){.enc-flex-manual-all-xs(display, @value);}
+.enc-flex-display-sm(@value){.enc-flex-manual-all-sm(display, @value);}
+.enc-flex-display-md(@value){.enc-flex-manual-all-md(display, @value);}
+.enc-flex-display-lg(@value){.enc-flex-manual-all-lg(display, @value);}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Display Block*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-block-xs(){.enc-flex-display-xs(block);}
+.enc-block-sm(){.enc-flex-display-sm(block);}
+.enc-block-md(){.enc-flex-display-md(block);}
+.enc-block-lg(){.enc-flex-display-lg(block);}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Display Hidden*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-hidden-xs(){.enc-flex-display-xs(none);}
+.enc-hidden-sm(){.enc-flex-display-sm(none);}
+.enc-hidden-md(){.enc-flex-display-md(none);}
+.enc-hidden-lg(){.enc-flex-display-lg(none);}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Grouped Display, Extra Small and Small Hidden*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-display-md-lg(){
+	.enc-hidden-xs();
+	.enc-hidden-sm();
+	.enc-block-md();
+	.enc-block-lg();
+}
+
+/*##############################################################################*/
+/*##############################################################################*/
+/*Grouped Display, Medium and Large Hidden*/
+/*##############################################################################*/
+/*##############################################################################*/
+.enc-flex-display-xs-sm(){
+	.enc-block-xs();
+	.enc-block-sm();
+	.enc-hidden-md();
+	.enc-hidden-lg();
+}
+
+.enc-box-shadow(@color: #000000, @opacity: 1, @horizontal: 2px, @vertical: 2px, @blurRadius: 2px, @spreadRadius: 2px){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	-webkit-box-shadow: @horizontal @vertical @blurRadius @spreadRadius @rgba-color;
+	-moz-box-shadow: @horizontal @vertical @blurRadius @spreadRadius @rgba-color;
+	box-shadow: @horizontal @vertical @blurRadius @spreadRadius @rgba-color;
+}
+
+.enc-text-shadow(@color: #000000, @opacity: 1, @angle: 2px, @distance: 2px, @blur: 2px){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	text-shadow: @angle @distance @blur @rgba-color;
+}
+
+.enc-transform(@transform:rotate, @deg:45deg) {
+ 	-webkit-transition: @transform(@deg);
+  	-moz-transition: @transform(@deg);
+  	-o-transition: @transform(@deg);
+ 	 transition: @transform(@deg);
+}
+
+.enc-rotate(@deg){
+	@msDeg: (@deg / 100); 
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@msDeg);
+}
+
+/*
+Easily set a transistion that works for all browers
+*/
+.enc-transition(@duration:1s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}

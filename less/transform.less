@@ -1,15 +1,106 @@
-.enc-transform(@transform:rotate, @deg:45deg) {
- 	-webkit-transition: @transform(@deg);
-  	-moz-transition: @transform(@deg);
-  	-o-transition: @transform(@deg);
- 	 transition: @transform(@deg);
+.enc-transform-none{
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
 }
 
-.enc-rotate(@deg){
-	@msDeg: (@deg / 100); 
+.enc-transform-translate(@x: 0%, @y: 0%){
+	-webkit-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+	transform: translate(@x, @y);
+}
+
+.enc-transform-translateX(@x: 0%){
+	-webkit-transform: translateX(@x);
+	-ms-transform: translateX(@x);
+	transform: translateX(@x);
+}
+
+.enc-transform-translateY(@y: 0%){
+	-webkit-transform: translateY(@y);
+	-ms-transform: translateY(@y);
+	transform: translateY(@y);
+}
+
+.enc-transform-scale(@x: 1, @y: 1){
+	-webkit-transform: scale(@x, @y);
+	-ms-transform: scale(@x, @y);
+	transform: scale(@x, @y);
+}
+
+.enc-transform-scaleX(@x: 1){
+	-webkit-transform: scaleX(@x);
+	-ms-transform: scaleX(@x);
+	transform: scaleX(@x);
+}
+
+.enc-transform-scaleY(@y: 1){
+	-webkit-transform: scaleX(@y);
+	-ms-transform: scaleX(@y);
+	transform: scaleX(@y);
+}
+
+.enc-transform-rotate(@deg: 90){
 	-webkit-transform: rotate(@deg);
-	-moz-transform: rotate(@deg);
 	-ms-transform: rotate(@deg);
-	-o-transform: rotate(@deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@msDeg);
+	transform: rotate(@deg);
+}
+
+.enc-transform-skewX(@x){
+	-webkit-transform: skewX(@x);
+	-ms-transform: skewX(@x);
+	transform: skewX(@x);
+}
+
+.enc-transform-skewY(@y){
+	-webkit-transform: skewY(@y);
+	-ms-transform: skewY(@y);
+	transform: skewY(@y);
+}
+
+.enc-transform-translate3d(@x: 0%, @y: 0%, @z: 0%){
+	-webkit-transform: translate3d(@x, @y, @z);
+	transform: translate3d(@x, @y, @z);
+}
+
+.enc-transform-translateZ(@z: 0%){
+	-webkit-transform: translateZ(@z);
+	transform: translateZ(@z);
+}
+
+
+.enc-transform-scale3d(@x: 1, @y: 1, @z: 1){
+	-webkit-transform: scale3d(@x, @y, @z);
+	transform: scale3d(@x, @y, @z);
+}
+
+.enc-transform-scaleZ(@z: 1){
+	-webkit-transform: scaleZ(@z);
+	transform: scaleZ(@z);
+}
+
+
+.enc-transform-rotate3d(@x: 1, @y: 1, @z: 1, @deg: 90deg){
+	-webkit-transform: rotate3d(@x, @y, @z, @deg);
+	transform: rotate3d(@x, @y, @z, @deg);
+}
+
+.enc-transform-rotateX(@deg: 90){
+	-webkit-transform: rotateX(@deg);
+	transform: rotateX(@deg);
+}
+
+.enc-transform-rotateY(@deg: 90){
+	-webkit-transform: rotateY(@deg);
+	transform: rotateY(@deg);
+}
+
+.enc-transform-rotateZ(@deg: 90){
+	-webkit-transform: rotateZ(@deg);
+	transform: rotateZ(@deg);
+}
+
+.enc-transform-perspective(@perspective: 0%){
+	-webkit-transform: perspective(@perspective);
+	transform: perspective(@perspective);
 }
