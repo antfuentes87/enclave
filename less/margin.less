@@ -1,11 +1,52 @@
+/*AUTO*/
 .enc-margin-auto-top(@marginTop, @marginTopRatio){.enc-flex-auto(margin-top, @marginTop, @marginTopRatio);}
 .enc-margin-auto-bottom(@marginBottom, @marginBottomRatio){.enc-flex-auto(margin-bottom, @marginBottom, @marginBottomRatio);}
 .enc-margin-auto-left(@marginLeft, @marginLeftRatio){.enc-flex-auto(margin-left, @marginLeft, @marginLeftRatio);}
 .enc-margin-auto-right(@marginRight, @marginRightRatio){.enc-flex-auto(margin-right, @marginRight, @marginRightRatio);}
 
+.enc-margin-auto-top-xs(@marginTop, @marginTopRatio){.enc-flex-auto-xs(margin-top, @marginTop, @marginTopRatio);}
+.enc-margin-auto-top-sm(@marginTop, @marginTopRatio){.enc-flex-auto-sm(margin-top, @marginTop, @marginTopRatio);}
+.enc-margin-auto-top-md(@marginTop, @marginTopRatio){.enc-flex-auto-md(margin-top, @marginTop, @marginTopRatio);}
+.enc-margin-auto-top-lg(@marginTop, @marginTopRatio){.enc-flex-auto-lg(margin-top, @marginTop, @marginTopRatio);}
+
+.enc-margin-auto-bottom-xs(@marginBottom, @marginBottomRatio){.enc-flex-auto-xs(margin-bottom, @marginBottom, @marginBottomRatio);}
+.enc-margin-auto-bottom-sm(@marginBottom, @marginBottomRatio){.enc-flex-auto-sm(margin-bottom, @marginBottom, @marginBottomRatio);}
+.enc-margin-auto-bottom-md(@marginBottom, @marginBottomRatio){.enc-flex-auto-md(margin-bottom, @marginBottom, @marginBottomRatio);}
+.enc-margin-auto-bottom-lg(@marginBottom, @marginBottomRatio){.enc-flex-auto-lg(margin-bottom, @marginBottom, @marginBottomRatio);}
+
+.enc-margin-auto-left-xs(@marginLeft, @marginLeftRatio){.enc-flex-auto-xs(margin-left, @marginLeft, @marginLeftRatio);}
+.enc-margin-auto-left-sm(@marginLeft, @marginLeftRatio){.enc-flex-auto-sm(margin-left, @marginLeft, @marginLeftRatio);}
+.enc-margin-auto-left-md(@marginLeft, @marginLeftRatio){.enc-flex-auto-md(margin-left, @marginLeft, @marginLeftRatio);}
+.enc-margin-auto-left-lg(@marginLeft, @marginLeftRatio){.enc-flex-auto-lg(margin-left, @marginLeft, @marginLeftRatio);}
+
+.enc-margin-auto-right-xs(@marginRight, @marginRightRatio){.enc-flex-auto-xs(margin-right, @marginRight, @marginRightRatio);}
+.enc-margin-auto-right-sm(@marginRight, @marginRightRatio){.enc-flex-auto-sm(margin-right, @marginRight, @marginRightRatio);}
+.enc-margin-auto-right-md(@marginRight, @marginRightRatio){.enc-flex-auto-md(margin-right, @marginRight, @marginRightRatio);}
+.enc-margin-auto-right-lg(@marginRight, @marginRightRatio){.enc-flex-auto-lg(margin-right, @marginRight, @marginRightRatio);}
+
 .enc-margin-auto-topbottom(@marginTop, @marginTopRatio, @marginBottom, @marginBottomRatio){
 	.enc-margin-auto-top(@marginTop, @marginTopRatio);
 	.enc-margin-auto-bottom(@marginBottom, @marginBottomRatio);
+}
+
+.enc-margin-auto-topbottom-xs(@marginTop, @marginTopRatio, @marginBottom, @marginBottomRatio){
+	.enc-margin-auto-top-xs(@marginTop, @marginTopRatio);
+	.enc-margin-auto-bottom-xs(@marginBottom, @marginBottomRatio);
+}
+
+.enc-margin-auto-topbottom-sm(@marginTop, @marginTopRatio, @marginBottom, @marginBottomRatio){
+	.enc-margin-auto-top-sm(@marginTop, @marginTopRatio);
+	.enc-margin-auto-bottom-sm(@marginBottom, @marginBottomRatio);
+}
+
+.enc-margin-auto-topbottom-md(@marginTop, @marginTopRatio, @marginBottom, @marginBottomRatio){
+	.enc-margin-auto-top-md(@marginTop, @marginTopRatio);
+	.enc-margin-auto-bottom-md(@marginBottom, @marginBottomRatio);
+}
+
+.enc-margin-auto-topbottom-lg(@marginTop, @marginTopRatio, @marginBottom, @marginBottomRatio){
+	.enc-margin-auto-top-lg(@marginTop, @marginTopRatio);
+	.enc-margin-auto-bottom-lg(@marginBottom, @marginBottomRatio);
 }
 
 .enc-margin-auto-leftright(@marginLeft, @marginLeftRatio, @marginRight, @marginRightRatio){
@@ -13,12 +54,194 @@
 	.enc-margin-auto-right(@marginRight, @marginRightRatio);
 }
 
+.enc-margin-auto-leftright-xs(@marginLeft, @marginLeftRatio, @marginRight, @marginRightRatio){
+	.enc-margin-auto-left-xs(@marginLeft, @marginLeftRatio);
+	.enc-margin-auto-right-xs(@marginRight, @marginRightRatio);
+}
+
+.enc-margin-auto-leftright-sm(@marginLeft, @marginLeftRatio, @marginRight, @marginRightRatio){
+	.enc-margin-auto-left-sm(@marginLeft, @marginLeftRatio);
+	.enc-margin-auto-right-sm(@marginRight, @marginRightRatio);
+}
+
+.enc-margin-auto-leftright-md(@marginLeft, @marginLeftRatio, @marginRight, @marginRightRatio){
+	.enc-margin-auto-left-md(@marginLeft, @marginLeftRatio);
+	.enc-margin-auto-right-md(@marginRight, @marginRightRatio);
+}
+
+.enc-margin-auto-leftright-lg(@marginLeft, @marginLeftRatio, @marginRight, @marginRightRatio){
+	.enc-margin-auto-left-lg(@marginLeft, @marginLeftRatio);
+	.enc-margin-auto-right-lg(@marginRight, @marginRightRatio);
+}
+
 .enc-margin-auto-equal-topbottom(@margin, @marginRatio){
 	.enc-margin-auto-top(@margin, @marginRatio);
 	.enc-margin-auto-bottom(@margin, @marginRatio);
 }
 
+.enc-margin-auto-equal-topbottom-xs(@margin, @marginRatio){
+	.enc-margin-auto-top-xs(@margin, @marginRatio);
+	.enc-margin-auto-bottom-xs(@margin, @marginRatio);
+}
+
+.enc-margin-auto-equal-topbottom-sm(@margin, @marginRatio){
+	.enc-margin-auto-top-sm(@margin, @marginRatio);
+	.enc-margin-auto-bottom-sm(@margin, @marginRatio);
+}
+
+.enc-margin-auto-equal-topbottom-md(@margin, @marginRatio){
+	.enc-margin-auto-top-md(@margin, @marginRatio);
+	.enc-margin-auto-bottom-md(@margin, @marginRatio);
+}
+.enc-margin-auto-equal-topbottom-lg(@margin, @marginRatio){
+	.enc-margin-auto-top-lg(@margin, @marginRatio);
+	.enc-margin-auto-bottom-lg(@margin, @marginRatio);
+}
+
 .enc-margin-auto-equal-leftright(@margin, @marginRatio){
 	.enc-margin-auto-left(@margin, @marginRatio);
 	.enc-margin-auto-right(@margin, @marginRatio);
+}
+
+.enc-margin-auto-equal-leftright-xs(@margin, @marginRatio){
+	.enc-margin-auto-left-xs(@margin, @marginRatio);
+	.enc-margin-auto-right-xs(@margin, @marginRatio);
+}
+
+.enc-margin-auto-equal-leftright-sm(@margin, @marginRatio){
+	.enc-margin-auto-left-sm(@margin, @marginRatio);
+	.enc-margin-auto-right-sm(@margin, @marginRatio);
+}
+
+.enc-margin-auto-equal-leftright-md(@margin, @marginRatio){
+	.enc-margin-auto-left-md(@margin, @marginRatio);
+	.enc-margin-auto-right-md(@margin, @marginRatio);
+}
+.enc-margin-auto-equal-leftright-lg(@margin, @marginRatio){
+	.enc-margin-auto-left-lg(@margin, @marginRatio);
+	.enc-margin-auto-right-lg(@margin, @marginRatio);
+}
+
+/*MANUAL*/
+.enc-margin-manual-all-top(@marginTop){.enc-flex-manual-all(margin-top, @marginTop);}
+.enc-margin-manual-all-bottom(@marginBottom){.enc-flex-manual-all(margin-bottom, @marginBottom);}
+.enc-margin-manual-all-left(@marginLeft){.enc-flex-manual-all(margin-left, @marginLeft);}
+.enc-margin-manual-all-right(@marginRight){.enc-flex-manual-all(margin-right, @marginRight);}
+
+.enc-margin-manual-all-top-xs(@marginTop){.enc-flex-manual-all-xs(margin-top, @marginTop);}
+.enc-margin-manual-all-top-sm(@marginTop){.enc-flex-manual-all-sm(margin-top, @marginTop);}
+.enc-margin-manual-all-top-md(@marginTop){.enc-flex-manual-all-md(margin-top, @marginTop);}
+.enc-margin-manual-all-top-lg(@marginTop){.enc-flex-manual-all-lg(margin-top, @marginTop);}
+
+.enc-margin-manual-all-bottom-xs(@marginBottom){.enc-flex-manual-all-xs(margin-bottom, @marginBottom);}
+.enc-margin-manual-all-bottom-sm(@marginBottom){.enc-flex-manual-all-sm(margin-bottom, @marginBottom);}
+.enc-margin-manual-all-bottom-md(@marginBottom){.enc-flex-manual-all-md(margin-bottom, @marginBottom);}
+.enc-margin-manual-all-bottom-lg(@marginBottom){.enc-flex-manual-all-lg(margin-bottom, @marginBottom);}
+
+.enc-margin-manual-all-left-xs(@marginLeft){.enc-flex-manual-all-xs(margin-left, @marginLeft);}
+.enc-margin-manual-all-left-sm(@marginLeft){.enc-flex-manual-all-sm(margin-left, @marginLeft);}
+.enc-margin-manual-all-left-md(@marginLeft){.enc-flex-manual-all-md(margin-left, @marginLeft);}
+.enc-margin-manual-all-left-lg(@marginLeft){.enc-flex-manual-all-lg(margin-left, @marginLeft);}
+
+.enc-margin-manual-all-right-xs(@marginRight){.enc-flex-manual-all-xs(margin-right, @marginRight);}
+.enc-margin-manual-all-right-sm(@marginRight){.enc-flex-manual-all-sm(margin-right, @marginRight);}
+.enc-margin-manual-all-right-md(@marginRight){.enc-flex-manual-all-md(margin-right, @marginRight);}
+.enc-margin-manual-all-right-lg(@marginRight){.enc-flex-manual-all-lg(margin-right, @marginRight);}
+
+.enc-margin-manual-all-topbottom(@marginTop, @marginBottom){
+	.enc-margin-manual-all-top(@marginTop);
+	.enc-margin-manual-all-bottom(@marginBottom);
+}
+
+.enc-margin-manual-all-topbottom-xs(@marginTop, @marginBottom){
+	.enc-margin-manual-all-top-xs(@marginTop);
+	.enc-margin-manual-all-bottom-xs(@marginBottom);
+}
+
+.enc-margin-manual-all-topbottom-sm(@marginTop, @marginBottom){
+	.enc-margin-manual-all-top-sm(@marginTop);
+	.enc-margin-manual-all-bottom-sm(@marginBottom);
+}
+
+.enc-margin-manual-all-topbottom-md(@marginTop, @marginBottom){
+	.enc-margin-manual-all-top-md(@marginTop);
+	.enc-margin-manual-all-bottom-md(@marginBottom);
+}
+
+.enc-margin-manual-all-topbottom-lg(@marginTop, @marginBottom){
+	.enc-margin-manual-all-top-lg(@marginTop);
+	.enc-margin-manual-all-bottom-lg(@marginBottom);
+}
+
+.enc-margin-manual-all-leftright(@marginLeft, @marginRight){
+	.enc-margin-manual-all-left(@marginLeft);
+	.enc-margin-manual-all-right(@marginRight);
+}
+
+.enc-margin-manual-all-leftright-xs(@marginLeft, @marginRight){
+	.enc-margin-manual-all-left-xs(@marginLeft);
+	.enc-margin-manual-all-right-xs(@marginRight);
+}
+
+.enc-margin-manual-all-leftright-sm(@marginLeft, @marginRight){
+	.enc-margin-manual-all-left-sm(@marginLeft);
+	.enc-margin-manual-all-right-sm(@marginRight);
+}
+
+.enc-margin-manual-all-leftright-md(@marginLeft, @marginRight){
+	.enc-margin-manual-all-left-md(@marginLeft);
+	.enc-margin-manual-all-right-md(@marginRight);
+}
+
+.enc-margin-manual-all-leftright-lg(@marginLeft, @marginRight){
+	.enc-margin-manual-all-left-lg(@marginLeft);
+	.enc-margin-manual-all-right-lg(@marginRight);
+}
+
+.enc-margin-manual-all-equal-topbottom(@margin){
+	.enc-margin-manual-all-top(@margin);
+	.enc-margin-manual-all-bottom(@margin);
+}
+
+.enc-margin-manual-all-equal-topbottom-xs(@margin){
+	.enc-margin-manual-all-top-xs(@margin);
+	.enc-margin-manual-all-bottom-xs(@margin);
+}
+
+.enc-margin-manual-all-equal-topbottom-sm(@margin){
+	.enc-margin-manual-all-top-sm(@margin);
+	.enc-margin-manual-all-bottom-sm(@margin);
+}
+
+.enc-margin-manual-all-equal-topbottom-md(@margin){
+	.enc-margin-manual-all-top-md(@margin);
+	.enc-margin-manual-all-bottom-md(@margin);
+}
+.enc-margin-manual-all-equal-topbottom-lg(@margin){
+	.enc-margin-manual-all-top-lg(@margin);
+	.enc-margin-manual-all-bottom-lg(@margin);
+}
+
+.enc-margin-manual-all-equal-leftright(@margin){
+	.enc-margin-manual-all-left(@margin);
+	.enc-margin-manual-all-right(@margin);
+}
+
+.enc-margin-manual-all-equal-leftright-xs(@margin){
+	.enc-margin-manual-all-left-xs(@margin);
+	.enc-margin-manual-all-right-xs(@margin);
+}
+
+.enc-margin-manual-all-equal-leftright-sm(@margin){
+	.enc-margin-manual-all-left-sm(@margin);
+	.enc-margin-manual-all-right-sm(@margin);
+}
+
+.enc-margin-manual-all-equal-leftright-md(@margin){
+	.enc-margin-manual-all-left-md(@margin);
+	.enc-margin-manual-all-right-md(@margin);
+}
+.enc-margin-manual-all-equal-leftright-lg(@margin){
+	.enc-margin-manual-all-left-lg(@margin);
+	.enc-margin-manual-all-right-lg(@margin);
 }

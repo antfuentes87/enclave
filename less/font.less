@@ -3,6 +3,51 @@
 	.enc-flex-auto(line-height, @lineHeight, @lineHeightRatio);
 }
 
+.enc-font-auto-size-lineheight-xs(@fontSize: 1rem, @fontSizeRatio: 0.01, @lineHeight: 1rem, @lineHeightRatio: 0.01){
+	.enc-flex-auto-xs(font-size, @fontSize, @fontSizeRatio);
+	.enc-flex-auto-xs(line-height, @lineHeight, @lineHeightRatio);
+}
+
+.enc-font-auto-size-lineheight-sm(@fontSize: 1rem, @fontSizeRatio: 0.01, @lineHeight: 1rem, @lineHeightRatio: 0.01){
+	.enc-flex-auto-sm(font-size, @fontSize, @fontSizeRatio);
+	.enc-flex-auto-sm(line-height, @lineHeight, @lineHeightRatio);
+}
+
+.enc-font-auto-size-lineheight-md(@fontSize: 1rem, @fontSizeRatio: 0.01, @lineHeight: 1rem, @lineHeightRatio: 0.01){
+	.enc-flex-auto-md(font-size, @fontSize, @fontSizeRatio);
+	.enc-flex-auto-md(line-height, @lineHeight, @lineHeightRatio);
+}
+
+.enc-font-auto-size-lineheight-lg(@fontSize: 1rem, @fontSizeRatio: 0.01, @lineHeight: 1rem, @lineHeightRatio: 0.01){
+	.enc-flex-auto-lg(font-size, @fontSize, @fontSizeRatio);
+	.enc-flex-auto-lg(line-height, @lineHeight, @lineHeightRatio);
+}
+
+.enc-font-manual-all-size-lineheight(@fontSize: 1rem, @lineHeight: 1rem){
+	.enc-flex-manual-all(font-size, @fontSize);
+	.enc-flex-manual-all(line-height, @lineHeight);
+}
+
+.enc-font-manual-all-size-lineheight-xs(@fontSize: 1rem, @lineHeight: 1rem
+	.enc-flex-manual-all-xs(font-size, @fontSize);
+	.enc-flex-manual-all-xs(line-height, @lineHeight);
+}
+
+.enc-font-manual-all-size-lineheight-sm(@fontSize: 1rem, @lineHeight: 1rem){
+	.enc-flex-manual-all-sm(font-size, @fontSize);
+	.enc-flex-manual-all-sm(line-height, @lineHeight);
+}
+
+.enc-font-manual-all-size-lineheight-md(@fontSize: 1rem, @lineHeight: 1rem){
+	.enc-flex-manual-all-md(font-size, @fontSize);
+	.enc-flex-manual-all-md(line-height, @lineHeight);
+}
+
+.enc-font-manual-all-size-lineheight-lg(@fontSize: 1rem, @lineHeight: 1rem){
+	.enc-flex-manual-all-lg(font-size, @fontSize);
+	.enc-flex-manual-all-lg(line-height, @lineHeight);
+}
+
 .enc-font-add(@font-default-path, @font-name, @font-weight, @font-style){
 	@font-full-path: "@{font-default-path}@{font-name}/@{font-name}";
 	@font-face{
