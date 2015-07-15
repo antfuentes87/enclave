@@ -1,131 +1,3 @@
-function encPadding_EvenInner(margin, elementA, elementB, elementC, elementD){
-	var marginHalfPx = margin.replace("px", '');
-	var marginHalf = Math.floor(marginHalfPx) / 2;
-	$(elementA).css("padding-top", 0);
-	$(elementA).css("padding-bottom", marginHalf);
-	$(elementA).css("padding-left", 0);
-	$(elementA).css("padding-right", marginHalf);
-	$(elementB).css("padding-top", 0);
-	$(elementB).css("padding-bottom", marginHalf);
-	$(elementB).css("padding-left", marginHalf);
-	$(elementB).css("padding-right", 0);
-	$(elementC).css("padding-top", marginHalf);
-	$(elementC).css("padding-bottom", 0);
-	$(elementC).css("padding-left", 0);
-	$(elementC).css("padding-right", marginHalf);
-	$(elementD).css("padding-top", marginHalf);
-	$(elementD).css("padding-bottom", 0);
-	$(elementD).css("padding-left", marginHalf);
-	$(elementD).css("padding-right", 0);
-}
-
-function encMargin_EvenInner(margin, elementA, elementB, elementC, elementD){
-	var marginHalfPx = margin.replace("px", '');
-	var marginHalf = Math.floor(marginHalfPx) / 2;
-	$(elementA).css("margin-top", 0);
-	$(elementA).css("margin-bottom", marginHalf);
-	$(elementA).css("margin-left", 0);
-	$(elementA).css("margin-right", marginHalf);
-	$(elementB).css("margin-top", 0);
-	$(elementB).css("margin-bottom", marginHalf);
-	$(elementB).css("margin-left", marginHalf);
-	$(elementB).css("margin-right", 0);
-	$(elementC).css("margin-top", marginHalf);
-	$(elementC).css("margin-bottom", 0);
-	$(elementC).css("margin-left", 0);
-	$(elementC).css("margin-right", marginHalf);
-	$(elementD).css("margin-top", marginHalf);
-	$(elementD).css("margin-bottom", 0);
-	$(elementD).css("margin-left", marginHalf);
-	$(elementD).css("margin-right", 0);
-}
-
-function encAddClassScrollWindowHeight_Half(startClass, endClass, minusClass){
-	var header = $(startClass);
-	var minusClassHeight = $(minusClass).height();
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-	var windowHeight = $(window).height();
-	var windowHeightDivide = windowHeight / 2;
-	var windowHeightMinus = windowHeightDivide - minusClassHeight;
-        if (scroll >= windowHeightMinus) {
-            header.addClass(endClass);
-        } else {
-            header.removeClass(endClass);
-        }
-    });
-}
-
-function encFlexFont(elementA, elementB, fontRatio, lineheightRatio){
-	var elementAWidth = $(elementA).width();
-	$(elementB).css("font-size", elementAWidth / fontRatio);
-	$(elementB).css("line-height", elementAWidth / lineheightRatio + 'px');
-}
-
-function encFlexPaddingTopBottom(elementA, elementB){
-	var elementAHeight = $(elementA).height();
-	$(elementB).css("padding-top", elementAHeight / 16);
-	$(elementB).css("padding-bottom", elementAHeight / 32);	
-}
-
-function encMarginNegativeVerticalCenter(elementA, elementB){
-	var elementAHeight = $(elementA).height();
-	var elementBHeight = $(elementB).height();
-	var elementBMargin = elementAHeight - elementBHeight;
-	$(elementB).css("vertical-align", elementBMargin / 4);
-}
-
-function encFlexWidthCenter(elementA, elementB, xs, sm, md, lg){
-	var elementAWidth = $(elementA).width();
-	$(elementB).css("margin", "0 auto");
-	$(elementB).css("display", "block");
-	if (window.matchMedia("(max-width: 767px)").matches){
-		$(elementB).width(elementAWidth / xs);
-	}else if(window.matchMedia("(max-width: 1023px)").matches){
-		$(elementB).width(elementAWidth / sm);
-	}else if(window.matchMedia("(max-width: 1365px)").matches){
-		$(elementB).width(elementAWidth / md);
-	}else if(window.matchMedia("(max-width: 1920px)").matches){
-		$(elementB).width(elementAWidth / lg);
-	}
-}
-
-function encVerticalCenter(outerElement, innerElement, innerElementContent){
-	var outerElementHeight = $(outerElement).height();
-	var innerElementContentHeight = $(innerElementContent).height();
-	$(innerElement).css("padding-top", outerElementHeight / 2);
-	$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
-}
-/*Widths*/
-function encAllWidthsEqualElementA(elementA, elementB){
-	var elementAWidth = $(elementA).width();
-	$(elementB).width(elementAWidth);
-}
-
-function encAllWidthsEqualElementA_Half(elementA, elementB){
-	var elementAWidth = $(elementA).width();
-	$(elementB).width(elementAWidth / 2);
-}
-
-function encAllWidthsEqualElementA_Divided(elementA, elementB, divisionNumber){
-	var elementAWidth = $(elementA).width();
-	$(elementB).width(elementAWidth / divisionNumber);
-}
-/*Min Heights*/
-function encAllMinHeightsEqualElementA(elementA, elementB){
-	var elementAHeight = $(elementA).height();
-	$(elementB).css("min-height", elementAHeight);
-}
-
-function encAllMinHeightsEqualElementA_Half(elementA, elementB){
-	var elementAHeight = $(elementA).height();
-	$(elementB).css("min-height", elementAHeight / 2);
-}
-
-function encAllMinHeightsEqualElementA_Divided(elementA, elementB, divisionNumber){
-	var elementAHeight = $(elementA).height();
-	$(elementB).css("min-height", elementAHeight / divisionNumber);
-}
 /*Heights*/
 function encAllHeightsEqualElementA(elementA, elementB){
 	var elementAHeight = $(elementA).height();
@@ -141,7 +13,6 @@ function encAllHeightsEqualElementA_Divided(elementA, elementB, divisionNumber){
 	var elementAHeight = $(elementA).height();
 	$(elementB).css("height", elementAHeight / divisionNumber);
 }
-
 function encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
 	var elementAHeight = $(elementA).height();
 	var elementBHeight = elementAHeight / elementOffset;
@@ -149,7 +20,6 @@ function encAllHeightsEqualElementA_Offset(elementA, elementB, elementOffset){
 	$(elementB).height(elementBHeight);
 	$(elementB).css("margin-top", elementBMarginTop);
 }
-
 function encAllHeightsEqualElementA_MinusPadding(elementA, elementB){
 	var elementAHeight = $(elementA).height();
 	var elementAPaddingTop = $(elementA).css("padding-top").replace("px", "");
@@ -282,6 +152,83 @@ function encAllHeightsEqualElement_Tallest(container){
 	});
 }
 
+/*Min Heights*/
+function encAllMinHeightsEqualElementA(elementA, elementB){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("min-height", elementAHeight);
+}
+
+function encAllMinHeightsEqualElementA_Half(elementA, elementB){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("min-height", elementAHeight / 2);
+}
+
+function encAllMinHeightsEqualElementA_Divided(elementA, elementB, divisionNumber){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("min-height", elementAHeight / divisionNumber);
+}
+
+/*Widths*/
+function encAllWidthsEqualElementA(elementA, elementB){
+	var elementAWidth = $(elementA).width();
+	$(elementB).width(elementAWidth);
+}
+
+function encAllWidthsEqualElementA_Half(elementA, elementB){
+	var elementAWidth = $(elementA).width();
+	$(elementB).width(elementAWidth / 2);
+}
+
+function encAllWidthsEqualElementA_Divided(elementA, elementB, divisionNumber){
+	var elementAWidth = $(elementA).width();
+	$(elementB).width(elementAWidth / divisionNumber);
+}
+
+/*Align*/
+function encMarginNegativeVerticalCenter(elementA, elementB){
+	var elementAHeight = $(elementA).height();
+	var elementBHeight = $(elementB).height();
+	var elementBMargin = elementAHeight - elementBHeight;
+	$(elementB).css("vertical-align", elementBMargin / 4);
+}
+
+function encFlexWidthCenter(elementA, elementB, xs, sm, md, lg){
+	var elementAWidth = $(elementA).width();
+	$(elementB).css("margin", "0 auto");
+	$(elementB).css("display", "block");
+	if (window.matchMedia("(max-width: 767px)").matches){
+		$(elementB).width(elementAWidth / xs);
+	}else if(window.matchMedia("(max-width: 1023px)").matches){
+		$(elementB).width(elementAWidth / sm);
+	}else if(window.matchMedia("(max-width: 1365px)").matches){
+		$(elementB).width(elementAWidth / md);
+	}else if(window.matchMedia("(max-width: 1920px)").matches){
+		$(elementB).width(elementAWidth / lg);
+	}
+}
+
+function encVerticalCenter(outerElement, innerElement, innerElementContent){
+	var outerElementHeight = $(outerElement).height();
+	var innerElementContentHeight = $(innerElementContent).height();
+	$(innerElement).css("padding-top", outerElementHeight / 2);
+	$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
+}
+/*Scroll*/
+function encAddClassScrollWindowHeight_Half(startClass, endClass, minusClass){
+	var header = $(startClass);
+	var minusClassHeight = $(minusClass).height();
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+	var windowHeight = $(window).height();
+	var windowHeightDivide = windowHeight / 2;
+	var windowHeightMinus = windowHeightDivide - minusClassHeight;
+        if (scroll >= windowHeightMinus) {
+            header.addClass(endClass);
+        } else {
+            header.removeClass(endClass);
+        }
+    });
+}
 function encScrollTopAddClass(element, elementAddClass, scrollAddClassValue){
 	$(window).scroll(function() {    
     var scrollTopValue = $(window).scrollTop();
@@ -291,4 +238,103 @@ function encScrollTopAddClass(element, elementAddClass, scrollAddClassValue){
         $(element).removeClass(elementAddClass);
     }
 	});
+}
+/*Hover*/
+function encHoverClassActiveNotActive(element, activeClass, notActiveClass) {
+   $(function(){
+		$(element).hover(function() {
+			$(this).addClass(activeClass);
+		},
+		function(){
+			$(this).removeClass(activeClass);
+		});
+		$(element).hover(function() {
+			var elementNot = element + ':not(.' + activeClass + ')';
+			$(elementNot).addClass(notActiveClass);
+		},
+		function(){
+			var elementNot = element + ':not(.' + activeClass + ')';
+			$(elementNot).removeClass(notActiveClass);
+		});
+	});
+}
+
+function encHoverClassActive(element, activeClass) {
+	$(element).hover(
+		function () {
+			$(this).addClass(activeClass);
+		}, 
+		function () {
+			$(this).removeClass(activeClass);
+		}
+	);
+}
+
+function encHoverAddClassRemoveClass(elementA, elementB, activeClass, nonActiveClass) {
+	$(elementB).addClass(nonActiveClass);
+	$(elementA).hover(
+		function () {
+			$(elementB).removeClass(nonActiveClass);
+			$(elementB).addClass(activeClass);
+		}, 
+		function () {
+			$(elementB).removeClass(activeClass);
+			$(elementB).addClass(nonActiveClass);
+		}
+	);
+}
+
+/*TRASH!!!*/
+function encPadding_EvenInner(margin, elementA, elementB, elementC, elementD){
+	var marginHalfPx = margin.replace("px", '');
+	var marginHalf = Math.floor(marginHalfPx) / 2;
+	$(elementA).css("padding-top", 0);
+	$(elementA).css("padding-bottom", marginHalf);
+	$(elementA).css("padding-left", 0);
+	$(elementA).css("padding-right", marginHalf);
+	$(elementB).css("padding-top", 0);
+	$(elementB).css("padding-bottom", marginHalf);
+	$(elementB).css("padding-left", marginHalf);
+	$(elementB).css("padding-right", 0);
+	$(elementC).css("padding-top", marginHalf);
+	$(elementC).css("padding-bottom", 0);
+	$(elementC).css("padding-left", 0);
+	$(elementC).css("padding-right", marginHalf);
+	$(elementD).css("padding-top", marginHalf);
+	$(elementD).css("padding-bottom", 0);
+	$(elementD).css("padding-left", marginHalf);
+	$(elementD).css("padding-right", 0);
+}
+
+function encMargin_EvenInner(margin, elementA, elementB, elementC, elementD){
+	var marginHalfPx = margin.replace("px", '');
+	var marginHalf = Math.floor(marginHalfPx) / 2;
+	$(elementA).css("margin-top", 0);
+	$(elementA).css("margin-bottom", marginHalf);
+	$(elementA).css("margin-left", 0);
+	$(elementA).css("margin-right", marginHalf);
+	$(elementB).css("margin-top", 0);
+	$(elementB).css("margin-bottom", marginHalf);
+	$(elementB).css("margin-left", marginHalf);
+	$(elementB).css("margin-right", 0);
+	$(elementC).css("margin-top", marginHalf);
+	$(elementC).css("margin-bottom", 0);
+	$(elementC).css("margin-left", 0);
+	$(elementC).css("margin-right", marginHalf);
+	$(elementD).css("margin-top", marginHalf);
+	$(elementD).css("margin-bottom", 0);
+	$(elementD).css("margin-left", marginHalf);
+	$(elementD).css("margin-right", 0);
+}
+
+function encFlexFont(elementA, elementB, fontRatio, lineheightRatio){
+	var elementAWidth = $(elementA).width();
+	$(elementB).css("font-size", elementAWidth / fontRatio);
+	$(elementB).css("line-height", elementAWidth / lineheightRatio + 'px');
+}
+
+function encFlexPaddingTopBottom(elementA, elementB){
+	var elementAHeight = $(elementA).height();
+	$(elementB).css("padding-top", elementAHeight / 16);
+	$(elementB).css("padding-bottom", elementAHeight / 32);	
 }
