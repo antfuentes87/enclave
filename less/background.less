@@ -13,8 +13,11 @@
 .enc-background-color-overlay(@color, @opacity){
 	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
 	box-shadow: inset 0 0 0 1000px @rgba-color;
-	-webkit-box-shadow: inset 0 0 0 1000px @rgba-color;
-	-moz-box-shadow: inset 0 0 0 1000px @rgba-color;
-	-ms-box-shadow: inset 0 0 0 1000px @rgba-color;
-	-o-box-shadow: inset 0 0 0 1000px @rgba-color;
+}
+
+.enc-background-image(@size: cover, @position: center, @attachment: fixed, @color: @black, @opacity: 1){
+	.enc-background-color-overlay(@color, @opacity);
+	background-size: @cover;
+	background-position: @position;
+	background-attachment: @attachment;
 }
