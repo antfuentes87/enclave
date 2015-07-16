@@ -84,7 +84,7 @@ ENC.align = {
 		outerElementHeight = $(outerElement).outerHeight();
 		innerElementContentHeight = $(innerElementContent).outerHeight();
 		$(innerElement).css("padding-top", outerElementHeight / 2);
-		$(innerElementContent).css("margin-top", outerElementHeight / 2);
+		$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
 	}
 };
 ENC.scroll = {
