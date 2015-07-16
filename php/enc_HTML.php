@@ -89,7 +89,7 @@ class enc_HTML{
 		$this->execute($html, $execute);
 	}
 
-	public function audio($flag = 0, $src, $autoplay = true, $loop = false, $volume = '1.0' $execute = 0, $controls = '', $class = '', $id = ''){
+	public function audio($flag = 0, $src, $autoplay = true, $loop = false, $volume = '1.0', $execute = 0, $controls = '', $class = '', $id = ''){
 		$html = '<';
 		$html = $this->element('audio', $flag, $class, $id);
 		$html .= ' src="'.$src.'" autoplay="'.$autoplay.'" loop="'.$loop.'" volume="'.$volume.'".$controls.';
