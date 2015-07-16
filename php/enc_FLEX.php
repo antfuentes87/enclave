@@ -61,10 +61,18 @@ class enc_FLEX{
 				list($sectionId, $sectionType) = explode('_', $sectionValue);
 				if($sectionType == 'section'){
 					echo '<script>';
-						echo '$(window).on("load resize scroll",function(e){';
-						echo 'encAllMinHeightsEqualElementA_Divided(window, "#what-'.$sectionName.'-section-'.$sectionId.'-outer", '.$sectionWindowDivide[$var].');';
-						echo 'encVerticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-content");';
-						echo '});';
+						echo '$(document).ready(function($){';
+							echo 'ENC.minHeight.EqualElementA_Divided(ENC.minHeight.EqualElementA_Divided(window,"#what-'.$sectionName.'-section-'.$sectionId.'-outer", '.$sectionWindowDivide[$var].');';
+							echo 'ENC.align.verticalCenter(ENC.align.verticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-content");';
+							echo 'jQuery(window).resize(';
+								echo 'ENC.minHeight.EqualElementA_Divided(ENC.minHeight.EqualElementA_Divided(window,"#what-'.$sectionName.'-section-'.$sectionId.'-outer", '.$sectionWindowDivide[$var].'),';
+								echo 'ENC.align.verticalCenter(ENC.align.verticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-content")';
+							);
+							echo 'jQuery(window).load(';
+								echo 'ENC.minHeight.EqualElementA_Divided(ENC.minHeight.EqualElementA_Divided(window,"#what-'.$sectionName.'-section-'.$sectionId.'-outer", '.$sectionWindowDivide[$var].'),';
+								echo 'ENC.align.verticalCenter(ENC.align.verticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-content")';
+							);
+						});
 					echo '</script>';
 					$var = $var + 1;
 				}
@@ -74,10 +82,18 @@ class enc_FLEX{
 						if($parallaxValue <> 'parallax.php'){
 							list($parallaxId, $parallaxType) = explode('_', $parallaxValue);
 							echo '<script>';
-								echo '$(window).on("load resize scroll",function(e){';
-								echo 'encAllMinHeightsEqualElementA_Divided(window, "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", '.$sectionWindowDivide[$var].');';
-								echo 'encVerticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-content");';
-								echo '});';
+								echo '$(document).ready(function($){';
+									echo 'ENC.minHeight.EqualElementA_Divided(ENC.minHeight.EqualElementA_Divided(window, "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", '.$sectionWindowDivide[$var].');';
+									echo 'ENC.align.verticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-content");';
+									echo 'jQuery(window).resize(';
+										echo 'ENC.minHeight.EqualElementA_Divided(ENC.minHeight.EqualElementA_Divided(window, "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", '.$sectionWindowDivide[$var].');';
+										echo 'ENC.align.verticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-content");';
+									);
+									echo 'jQuery(window).load(';
+										echo 'ENC.minHeight.EqualElementA_Divided(ENC.minHeight.EqualElementA_Divided(window, "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", '.$sectionWindowDivide[$var].');';
+										echo 'ENC.align.verticalCenter("#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-outer", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-inner", "#what-'.$sectionName.'-section-'.$sectionId.'-parallax-'.$parallaxId.'-content");';
+									);
+								});
 							echo '</script>';
 							$var = $var + 1;
 						}

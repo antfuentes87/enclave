@@ -65,17 +65,17 @@ class enc_HTML{
 		$this->execute($html, $execute);
 	}
 
-	public function iframe($src, $execute = 0, $class = '', $id = ''){
+	public function iframe($flag = 0, $src, $execute = 0, $class = '', $id = ''){
 		$html = '<';
-		$html .= $this->elementSingle('iframe', $class, $id);
+		$html = $this->element('iframe', $flag, $class, $id);
 		$html .= ' src="'.$src.'"';
 		$html .= '>';
 		$this->execute($html, $execute);
 	}
 
-	public function video($src, $autoplay = true, $loop = false, $muted = false, $execute = 0, $class = '', $id = ''){
+	public function video($flag = 0, $src, $autoplay = true, $loop = false, $muted = false, $execute = 0, $class = '', $id = ''){
 		$html = '<';
-		$html .= $this->elementSingle('video', $class, $id);
+		$html = $this->element('video', $flag, $class, $id);
 		$html .= ' src="'.$src.'" autoplay="'.$autoplay.'" loop="'.$loop.'" muted="'.$muted.'"';
 		$html .= '>';
 		$this->execute($html, $execute);
@@ -89,9 +89,9 @@ class enc_HTML{
 		$this->execute($html, $execute);
 	}
 
-	public function audio($src, $autoplay = true, $loop = false, $volume = '1.0' $execute = 0, $controls = '', $class = '', $id = ''){
+	public function audio($flag = 0, $src, $autoplay = true, $loop = false, $volume = '1.0' $execute = 0, $controls = '', $class = '', $id = ''){
 		$html = '<';
-		$html .= $this->elementSingle('audio', $class, $id);
+		$html = $this->element('audio', $flag, $class, $id);
 		$html .= ' src="'.$src.'" autoplay="'.$autoplay.'" loop="'.$loop.'" volume="'.$volume.'".$controls.';
 		$html .= '>';
 		$this->execute($html, $execute);
@@ -101,6 +101,23 @@ class enc_HTML{
 		$html = '<';
 		$html .= $this->elementSingle('embed', $class, $id);
 		$html .= ' src="'.$src.'"';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
+	public function a($href, $target = '',$execute = 0, $class = '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle('a', $class, $id);
+		$html .= ' href="'.$href.'"';
+		$html .= ' target="'.$target.'"';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
+	public function form($flag = 0, $action = '', $method = '', $class = '', $id = ''){
+		$html = '<';
+		$html = $this->element('form', $flag, $class, $id);
+		$html .= 'action="'.$action.'" method="'.$method.'"';
 		$html .= '>';
 		$this->execute($html, $execute);
 	}
