@@ -122,6 +122,15 @@ class enc_HTML{
 		$this->execute($html, $execute);
 	}
 
+	public function input($type = "", $value = '', $execute = 0, $class = '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle('input', $class, $id);
+		$html .= ' type="'.$type.'"';
+		$html .= ' value="'.$value.'"';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
 	public function heading($flag = 0, $execute = 0, $number, $class = '', $id = ''){
 		$html = $this->element('h'.$number, $flag, $class, $id);
 		$this->execute($html, $execute);
@@ -280,6 +289,10 @@ class enc_HTML{
 	public function menu($flag = 0, $execute = 0, $class = '', $id = ''){
 		$html = $this->element('menu', $flag, $class, $id);
 		$this->execute($html, $execute);
+	}
+
+	public function string_formatDate($dateFormat, $dateKey){
+		return date($dateFormat, strtotime($dateKey));
 	}
 }
 ?>
