@@ -65,6 +65,46 @@ class enc_HTML{
 		$this->execute($html, $execute);
 	}
 
+	public function iframe($src, $execute = 0, $class = '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle('iframe', $class, $id);
+		$html .= ' src="'.$src.'"';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
+	public function video($src, $autoplay = true, $loop = false, $muted = false, $execute = 0, $class = '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle('video', $class, $id);
+		$html .= ' src="'.$src.'" autoplay="'.$autoplay.'" loop="'.$loop.'" muted="'.$muted.'"';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
+	public function track($src, $label = '', $execute = 0, $class= '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle('track', $class, $id);
+		$html .= ' src="'.$src.'" label="'.$label.'"';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
+	public function audio($src, $autoplay = true, $loop = false, $volume = '1.0' $execute = 0, $controls = '', $class = '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle('audio', $class, $id);
+		$html .= ' src="'.$src.'" autoplay="'.$autoplay.'" loop="'.$loop.'" volume="'.$volume.'".$controls.';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
+	public function embed($src, $type = '',$execute = 0, $class = '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle('embed', $class, $id);
+		$html .= ' src="'.$src.'"';
+		$html .= '>';
+		$this->execute($html, $execute);
+	}
+
 	public function heading($flag = 0, $execute = 0, $number, $class = '', $id = ''){
 		$html = $this->element('h'.$number, $flag, $class, $id);
 		$this->execute($html, $execute);
