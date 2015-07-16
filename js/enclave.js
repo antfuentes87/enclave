@@ -81,8 +81,8 @@ ENC.align = {
 		}
 	},
 	verticalCenter: function(outerElement, innerElement, innerElementContent){
-		outerElementHeight = $(outerElement).outerHeight();
-		innerElementContentHeight = $(innerElementContent).outerHeight();
+		outerElementHeight = $(outerElement).outerHeight(true);
+		innerElementContentHeight = $(innerElementContent).outerHeight(true);
 		$(innerElement).css("padding-top", outerElementHeight / 2);
 		$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
 	}
