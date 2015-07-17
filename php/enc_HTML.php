@@ -56,6 +56,11 @@ class enc_HTML{
 		}
 	}
 
+	public function joomlaCategoryArticle($array, $require){
+		$this->catArray = $array;
+		require('templates/what/html/com_content/article/'.$require.'/item.php');
+	}
+	
 	public function image($src, $alt, $exe = 0, $class = '', $id = ''){
 		$html = '<';
 		$html .= $this->elementSingle('img', $class, $id);
