@@ -298,13 +298,11 @@ class enc_HTML{
 	public function joomlaQueryArray($table, $col, $where, $whereValue, $orderBy, $order, $limit){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
-	
 		$query->select($db->quoteName($col));
 		$query->from($db->quoteName('#__'.$table));
-		$query->where($db->quoteName($where) . ' = '.$whereValue);
+		$query->where($db->quoteName($where)." = ".$db->quote($whereValue));
 		$query->order($orderBy.' '.$order);
 		$query->setLimit($limit);
-		
 		$db->setQuery($query);
 		$results = $db->loadObjectList();
 		return $results;
