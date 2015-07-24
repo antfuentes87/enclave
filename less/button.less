@@ -1,3 +1,69 @@
-.enc-button(@fontColor, @fontColorOpacity){
-	.enc-color(@fontColor, @fontColorOpacity);
+/*.enc-button(
+@color: @black,
+@bgColor: @white,
+@bColor: @black, 
+@fontSize: 1rem, @fontSizeRatio: 0.01, 
+@lineHeight: 1rem, @lineHeightRatio: 0.01,
+@paddingTB: 1rem, @paddingTBRatio: 0.01,
+@paddingLR: 1rem, @paddingLRRatio: 0.01,
+@hColor: @black,
+@hBgColor: @white,
+@hBColor: @black);*/
+
+.enc-button(
+@color, @opacity: 1,
+@bgColor,  @bgOpacity: 1,
+@bWidth: 0.0625rem, @bStyle: solid, @bColor, @bRadius: 0,
+@fontSize, @fontSizeRatio, 
+@lineHeight, @lineHeightRatio,
+@paddingTB, @paddingTBRatio,
+@paddingLR, @paddingLRRatio,
+@delay: 0, @duration: 0.5s, @timing: ease-in-out,
+@hColor, @hOpacity: 1,
+@hBgColor, @hBgOpacity: 1,
+@hBWidth: 0.0625rem, @hBStyle: solid, @hBColor, @hBRadius: 0, @textTransform: none, @letterSpacing: normal, @fontWeight: normal){
+	.enc-color(@color, @opacity);
+	.enc-background-color(@bgColor, @bgOpacity);
+	.enc-border(@bWidth, @bStyle, @bColor, @bRadius);
+	.enc-font-auto-size-lineheight-reverse(@fontSize, @fontSizeRatio, @lineHeight, @lineHeightRatio);
+	.enc-padding-auto-topbottom(@paddingTB, @paddingTBRatio, @paddingTB, @paddingTBRatio);
+	.enc-padding-auto-leftright(@paddingLR, @paddingLRRatio, @paddingLR, @paddingLRRatio);
+	.enc-transition-all(@delay, @duration, @timing);
+	text-transform: @textTransform;
+	letter-spacing: @letterSpacing;
+	font-weight: @fontWeight;
+	&:hover{
+		.enc-color(@hColor, @hOpacity);
+		.enc-background-color(@hBgColor, @hBgOpacity);
+		.enc-border(@hBWidth, @hBStyle, @hBColor, @hBRadius);
+	}
+}
+
+.enc-button-regular(
+@color, @opacity: 1,
+@bgColor,  @bgOpacity: 1,
+@bWidth: 0.0625rem, @bStyle: solid, @bColor, @bRadius: 0,
+@fontSize, @fontSizeRatio, 
+@lineHeight, @lineHeightRatio,
+@paddingTB, @paddingTBRatio,
+@paddingLR, @paddingLRRatio,
+@delay: 0, @duration: 0.5s, @timing: ease-in-out,
+@hColor, @hOpacity: 1,
+@hBgColor, @hBgOpacity: 1,
+@hBWidth: 0.0625rem, @hBStyle: solid, @hBColor, @hBRadius: 0, @textTransform: none, @letterSpacing: normal, @fontWeight: normal){
+	.enc-color(@color, @opacity);
+	.enc-background-color(@bgColor, @bgOpacity);
+	.enc-border(@bWidth, @bStyle, @bColor, @bRadius);
+	.enc-font-auto-size-lineheight(@fontSize, @fontSizeRatio, @lineHeight, @lineHeightRatio);
+	.enc-padding-auto-topbottom(@paddingTB, @paddingTBRatio, @paddingTB, @paddingTBRatio);
+	.enc-padding-auto-leftright(@paddingLR, @paddingLRRatio, @paddingLR, @paddingLRRatio);
+	.enc-transition-all(@delay, @duration, @timing);
+	text-transform: @textTransform;
+	letter-spacing: @letterSpacing;
+	font-weight: @fontWeight;
+	&:hover{
+		.enc-color(@hColor, @hOpacity);
+		.enc-background-color(@hBgColor, @hBgOpacity);
+		.enc-border(@hBWidth, @hBStyle, @hBColor, @hBRadius);
+	}
 }

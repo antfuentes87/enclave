@@ -2,3 +2,7 @@
 	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
 	color: @rgba-color;
 }
+
+.enc-color-lighten(@color, @percent, @opacity: 1){
+	.enc-color(lighten(@color, @percent), @opacity);
+}

@@ -9,6 +9,9 @@
 		filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
 	}
 }
+.enc-background-color-lighten(@color, @percent, @opacity: 1){
+	.enc-background-color(lighten(@color, @percent), @opacity);
+}
 
 .enc-background-color-overlay(@color, @opacity){
 	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
@@ -17,7 +20,7 @@
 
 .enc-background-parallax(@size: cover, @position: center, @attachment: fixed, @color: @black, @opacity: 1){
 	.enc-background-color-overlay(@color, @opacity);
-	background-size: @cover;
+	background-size: @size;
 	background-position: @position;
 	background-attachment: @attachment;
 }

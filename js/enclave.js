@@ -20,23 +20,23 @@ ENC.height = {
 		currentTallest = 0,
 		currentRowStart = 0,
 		rowDivs = new Array(),
-		$el,
+		el = 0,
 		topPosition = 0;
 		 $(container).each(function() {
-			$el = $(this);
-			$($el).height('auto')
-			topPostion = $el.position().top;
+			el = $(this);
+			(el).height('auto');
+			topPostion = el.position().top;
 			if(currentRowStart != topPostion){
 				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++){
 					rowDivs[currentDiv].height(currentTallest);
 				}
 				rowDivs.length = 0;
 				currentRowStart = topPostion;
-				currentTallest = $el.height();
-				rowDivs.push($el);
+				currentTallest = el.height();
+				rowDivs.push(el);
 			}else{
-				rowDivs.push($el);
-				currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+				rowDivs.push(el);
+				currentTallest = (currentTallest < el.height()) ? (el.height()) : (currentTallest);
 			}
 			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
 				rowDivs[currentDiv].height(currentTallest);
@@ -81,9 +81,8 @@ ENC.align = {
 		}
 	},
 	verticalCenter: function(outerElement, innerElement, innerElementContent){
-		outerElementHeight = $(outerElement).outerHeight(true);
-		innerElementContentHeight = $(innerElementContent).outerHeight(true);
-		console.log(innerElementContentHeight + innerElementContent);
+		outerElementHeight = $(outerElement).height();
+		innerElementContentHeight = $(innerElementContent).height();
 		$(innerElement).css("padding-top", outerElementHeight / 2);
 		$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
 	}
@@ -142,7 +141,7 @@ ENC.hover = {
 			function () {
 				$(this).removeClass(activeClass);
 			}
-		)
+		);
 	},
 	AddClassRemoveClass: function(elementA, elementB, activeClass, nonActiveClass){
 		$(elementB).addClass(nonActiveClass);

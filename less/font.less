@@ -1,3 +1,13 @@
+.enc-font-auto-size-lineheight-reverse(@endFontSize: 1rem, @endFontSizeRatio: 0.01, @endLineHeight: 1rem, @endLineHeightRatio: 0.01){
+	@fontSizeRatio: @endFontSizeRatio;
+	@minusFontSize: @fontSizeRatio * 22;
+	@fontSize: @endFontSize - @minusFontSize;
+	@lineHeightRatio: @endLineHeightRatio;
+	@minusLineHeight: @lineHeightRatio * 22;
+	@lineHeight: @endLineHeight - @minusLineHeight;
+	.enc-font-auto-size-lineheight(@fontSize, @fontSizeRatio, @lineHeight, @lineHeightRatio);
+}
+
 .enc-font-auto-size-lineheight(@fontSize: 1rem, @fontSizeRatio: 0.01, @lineHeight: 1rem, @lineHeightRatio: 0.01){
 	.enc-flex-auto(font-size, @fontSize, @fontSizeRatio);
 	.enc-flex-auto(line-height, @lineHeight, @lineHeightRatio);
