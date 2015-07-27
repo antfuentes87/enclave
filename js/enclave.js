@@ -67,7 +67,7 @@ ENC.width = {
 };
 ENC.align = {
 	horizontalCenter: function(elementA, elementB, xs, sm, md, lg){
-		elementAWidth = $(elementA).width();
+		elementAWidth = $(elementA).outerWidth();
 		$(elementB).css("margin", "0 auto");
 		$(elementB).css("display", "block");
 		if (window.matchMedia("(max-width: 767px)").matches){
@@ -81,8 +81,8 @@ ENC.align = {
 		}
 	},
 	verticalCenter: function(outerElement, innerElement, innerElementContent){
-		outerElementHeight = $(outerElement).height();
-		innerElementContentHeight = $(innerElementContent).height();
+		outerElementHeight = $(outerElement).outerHeight();
+		innerElementContentHeight = $(innerElementContent).outerHeight();
 		$(innerElement).css("padding-top", outerElementHeight / 2);
 		$(innerElementContent).css("margin-top", -innerElementContentHeight / 2);
 	}
@@ -115,6 +115,58 @@ ENC.scroll = {
 	}
 };
 ENC.hover = {
+	AddClassParentFind: function(hoverElement, parentElement, findElement, parentClass, findClass){
+		$(hoverElement).hover(
+    		function() {
+        		$(this).parents(parentElement).addClass(parentClass);
+				$(this).parents(parentElement).find(findElement).addClass(findClass);
+    		},
+    		function() {
+        		$(this).parents(parentElement).removeClass(parentClass);
+				$(this).parents(parentElement).find(findElement).removeClass(findClass);
+    		}		     
+		);
+	},
+	AddClassClosest: function(hoverElement, closestElement, addClass){
+		$(hoverElement).hover(
+    		function() {
+        		$(this).closest(closestElement).addClass(addClass);
+    		},
+    		function() {
+        		$(this).closest(closestElement).removeClass(addClass);
+    		}		     
+		);
+	},
+	AddClassSiblings: function(hoverElement, siblingElement, addClass){
+		$(hoverElement).hover(
+    		function() {
+        		$(this).siblings(siblingElement).addClass(addClass);
+    		},
+    		function() {
+        		$(this).siblings(siblingElement).removeClass(addClass);
+    		}		     
+		);
+	},
+	AddClassChildren: function(hoverElement, childElement, addClass){
+		$(hoverElement).hover(
+    		function() {
+        		$(this).children(childElement).addClass(addClass);
+    		},
+    		function() {
+        		$(this).children(childElement).removeClass(addClass);
+    		}		     
+		);
+	},
+	AddClassParent: function(hoverElement, parentElement, addClass){
+		$(hoverElement).hover(
+    		function() {
+        		$(this).parents(parentElement).addClass(addClass);
+    		},
+    		function() {
+        		$(this).parents(parentElement).removeClass(addClass);
+    		}		     
+		);	
+	},
 	ClassActiveNotActive: function(element, activeClass, notActiveClass){
 		$(function(){
 			$(element).hover(function() {

@@ -1,6 +1,19 @@
 <?php
 
 class enc_HTML{
+	
+	public function textExplode($array, $explode){
+		return explode($explode, $array);
+	}
+	
+	public function schemaBlog($element, $class = '', $id = ''){
+		$html = '<';
+		$html .= $this->elementSingle($element, $class, $id).' ';
+		$html .= 'itemscope itemtype="https://schema.org/BlogPosting"';
+		$html .= '>';
+		echo $html;
+	}
+	
 	public function element($element, $flag = 0, $class = '', $id = ''){
 		if($flag == 0){
 			if($class <> '' || $id <> ''){
@@ -340,10 +353,10 @@ class enc_HTML{
 		$this->exe($html, $exe);
 	}
 
-	public function iframe($flag = 0, $src, $exe = 0, $class = '', $id = ''){
+	public function iframe($flag, $src, $exe = 0, $class = '', $id = ''){
 		if($flag == 0){
 			$html = '<';
-			$html = $this->element('iframe', $flag, $class, $id);
+			$html .= $this->elementSingle('iframe', $class, $id);
 			$html .= ' src="'.$src.'"';
 			$html .= '>';
 		}else{
@@ -405,11 +418,13 @@ class enc_HTML{
 		$this->exe($html, $exe);
 	}
 
-	public function input($type = "", $value = '', $exe = 0, $class = '', $id = ''){
+	public function input($type = '', $value = '', $exe = 0, $placeholder = '', $name = '', $class = '', $id = ''){
 		$html = '<';
 		$html .= $this->elementSingle('input', $class, $id);
 		$html .= ' type="'.$type.'"';
 		$html .= ' value="'.$value.'"';
+		$html .= ' placeholder="'.$placeholder.'"';
+		$html .= ' name="'.$name.'"';
 		$html .= '>';
 		$this->exe($html, $exe);
 	}
@@ -576,6 +591,19 @@ class enc_HTML{
 
 	public function menu($flag = 0, $exe = 0, $class = '', $id = ''){
 		$html = $this->element('menu', $flag, $class, $id);
+		$this->exe($html, $exe);
+	}
+	
+	public function textarea($flag = 0, $exe = 0, $name = '', $placeholder = '', $class = '', $id = ''){
+		if($flag == 0){
+			$html = '<';
+			$html .= $this->elementSingle('textarea', $class, $id);
+			$html .= ' name="'.$name.'"';
+			$html .= ' placeholder="'.$placeholder.'"';
+			$html .= '>';
+		}else{
+			$html ='</textarea>';
+		}		
 		$this->exe($html, $exe);
 	}
 
