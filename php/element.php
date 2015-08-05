@@ -1,10 +1,12 @@
 <?php
-class element extends schema{	
+class ENCelement{
+
 	public function schema($schemas){
+		$html = '';
 		$schemas = json_decode($schemas);
 		foreach($schemas as $schemaKey => $schema){
-			if($schemaKey == 'itemtype'){
-				$html .= 'itemscope  '.$schemaKey.'='.'"'.$this->schemaURL.$schema.'"';
+			if($schemaKey == 'itemtype' || $schemaKey == 'itemType'){
+				$html .= ENCschema::itemScope.'  '.$schemaKey.'='.'"'.ENCschema::URL.$schema.'"';
 			}else{
 				$html .= $schemaKey.'='.'"'.$schema.'"';
 			}
@@ -13,6 +15,7 @@ class element extends schema{
 	}
 	
 	public function attributes($attributes){
+		$html = '';
 		$attributes = json_decode($attributes);
 		foreach($attributes as $attributeKey => $attribute){
 			if($attribute <> ''){

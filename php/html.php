@@ -1,6 +1,6 @@
 <?php
-class html extends element{
-	public function build($element, $flag, $return, $schema = '', $attributes = ''){
+class ENChtml extends ENCelement{	
+	public function b($element, $flag, $return, $schema = '', $attributes = ''){
 		if($flag == 0){
 			if($return == 0){
 				return $this->open($element, $schema, $attributes);	
@@ -13,6 +13,14 @@ class html extends element{
 			}else{
 				echo $this->close($element);
 			}
+		}
+	}
+	
+	public function e($return, $string){
+		if($return == 0){
+			return $string;
+		}else{
+			echo $string;
 		}
 	}
 }
