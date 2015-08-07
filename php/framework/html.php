@@ -1,5 +1,7 @@
 <?php
-class ENChtml extends ENCelement{	
+namespace framework;
+
+class html extends element{	
 	public function b($element, $flag, $return, $schema = '', $attributes = ''){
 		if($flag == 0){
 			if($return == 0){

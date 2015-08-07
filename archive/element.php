@@ -1,5 +1,5 @@
 <?php
-class ENCelement{
+class element{
 
 	public function schema($schemas){
 		$html = '';
