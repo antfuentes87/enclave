@@ -1,44 +1,61 @@
 <?php
 namespace joomla;
 
+use framework\html;
 use joomla\database;
 use joomla\menu;
 
 class category{
-	function content($id, $itemId, $userLimit, $template){
+	public function deploy($id, $itemId, $showLimit, $template, $alias, $view, $schema = ''){
+		$html = new html();
+		$attr = '{"id":"'.$alias.'-'.$view.'"}';
+		$html->b('section', 0, 1, $schema, $attr);
+			$this->content($id, $itemId, $showLimit, $template);
+		$html->b('section', 1, 1);
+	}
+
+	public function content($id, $itemId, $showLimit, $template){
+		//INT DATABASE / MENU CLASSES
 		$db = new database();
 		$menu = new menu();
 
-		$menu->link($itemId);
-
+		//CREATE TABLE NAME VARS
 		$db->tables();
-		$catid = $id;
-		$query = "SELECT * FROM $db->content WHERE catid = '$catid' ORDER BY id DESC";
+
+		//BUILD QUERY
+		$query = "SELECT * FROM $db->content WHERE catid = '$id' ORDER BY id DESC";
+
+		//STORE QUERY
 		$result = $db->q($query);
 
+		//COUNT QUERY
 		$total = count($result);
 		
-		$show_item = $userLimit;
-		
+		//GET PAGE
 		$pages= @$_GET["page"];
 
-		$pages_total = ceil($total / $show_item);
+		//CEIL FOR PAGE TOTAL
+		$pagesTotal = ceil($total / $showLimit);
 
+		//IF PAGES IS LESS THAN 1 MAKE IT 1
 		if($pages < 1){ 
 			$pages = 1;
 		}else{ 
 			$pages;
 		}
 		
-		$start = ($pages-1) * ($show_item);
+		//CALC START
+		$start = ($pages - 1) * ($showLimit);
 		
-		$resultSlice = array_slice($result,$start,$show_item);
+		//SLICE RESULT
+		$resultSlice = array_slice($result,$start,$showLimit);
+
+		//ASIGN VAR FOR PAGES TOTAL
+		$this->pagesTotal = $pagesTotal;
 
 		foreach($resultSlice as $val){
 			require($template.'.php');
 		}
-
-		$this->pagesTotal = $pages_total;
 	}
 }
 
