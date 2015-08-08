@@ -18,7 +18,6 @@ class ENCschema{
 	const videoObject = '{"itemtype":"VideoObject"}';
 	
 	/*Item Props*/
-	const contentUrl = '{"itemprop":"contentUrl"}';
 	const datePublished = '{"itemprop":"datePublished"}';
 	const headline = '{"itemprop":"headline"}';
 	const author = '{"itemprop":"author"}';
@@ -27,5 +26,14 @@ class ENCschema{
 	const articleBody = '{"itemprop":"articleBody"}';
 	const description = '{"itemprop":"description"}';
 	const video = '{"itemprop":"video"}';
+
+	const thumbnailUrl = '{"itemprop":"thumbnailUrl"}';
+	const contentURL = '{"itemprop":"contentURL"}';
+	const contentUrl = '{"itemprop":"contentURL"}';
+	const embedURL = '{"itemprop":"embedURL"}';
+	const uploadDate = '{"itemprop":"uploadDate"}';
+	const width = '{"itemprop":"width"}';
+	const height = '{"itemprop":"height"}';
+	const duration = '{"itemprop":"duration"}';
 }
 ?>

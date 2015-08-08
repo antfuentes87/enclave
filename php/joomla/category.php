@@ -6,10 +6,13 @@ use joomla\database;
 use joomla\menu;
 
 class category{
-	public function deploy($id, $itemId, $showLimit, $template, $alias, $view, $schema = ''){
+	public function deploy($id, $itemId, $showLimit, $template, $alias, $view, $categoryTitle, $schema = ''){
 		$html = new html();
 		$attr = '{"id":"'.$alias.'-'.$view.'"}';
 		$html->b('section', 0, 1, $schema, $attr);
+			$html->b('h1', 0, 1);
+				$html->e(1, $categoryTitle);
+			$html->b('h1', 1, 1);
 			$this->content($id, $itemId, $showLimit, $template);
 		$html->b('section', 1, 1);
 	}

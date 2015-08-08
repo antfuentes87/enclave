@@ -26,24 +26,26 @@ class router{
 			$result = $database->q($q);
 
 			$categoryId = $result[0]['catid'];
-			$articleAlias = $result[0]['alias'];
+			$this->articleAlias = $result[0]['alias'];
 
-			$q = "SELECT alias FROM $database->categories WHERE id = '$categoryId'";
+			$q = "SELECT title, alias FROM $database->categories WHERE id = '$categoryId'";
 			$result = $database->q($q);
 
-			$categoryAlias = $result[0]['alias'];
+			$this->categoryAlias = $result[0]['alias'];
+			$this->categoryTitle = $result[0]['title'];
 
-			if($categoryAlias == 'static'){
-				$pathAlias = $articleAlias;
+			if($this->categoryAlias == 'static'){
+				$pathAlias = $this->articleAlias;
 			}else{
-				$pathAlias = $categoryAlias;
+				$pathAlias = $this->categoryAlias;
 			}
 		}
 
 		if($view == 'category'){
-			$q = "SELECT alias FROM $database->categories WHERE id = '$id'";
+			$q = "SELECT title, alias FROM $database->categories WHERE id = '$id'";
 			$result = $database->q($q);
 			$this->categoryAlias = $result[0]['alias'];
+			$this->categoryTitle = $result[0]['title'];
 			$pathAlias = $this->categoryAlias;
 		}
 

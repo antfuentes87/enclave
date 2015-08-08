@@ -24,7 +24,7 @@ ENC.height = {
 		topPosition = 0;
 		 $(container).each(function() {
 			el = $(this);
-			(el).height('auto');
+			(el).outerHeight('auto');
 			topPostion = el.position().top;
 			if(currentRowStart != topPostion){
 				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++){
@@ -32,14 +32,14 @@ ENC.height = {
 				}
 				rowDivs.length = 0;
 				currentRowStart = topPostion;
-				currentTallest = el.height();
+				currentTallest = el.outerHeight();
 				rowDivs.push(el);
 			}else{
 				rowDivs.push(el);
-				currentTallest = (currentTallest < el.height()) ? (el.height()) : (currentTallest);
+				currentTallest = (currentTallest < el.outerHeight()) ? (el.outerHeight()) : (currentTallest);
 			}
 			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-				rowDivs[currentDiv].height(currentTallest);
+				rowDivs[currentDiv].outerHeight(currentTallest);
 			}
 		});
 	}
