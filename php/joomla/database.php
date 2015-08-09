@@ -1,6 +1,8 @@
 <?php
 namespace joomla;
 
+use framework\html;
+
 class database{
     public $link;
 
@@ -9,8 +11,10 @@ class database{
     	if (mysqli_connect_errno()) {
     		printf("Connect failed: %s\n", mysqli_connect_error());
     		exit();
-		}
-    	
+        }else{
+            mysqli_set_charset($this->link, 'utf8');
+        }
+
     }
 
     public function q($q){
@@ -40,6 +44,13 @@ class database{
 			$varname = $val['Field'];
      		$this->$varname = $val['Field'];
 		}
+    }
+
+    public function dump($dump){
+        $h = new html();
+        $h->b('pre', 0, 1);
+            var_dump($dump);
+        $h->b('pre', 1, 1);
     }
 }
 ?>

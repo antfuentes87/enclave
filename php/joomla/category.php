@@ -18,45 +18,29 @@ class category{
 	}
 
 	public function content($id, $itemId, $showLimit, $template){
-		//INT DATABASE / MENU CLASSES
 		$db = new database();
 		$menu = new menu();
-
-		//CREATE TABLE NAME VARS
 		$db->tables();
-
-		//BUILD QUERY
 		$query = "SELECT * FROM $db->content WHERE catid = '$id' ORDER BY id DESC";
+		$results = $db->q($query);
 
-		//STORE QUERY
-		$result = $db->q($query);
-
-		//COUNT QUERY
-		$total = count($result);
-		
-		//GET PAGE
+		$total = count($results);
 		$pages= @$_GET["page"];
-
-		//CEIL FOR PAGE TOTAL
 		$pagesTotal = ceil($total / $showLimit);
-
-		//IF PAGES IS LESS THAN 1 MAKE IT 1
 		if($pages < 1){ 
 			$pages = 1;
 		}else{ 
 			$pages;
 		}
 		
-		//CALC START
 		$start = ($pages - 1) * ($showLimit);
-		
-		//SLICE RESULT
-		$resultSlice = array_slice($result,$start,$showLimit);
-
-		//ASIGN VAR FOR PAGES TOTAL
+		$resultsSlices = array_slice($results,$start,$showLimit);
 		$this->pagesTotal = $pagesTotal;
 
-		foreach($resultSlice as $val){
+		foreach($resultsSlices as $resultSlice){
+			foreach ($resultSlice as $column => $data){
+				$this->{$column} = $data;
+			}
 			require($template.'.php');
 		}
 	}

@@ -17,7 +17,7 @@ class router{
 		}
 	}
 
-	public function routerv2($id, $path, $option, $view, $layout){
+	public function route($id, $path, $option, $view, $layout){
 		$database = new database();
 		$database->tables();
 
@@ -25,10 +25,10 @@ class router{
 			$q = "SELECT alias, catid FROM $database->content WHERE id = '$id'";
 			$result = $database->q($q);
 
-			$categoryId = $result[0]['catid'];
+			$this->categoryId = $result[0]['catid'];
 			$this->articleAlias = $result[0]['alias'];
 
-			$q = "SELECT title, alias FROM $database->categories WHERE id = '$categoryId'";
+			$q = "SELECT title, alias FROM $database->categories WHERE id = '$this->categoryId'";
 			$result = $database->q($q);
 
 			$this->categoryAlias = $result[0]['alias'];
@@ -68,29 +68,6 @@ class router{
 		$path .= 'default.php';
 
 		require ($path);
-	}
-
-	public function route($path, $option, $view, $layout, $title){
-		if($option){
-			$path .= $option . '/';
-		}
-		if($view){
-			$path .= $view . '/';
-		}
-		if($layout){
-			$path .= $layout . '/';
-		}
-
-		if($title){
-			$path .= strtolower($title) . '/';
-		}
-		
-		$path .= 'default.php';
-
-		$this->title = $title;
-		$this->alias = strtolower($title);
-		
-		require_once($path);
 	}
 }
 ?>

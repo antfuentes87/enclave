@@ -7,7 +7,15 @@ class string{
 	}
 	
 	public function breakExplode($array){
-		return explode('{BREAK}', $array);
+		$results = explode('{BREAK}', $array);
+		return $results;
+	}
+
+	public function breakExplodeVars($array){
+		$results = explode('{BREAK}', $array);
+		foreach($results as $resultKey => $result){
+			$this->{'text_'.$resultKey} = trim($result);
+		}
 	}
 	public function formatDate($dateFormat, $dateKey){
 		return date($dateFormat, strtotime($dateKey));
