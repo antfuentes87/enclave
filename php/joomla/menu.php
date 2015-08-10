@@ -4,7 +4,15 @@ namespace joomla;
 use framework\element;
 use framework\html;
 
-class menu extends database{	
+class menu extends database{
+
+	public function current($itemid){
+    	$this->tables();
+		$query = "SELECT alias FROM `$this->menu` WHERE id = '$itemid'";
+		$array = $this->q($query);
+		$this->currentAlias = $array[0]['alias'];
+  	}
+
 	public function load($menutype){
 		$this->tables();
 		$query = "SELECT * FROM `$this->menu` WHERE menutype = '$menutype'";
@@ -34,6 +42,7 @@ class menu extends database{
 				$count = '';
 			}
 			if($val['id'] == $active){
+				$this->activeItemAlias = $val['alias'];
 				if($class <> ''){
 					$activeClass = ' active';
 				}else{

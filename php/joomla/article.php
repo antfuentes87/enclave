@@ -49,12 +49,13 @@ class article{
 		$this->variables($results);
 	}
 
-	public function sections($dir, $articleAlias){
+	public function sections($dir, $articleAlias, $outerElement = 'section', $center = ''){
 		$h = new html();
+		$db = new database();
 
 		$this->articleAlias = $articleAlias;
 
-		$h->b('section', 0, 1, '', '{"id":"'.$this->articleAlias.'"}');
+		$h->b($outerElement, 0, 1, '', '{"id":"'.$this->articleAlias.'"}');
 		$sections = scandir($dir);
 		foreach($sections as $sectionKey => $section){
 			if($section <> '.' AND $section <> '..'){
@@ -66,9 +67,13 @@ class article{
 					$this->sectionAlias = $this->sectionId.'-'.$this->sectionType;
 					if($this->sectionType == 'section'){
 						$h->b('section', 0, 1, '', '{"class":"'.$this->sectionType.'-'.$this->sectionId.'"}');
-							$h->b('div', 0, 1, '', '{"class":"what-section-center"}');
+							if($center == ''){
+								$h->b('div', 0, 1, '', '{"class":"what-section-center"}');
+							}
 								require($dir.'\\'.$section.'\\'.'section.php');
-							$h->b('div', 1, 1);
+							if($center == ''){
+								$h->b('div', 1, 1);
+							}
 						$h->b('section', 1, 1);
 					}elseif($this->sectionType == 'parallax'){
 						require_once($dir.'\\'.$section.'\\'.'parallax.php');
@@ -95,7 +100,7 @@ class article{
 				}
 			}
 		}
-		$h->b('section', 1, 1);
+		$h->b($outerElement, 1, 1);
 	}
 }
 
