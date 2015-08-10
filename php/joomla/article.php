@@ -13,6 +13,12 @@ class article{
 		}
 	}
 
+	public function variable($result){
+		foreach ($result as $column => $data) {
+			$this->{$column} = $data;
+		}
+	}
+
 	public function deploy($element, $flag, $alias = '', $view = '', $schema = ''){
 		$h = new html();
 		if($flag == 0){
