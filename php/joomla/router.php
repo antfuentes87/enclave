@@ -67,7 +67,7 @@ class router{
 
 		$path .= 'default.php';
 
-		require ($path);
+		require($path);
 	}
 }
 ?>
