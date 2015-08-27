@@ -21,10 +21,13 @@ class string{
 		return date($dateFormat, strtotime($dateKey));
 	}
 
+	public function formatGmDate($dateFormat, $timestamp){
+		return gmdate($dateFormat, $timestamp);
+	}
+	
 	public function between($left, $right, $in){
 	    preg_match('/'.$left.'(.*?)'.$right.'/s', $in, $match);
 	    return empty($match[1]) ? NULL : $match[1];
 	}
-
 }
 ?>

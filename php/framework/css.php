@@ -13,5 +13,11 @@ class css{
 
 	/*FONT AWESOME CONST*/
 	const faYouTubePlay = '{"class":"fa fa-youtube-play"}';
+	const faHome = '{"class":"fa fa-home"}';
+	const faPhone = '{"class":"fa fa-phone"}';
+	const faFax = '{"class":"fa fa-fax"}';
+	const faEnvelopeO = '{"class":"fa fa-envelope-o"}';
+	const faEnvelope = '{"class":"fa fa-envelope"}';
+	const faBars = '{"class":"fa fa-bars"}';
 }
 ?>

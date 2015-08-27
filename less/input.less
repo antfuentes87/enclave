@@ -1,25 +1,26 @@
-.enc-input-placeholder-color(@color, @opacity){
-	*::-webkit-input-placeholder {
-		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+.enc-input-placeholder-color(@color, @opacity: 1){
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	&::-webkit-input-placeholder {
 		color: @rgba-color;
 		opacity: @opacity;
-	}
-	*:-moz-placeholder {
-		/* FF 4-18 */
-		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+    }
+    &:-moz-placeholder {
 		color: @rgba-color;
 		opacity: @opacity;
-	}
-	*::-moz-placeholder {
-		/* FF 19+ */
-		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+    }
+    &::-moz-placeholder {
 		color: @rgba-color;
 		opacity: @opacity;
-	}
-	*:-ms-input-placeholder {
-		/* IE 10+ */
-		@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+    }
+    &:-ms-input-placeholder {
 		color: @rgba-color;
 		opacity: @opacity;
+    }
+}
+
+.enc-input-remove-border(){
+	border: none;
+	&:focus{
+		outline: none;
 	}
 }

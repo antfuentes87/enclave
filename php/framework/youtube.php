@@ -80,10 +80,6 @@ class youtube{
         $this->videoThumbnailHighUrl = $snippet['items'][0]['snippet']['thumbnails']['high']['url'];
         $this->videoThumbnailHighWidth = $snippet['items'][0]['snippet']['thumbnails']['high']['width'];
         $this->videoThumbnailHighHeight = $snippet['items'][0]['snippet']['thumbnails']['high']['height'];
-
-        //echo '<pre>';
-        //var_dump($snippet);
-        //echo '</pre>';
     }
 }
 ?>

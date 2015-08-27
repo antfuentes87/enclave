@@ -1,7 +1,7 @@
 var ENC = ENC || {};
 ENC.height = {
 	EqualElementA: function(elementA, elementB){
-		elementAHeight = $(elementA).height();
+		elementAHeight = $(elementA).outerHeight();
 		$(elementB).height(elementAHeight);
 	},
 	EqualElementA_Divided: function(elementA, elementB, divisionNumber){

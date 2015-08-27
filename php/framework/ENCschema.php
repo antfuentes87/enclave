@@ -2,11 +2,12 @@
 namespace framework;
 
 class ENCschema{
+	/*Setup*/
 	const URL = 'http://schema.org/';
 	const itemScope = 'itemscope';
 	const itemType = 'itemtype';
 	
-	/*ITEM TYPES & ITEM PROPS*/
+	/*Item Types & Item Props*/
 	const personAuthor = '{"itemprop":"author", "itemtype":"Person"}';
 	const videoVideoObject = '{"itemprop":"video", "itemtype":"VideoObject"}';
 	const associatedMediaMediaObject = '{"itemprop":"associatedMedia", "itemtype":"MediaObject"}';

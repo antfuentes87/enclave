@@ -19,8 +19,14 @@ class element{
 		$html = '';
 		$attributes = json_decode($attributes);
 		foreach($attributes as $attributeKey => $attribute){
-			if($attribute <> ''){
+			if($attributeKey <> '' AND $attribute <> ''){
 				$html .= $attributeKey.'='.'"'.$attribute.'"';	
+			}
+			if($attributeKey <> '' AND $attribute == ''){
+				$html .= $attributeKey;	
+			}
+			if($attributeKey == '' AND $attribute <> ''){
+				$html .= $attribute;
 			}
 		}
 		return $html;
@@ -38,6 +44,8 @@ class element{
 		}
 		
 		$html .= '>';
+		echo "\n";
+		
 		return $html;
 	}
 	
@@ -45,6 +53,8 @@ class element{
 		$html = '</';
 		$html .= $element;
 		$html .= '>';
+		echo "\n";
+		
 		return $html;
 	}
 }
